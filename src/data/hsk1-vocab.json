@@ -1,0 +1,1487 @@
+[
+  {
+    "hanzi": "我",
+    "pinyin": "wǒ",
+    "arti": "saya, aku",
+    "contoh": {
+      "zh": "我喜欢看书。",
+      "id": "Saya suka membaca buku."
+    }
+  },
+  {
+    "hanzi": "你",
+    "pinyin": "nǐ",
+    "arti": "kamu",
+    "contoh": {
+      "zh": "你叫什么名字？",
+      "id": "Kamu namanya siapa?"
+    }
+  },
+  {
+    "hanzi": "他",
+    "pinyin": "tā",
+    "arti": "dia (laki-laki)",
+    "contoh": {
+      "zh": "他是我的朋友。",
+      "id": "Dia adalah teman saya."
+    }
+  },
+  {
+    "hanzi": "她",
+    "pinyin": "tā",
+    "arti": "dia (perempuan)",
+    "contoh": {
+      "zh": "她很漂亮。",
+      "id": "Dia sangat cantik."
+    }
+  },
+  {
+    "hanzi": "我们",
+    "pinyin": "wǒmen",
+    "arti": "kami, kita",
+    "contoh": {
+      "zh": "我们一起去吧。",
+      "id": "Ayo kita pergi bersama."
+    }
+  },
+  {
+    "hanzi": "这",
+    "pinyin": "zhè",
+    "arti": "ini",
+    "contoh": {
+      "zh": "这是我的书。",
+      "id": "Ini adalah buku saya."
+    }
+  },
+  {
+    "hanzi": "那",
+    "pinyin": "nà",
+    "arti": "itu",
+    "contoh": {
+      "zh": "那个人是谁？",
+      "id": "Orang itu siapa?"
+    }
+  },
+  {
+    "hanzi": "哪",
+    "pinyin": "nǎ",
+    "arti": "mana, yang mana",
+    "contoh": {
+      "zh": "你住在哪？",
+      "id": "Kamu tinggal di mana?"
+    }
+  },
+  {
+    "hanzi": "谁",
+    "pinyin": "shéi",
+    "arti": "siapa",
+    "contoh": {
+      "zh": "他是谁？",
+      "id": "Dia siapa?"
+    }
+  },
+  {
+    "hanzi": "什么",
+    "pinyin": "shénme",
+    "arti": "apa",
+    "contoh": {
+      "zh": "你在做什么？",
+      "id": "Kamu sedang melakukan apa?"
+    }
+  },
+  {
+    "hanzi": "是",
+    "pinyin": "shì",
+    "arti": "adalah",
+    "contoh": {
+      "zh": "我是中国人。",
+      "id": "Saya adalah orang Tiongkok."
+    }
+  },
+  {
+    "hanzi": "有",
+    "pinyin": "yǒu",
+    "arti": "punya, ada",
+    "contoh": {
+      "zh": "我有一个哥哥。",
+      "id": "Saya punya seorang kakak laki-laki."
+    }
+  },
+  {
+    "hanzi": "看",
+    "pinyin": "kàn",
+    "arti": "melihat, menonton",
+    "contoh": {
+      "zh": "我在看电影。",
+      "id": "Saya sedang menonton film."
+    }
+  },
+  {
+    "hanzi": "听",
+    "pinyin": "tīng",
+    "arti": "mendengar",
+    "contoh": {
+      "zh": "请听老师说。",
+      "id": "Silakan dengarkan guru berbicara."
+    }
+  },
+  {
+    "hanzi": "说",
+    "pinyin": "shuō",
+    "arti": "berbicara, berkata",
+    "contoh": {
+      "zh": "他会说中文。",
+      "id": "Dia bisa berbicara Bahasa Mandarin."
+    }
+  },
+  {
+    "hanzi": "读",
+    "pinyin": "dú",
+    "arti": "membaca (keras)",
+    "contoh": {
+      "zh": "请读这个字。",
+      "id": "Tolong baca karakter ini."
+    }
+  },
+  {
+    "hanzi": "写",
+    "pinyin": "xiě",
+    "arti": "menulis",
+    "contoh": {
+      "zh": "我在写汉字。",
+      "id": "Saya sedang menulis karakter Mandarin."
+    }
+  },
+  {
+    "hanzi": "叫",
+    "pinyin": "jiào",
+    "arti": "memanggil, bernama",
+    "contoh": {
+      "zh": "我叫小红。",
+      "id": "Saya bernama Xiao Hong."
+    }
+  },
+  {
+    "hanzi": "来",
+    "pinyin": "lái",
+    "arti": "datang",
+    "contoh": {
+      "zh": "请来我家。",
+      "id": "Silakan datang ke rumah saya."
+    }
+  },
+  {
+    "hanzi": "去",
+    "pinyin": "qù",
+    "arti": "pergi",
+    "contoh": {
+      "zh": "我去学校。",
+      "id": "Saya pergi ke sekolah."
+    }
+  },
+  {
+    "hanzi": "吃",
+    "pinyin": "chī",
+    "arti": "makan",
+    "contoh": {
+      "zh": "我们吃饭吧。",
+      "id": "Ayo kita makan."
+    }
+  },
+  {
+    "hanzi": "喝",
+    "pinyin": "hē",
+    "arti": "minum",
+    "contoh": {
+      "zh": "你想喝什么？",
+      "id": "Kamu ingin minum apa?"
+    }
+  },
+  {
+    "hanzi": "做",
+    "pinyin": "zuò",
+    "arti": "melakukan, membuat",
+    "contoh": {
+      "zh": "你在做什么？",
+      "id": "Kamu sedang melakukan apa?"
+    }
+  },
+  {
+    "hanzi": "买",
+    "pinyin": "mǎi",
+    "arti": "membeli",
+    "contoh": {
+      "zh": "我想买一本书。",
+      "id": "Saya ingin membeli sebuah buku."
+    }
+  },
+  {
+    "hanzi": "住",
+    "pinyin": "zhù",
+    "arti": "tinggal",
+    "contoh": {
+      "zh": "你住在哪里？",
+      "id": "Kamu tinggal di mana?"
+    }
+  },
+  {
+    "hanzi": "学习",
+    "pinyin": "xuéxí",
+    "arti": "belajar",
+    "contoh": {
+      "zh": "我在学习中文。",
+      "id": "Saya sedang belajar Bahasa Mandarin."
+    }
+  },
+  {
+    "hanzi": "工作",
+    "pinyin": "gōngzuò",
+    "arti": "bekerja",
+    "contoh": {
+      "zh": "他在医院工作。",
+      "id": "Dia bekerja di rumah sakit."
+    }
+  },
+  {
+    "hanzi": "睡觉",
+    "pinyin": "shuìjiào",
+    "arti": "tidur",
+    "contoh": {
+      "zh": "我十点睡觉。",
+      "id": "Saya tidur jam sepuluh."
+    }
+  },
+  {
+    "hanzi": "打电话",
+    "pinyin": "dǎ diànhuà",
+    "arti": "menelepon",
+    "contoh": {
+      "zh": "我给妈妈打电话。",
+      "id": "Saya menelepon ibu."
+    }
+  },
+  {
+    "hanzi": "回",
+    "pinyin": "huí",
+    "arti": "kembali, pulang",
+    "contoh": {
+      "zh": "我六点回家。",
+      "id": "Saya pulang jam enam."
+    }
+  },
+  {
+    "hanzi": "想",
+    "pinyin": "xiǎng",
+    "arti": "ingin, berpikir",
+    "contoh": {
+      "zh": "我想去中国。",
+      "id": "Saya ingin pergi ke Tiongkok."
+    }
+  },
+  {
+    "hanzi": "会",
+    "pinyin": "huì",
+    "arti": "bisa, akan",
+    "contoh": {
+      "zh": "我会说中文。",
+      "id": "Saya bisa berbicara Bahasa Mandarin."
+    }
+  },
+  {
+    "hanzi": "能",
+    "pinyin": "néng",
+    "arti": "dapat, mampu",
+    "contoh": {
+      "zh": "你能来吗？",
+      "id": "Kamu bisa datang?"
+    }
+  },
+  {
+    "hanzi": "爱",
+    "pinyin": "ài",
+    "arti": "cinta, suka",
+    "contoh": {
+      "zh": "我爱我的家人。",
+      "id": "Saya mencintai keluarga saya."
+    }
+  },
+  {
+    "hanzi": "喜欢",
+    "pinyin": "xǐhuan",
+    "arti": "suka",
+    "contoh": {
+      "zh": "我喜欢吃苹果。",
+      "id": "Saya suka makan apel."
+    }
+  },
+  {
+    "hanzi": "认识",
+    "pinyin": "rènshi",
+    "arti": "mengenal",
+    "contoh": {
+      "zh": "很高兴认识你。",
+      "id": "Senang berkenalan denganmu."
+    }
+  },
+  {
+    "hanzi": "开",
+    "pinyin": "kāi",
+    "arti": "membuka, mengendarai",
+    "contoh": {
+      "zh": "请开门。",
+      "id": "Tolong buka pintu."
+    }
+  },
+  {
+    "hanzi": "坐",
+    "pinyin": "zuò",
+    "arti": "duduk, naik (kendaraan)",
+    "contoh": {
+      "zh": "请坐。",
+      "id": "Silakan duduk."
+    }
+  },
+  {
+    "hanzi": "下雨",
+    "pinyin": "xià yǔ",
+    "arti": "hujan",
+    "contoh": {
+      "zh": "今天下雨了。",
+      "id": "Hari ini hujan."
+    }
+  },
+  {
+    "hanzi": "好",
+    "pinyin": "hǎo",
+    "arti": "baik, bagus",
+    "contoh": {
+      "zh": "今天天气很好。",
+      "id": "Cuaca hari ini sangat bagus."
+    }
+  },
+  {
+    "hanzi": "大",
+    "pinyin": "dà",
+    "arti": "besar",
+    "contoh": {
+      "zh": "这个房间很大。",
+      "id": "Ruangan ini sangat besar."
+    }
+  },
+  {
+    "hanzi": "小",
+    "pinyin": "xiǎo",
+    "arti": "kecil",
+    "contoh": {
+      "zh": "我有一只小猫。",
+      "id": "Saya punya seekor kucing kecil."
+    }
+  },
+  {
+    "hanzi": "多",
+    "pinyin": "duō",
+    "arti": "banyak",
+    "contoh": {
+      "zh": "这里人很多。",
+      "id": "Di sini orangnya sangat banyak."
+    }
+  },
+  {
+    "hanzi": "少",
+    "pinyin": "shǎo",
+    "arti": "sedikit",
+    "contoh": {
+      "zh": "他的钱很少。",
+      "id": "Uangnya sangat sedikit."
+    }
+  },
+  {
+    "hanzi": "冷",
+    "pinyin": "lěng",
+    "arti": "dingin",
+    "contoh": {
+      "zh": "今天很冷。",
+      "id": "Hari ini sangat dingin."
+    }
+  },
+  {
+    "hanzi": "热",
+    "pinyin": "rè",
+    "arti": "panas",
+    "contoh": {
+      "zh": "北京的夏天很热。",
+      "id": "Musim panas di Beijing sangat panas."
+    }
+  },
+  {
+    "hanzi": "高兴",
+    "pinyin": "gāoxìng",
+    "arti": "senang, gembira",
+    "contoh": {
+      "zh": "我今天很高兴。",
+      "id": "Saya hari ini sangat senang."
+    }
+  },
+  {
+    "hanzi": "漂亮",
+    "pinyin": "piàoliang",
+    "arti": "cantik, indah",
+    "contoh": {
+      "zh": "这朵花很漂亮。",
+      "id": "Bunga ini sangat cantik."
+    }
+  },
+  {
+    "hanzi": "人",
+    "pinyin": "rén",
+    "arti": "orang",
+    "contoh": {
+      "zh": "那个人是我爸爸。",
+      "id": "Orang itu adalah ayah saya."
+    }
+  },
+  {
+    "hanzi": "朋友",
+    "pinyin": "péngyou",
+    "arti": "teman",
+    "contoh": {
+      "zh": "她是我的好朋友。",
+      "id": "Dia adalah teman baik saya."
+    }
+  },
+  {
+    "hanzi": "同学",
+    "pinyin": "tóngxué",
+    "arti": "teman sekelas",
+    "contoh": {
+      "zh": "他是我的同学。",
+      "id": "Dia adalah teman sekelas saya."
+    }
+  },
+  {
+    "hanzi": "老师",
+    "pinyin": "lǎoshī",
+    "arti": "guru",
+    "contoh": {
+      "zh": "王老师很好。",
+      "id": "Guru Wang sangat baik."
+    }
+  },
+  {
+    "hanzi": "学生",
+    "pinyin": "xuéshēng",
+    "arti": "murid, siswa",
+    "contoh": {
+      "zh": "我是学生。",
+      "id": "Saya adalah murid."
+    }
+  },
+  {
+    "hanzi": "医生",
+    "pinyin": "yīshēng",
+    "arti": "dokter",
+    "contoh": {
+      "zh": "他是一个医生。",
+      "id": "Dia adalah seorang dokter."
+    }
+  },
+  {
+    "hanzi": "爸爸",
+    "pinyin": "bàba",
+    "arti": "ayah",
+    "contoh": {
+      "zh": "我爸爸在工作。",
+      "id": "Ayah saya sedang bekerja."
+    }
+  },
+  {
+    "hanzi": "妈妈",
+    "pinyin": "māma",
+    "arti": "ibu",
+    "contoh": {
+      "zh": "妈妈在做饭。",
+      "id": "Ibu sedang memasak."
+    }
+  },
+  {
+    "hanzi": "儿子",
+    "pinyin": "érzi",
+    "arti": "anak laki-laki",
+    "contoh": {
+      "zh": "他的儿子三岁了。",
+      "id": "Anak laki-lakinya sudah tiga tahun."
+    }
+  },
+  {
+    "hanzi": "女儿",
+    "pinyin": "nǚ'ér",
+    "arti": "anak perempuan",
+    "contoh": {
+      "zh": "我的女儿很可爱。",
+      "id": "Anak perempuan saya sangat lucu."
+    }
+  },
+  {
+    "hanzi": "先生",
+    "pinyin": "xiānsheng",
+    "arti": "Tuan, Bapak",
+    "contoh": {
+      "zh": "李先生你好。",
+      "id": "Halo Bapak Li."
+    }
+  },
+  {
+    "hanzi": "小姐",
+    "pinyin": "xiǎojiě",
+    "arti": "Nona",
+    "contoh": {
+      "zh": "张小姐请进。",
+      "id": "Nona Zhang, silakan masuk."
+    }
+  },
+  {
+    "hanzi": "一",
+    "pinyin": "yī",
+    "arti": "satu",
+    "contoh": {
+      "zh": "我有一个弟弟。",
+      "id": "Saya punya seorang adik laki-laki."
+    }
+  },
+  {
+    "hanzi": "二",
+    "pinyin": "èr",
+    "arti": "dua",
+    "contoh": {
+      "zh": "他有二十块钱。",
+      "id": "Dia punya dua puluh yuan."
+    }
+  },
+  {
+    "hanzi": "三",
+    "pinyin": "sān",
+    "arti": "tiga",
+    "contoh": {
+      "zh": "我买了三本书。",
+      "id": "Saya membeli tiga buku."
+    }
+  },
+  {
+    "hanzi": "四",
+    "pinyin": "sì",
+    "arti": "empat",
+    "contoh": {
+      "zh": "我家有四口人。",
+      "id": "Keluarga saya ada empat orang."
+    }
+  },
+  {
+    "hanzi": "五",
+    "pinyin": "wǔ",
+    "arti": "lima",
+    "contoh": {
+      "zh": "现在五点了。",
+      "id": "Sekarang sudah jam lima."
+    }
+  },
+  {
+    "hanzi": "六",
+    "pinyin": "liù",
+    "arti": "enam",
+    "contoh": {
+      "zh": "他六岁了。",
+      "id": "Dia sudah enam tahun."
+    }
+  },
+  {
+    "hanzi": "七",
+    "pinyin": "qī",
+    "arti": "tujuh",
+    "contoh": {
+      "zh": "一个星期有七天。",
+      "id": "Satu minggu ada tujuh hari."
+    }
+  },
+  {
+    "hanzi": "八",
+    "pinyin": "bā",
+    "arti": "delapan",
+    "contoh": {
+      "zh": "我八点上课。",
+      "id": "Saya masuk kelas jam delapan."
+    }
+  },
+  {
+    "hanzi": "九",
+    "pinyin": "jiǔ",
+    "arti": "sembilan",
+    "contoh": {
+      "zh": "今天九月九号。",
+      "id": "Hari ini tanggal sembilan bulan sembilan."
+    }
+  },
+  {
+    "hanzi": "十",
+    "pinyin": "shí",
+    "arti": "sepuluh",
+    "contoh": {
+      "zh": "我十点睡觉。",
+      "id": "Saya tidur jam sepuluh."
+    }
+  },
+  {
+    "hanzi": "零",
+    "pinyin": "líng",
+    "arti": "nol",
+    "contoh": {
+      "zh": "今天零度。",
+      "id": "Hari ini nol derajat."
+    }
+  },
+  {
+    "hanzi": "两",
+    "pinyin": "liǎng",
+    "arti": "dua (untuk benda)",
+    "contoh": {
+      "zh": "我有两个孩子。",
+      "id": "Saya punya dua anak."
+    }
+  },
+  {
+    "hanzi": "百",
+    "pinyin": "bǎi",
+    "arti": "ratus",
+    "contoh": {
+      "zh": "这本书一百块。",
+      "id": "Buku ini seratus yuan."
+    }
+  },
+  {
+    "hanzi": "年",
+    "pinyin": "nián",
+    "arti": "tahun",
+    "contoh": {
+      "zh": "今年是二零二六年。",
+      "id": "Tahun ini adalah tahun 2026."
+    }
+  },
+  {
+    "hanzi": "月",
+    "pinyin": "yuè",
+    "arti": "bulan",
+    "contoh": {
+      "zh": "我三月去中国。",
+      "id": "Saya pergi ke Tiongkok bulan Maret."
+    }
+  },
+  {
+    "hanzi": "日",
+    "pinyin": "rì",
+    "arti": "hari, tanggal",
+    "contoh": {
+      "zh": "今天几月几日？",
+      "id": "Hari ini tanggal berapa?"
+    }
+  },
+  {
+    "hanzi": "星期",
+    "pinyin": "xīngqī",
+    "arti": "minggu",
+    "contoh": {
+      "zh": "今天星期几？",
+      "id": "Hari ini hari apa?"
+    }
+  },
+  {
+    "hanzi": "今天",
+    "pinyin": "jīntiān",
+    "arti": "hari ini",
+    "contoh": {
+      "zh": "今天星期一。",
+      "id": "Hari ini hari Senin."
+    }
+  },
+  {
+    "hanzi": "明天",
+    "pinyin": "míngtiān",
+    "arti": "besok",
+    "contoh": {
+      "zh": "明天你有空吗？",
+      "id": "Besok kamu ada waktu?"
+    }
+  },
+  {
+    "hanzi": "昨天",
+    "pinyin": "zuótiān",
+    "arti": "kemarin",
+    "contoh": {
+      "zh": "昨天我去了商店。",
+      "id": "Kemarin saya pergi ke toko."
+    }
+  },
+  {
+    "hanzi": "上午",
+    "pinyin": "shàngwǔ",
+    "arti": "pagi (sebelum siang)",
+    "contoh": {
+      "zh": "上午我在学校。",
+      "id": "Pagi hari saya di sekolah."
+    }
+  },
+  {
+    "hanzi": "下午",
+    "pinyin": "xiàwǔ",
+    "arti": "siang / sore",
+    "contoh": {
+      "zh": "下午你做什么？",
+      "id": "Sore hari kamu melakukan apa?"
+    }
+  },
+  {
+    "hanzi": "时候",
+    "pinyin": "shíhou",
+    "arti": "waktu, saat",
+    "contoh": {
+      "zh": "你什么时候来？",
+      "id": "Kamu datang kapan?"
+    }
+  },
+  {
+    "hanzi": "点",
+    "pinyin": "diǎn",
+    "arti": "jam (waktu)",
+    "contoh": {
+      "zh": "现在几点？",
+      "id": "Sekarang jam berapa?"
+    }
+  },
+  {
+    "hanzi": "分钟",
+    "pinyin": "fēnzhōng",
+    "arti": "menit",
+    "contoh": {
+      "zh": "等我五分钟。",
+      "id": "Tunggu saya lima menit."
+    }
+  },
+  {
+    "hanzi": "现在",
+    "pinyin": "xiànzài",
+    "arti": "sekarang",
+    "contoh": {
+      "zh": "现在我们上课。",
+      "id": "Sekarang kita masuk kelas."
+    }
+  },
+  {
+    "hanzi": "中国",
+    "pinyin": "Zhōngguó",
+    "arti": "Tiongkok",
+    "contoh": {
+      "zh": "我想去中国。",
+      "id": "Saya ingin pergi ke Tiongkok."
+    }
+  },
+  {
+    "hanzi": "北京",
+    "pinyin": "Běijīng",
+    "arti": "Beijing",
+    "contoh": {
+      "zh": "北京很大。",
+      "id": "Beijing sangat besar."
+    }
+  },
+  {
+    "hanzi": "家",
+    "pinyin": "jiā",
+    "arti": "rumah, keluarga",
+    "contoh": {
+      "zh": "我的家在这里。",
+      "id": "Rumah saya di sini."
+    }
+  },
+  {
+    "hanzi": "学校",
+    "pinyin": "xuéxiào",
+    "arti": "sekolah",
+    "contoh": {
+      "zh": "我的学校很大。",
+      "id": "Sekolah saya sangat besar."
+    }
+  },
+  {
+    "hanzi": "饭店",
+    "pinyin": "fàndiàn",
+    "arti": "restoran, hotel",
+    "contoh": {
+      "zh": "我们在饭店吃饭。",
+      "id": "Kami makan di restoran."
+    }
+  },
+  {
+    "hanzi": "商店",
+    "pinyin": "shāngdiàn",
+    "arti": "toko",
+    "contoh": {
+      "zh": "我去商店买东西。",
+      "id": "Saya pergi ke toko membeli barang."
+    }
+  },
+  {
+    "hanzi": "医院",
+    "pinyin": "yīyuàn",
+    "arti": "rumah sakit",
+    "contoh": {
+      "zh": "他在医院工作。",
+      "id": "Dia bekerja di rumah sakit."
+    }
+  },
+  {
+    "hanzi": "前面",
+    "pinyin": "qiánmiàn",
+    "arti": "di depan",
+    "contoh": {
+      "zh": "学校在前面。",
+      "id": "Sekolah ada di depan."
+    }
+  },
+  {
+    "hanzi": "后面",
+    "pinyin": "hòumiàn",
+    "arti": "di belakang",
+    "contoh": {
+      "zh": "我坐在后面。",
+      "id": "Saya duduk di belakang."
+    }
+  },
+  {
+    "hanzi": "里面",
+    "pinyin": "lǐmiàn",
+    "arti": "di dalam",
+    "contoh": {
+      "zh": "猫在里面。",
+      "id": "Kucing ada di dalam."
+    }
+  },
+  {
+    "hanzi": "上",
+    "pinyin": "shàng",
+    "arti": "atas",
+    "contoh": {
+      "zh": "书在桌子上。",
+      "id": "Buku ada di atas meja."
+    }
+  },
+  {
+    "hanzi": "下",
+    "pinyin": "xià",
+    "arti": "bawah",
+    "contoh": {
+      "zh": "猫在桌子下。",
+      "id": "Kucing ada di bawah meja."
+    }
+  },
+  {
+    "hanzi": "水",
+    "pinyin": "shuǐ",
+    "arti": "air",
+    "contoh": {
+      "zh": "请给我一杯水。",
+      "id": "Tolong beri saya segelas air."
+    }
+  },
+  {
+    "hanzi": "茶",
+    "pinyin": "chá",
+    "arti": "teh",
+    "contoh": {
+      "zh": "你想喝茶吗？",
+      "id": "Kamu mau minum teh?"
+    }
+  },
+  {
+    "hanzi": "米饭",
+    "pinyin": "mǐfàn",
+    "arti": "nasi",
+    "contoh": {
+      "zh": "我想吃米饭。",
+      "id": "Saya mau makan nasi."
+    }
+  },
+  {
+    "hanzi": "菜",
+    "pinyin": "cài",
+    "arti": "sayur, masakan",
+    "contoh": {
+      "zh": "这个菜很好吃。",
+      "id": "Masakan ini sangat enak."
+    }
+  },
+  {
+    "hanzi": "苹果",
+    "pinyin": "píngguǒ",
+    "arti": "apel",
+    "contoh": {
+      "zh": "我买了一个苹果。",
+      "id": "Saya membeli sebuah apel."
+    }
+  },
+  {
+    "hanzi": "杯子",
+    "pinyin": "bēizi",
+    "arti": "gelas, cangkir",
+    "contoh": {
+      "zh": "这个杯子是我的。",
+      "id": "Gelas ini punya saya."
+    }
+  },
+  {
+    "hanzi": "水果",
+    "pinyin": "shuǐguǒ",
+    "arti": "buah-buahan",
+    "contoh": {
+      "zh": "我喜欢吃水果。",
+      "id": "Saya suka makan buah."
+    }
+  },
+  {
+    "hanzi": "钱",
+    "pinyin": "qián",
+    "arti": "uang",
+    "contoh": {
+      "zh": "你有多少钱？",
+      "id": "Kamu punya berapa uang?"
+    }
+  },
+  {
+    "hanzi": "东西",
+    "pinyin": "dōngxi",
+    "arti": "barang, benda",
+    "contoh": {
+      "zh": "你买了什么东西？",
+      "id": "Kamu membeli barang apa?"
+    }
+  },
+  {
+    "hanzi": "书",
+    "pinyin": "shū",
+    "arti": "buku",
+    "contoh": {
+      "zh": "这本书很好。",
+      "id": "Buku ini sangat bagus."
+    }
+  },
+  {
+    "hanzi": "电脑",
+    "pinyin": "diànnǎo",
+    "arti": "komputer",
+    "contoh": {
+      "zh": "我用电脑工作。",
+      "id": "Saya menggunakan komputer untuk bekerja."
+    }
+  },
+  {
+    "hanzi": "电视",
+    "pinyin": "diànshì",
+    "arti": "televisi",
+    "contoh": {
+      "zh": "我在看电视。",
+      "id": "Saya sedang menonton televisi."
+    }
+  },
+  {
+    "hanzi": "电影",
+    "pinyin": "diànyǐng",
+    "arti": "film",
+    "contoh": {
+      "zh": "这个电影很好看。",
+      "id": "Film ini sangat bagus."
+    }
+  },
+  {
+    "hanzi": "天气",
+    "pinyin": "tiānqì",
+    "arti": "cuaca",
+    "contoh": {
+      "zh": "今天天气怎么样？",
+      "id": "Cuaca hari ini bagaimana?"
+    }
+  },
+  {
+    "hanzi": "猫",
+    "pinyin": "māo",
+    "arti": "kucing",
+    "contoh": {
+      "zh": "我家有一只猫。",
+      "id": "Rumah saya ada seekor kucing."
+    }
+  },
+  {
+    "hanzi": "狗",
+    "pinyin": "gǒu",
+    "arti": "anjing",
+    "contoh": {
+      "zh": "他的狗很大。",
+      "id": "Anjingnya sangat besar."
+    }
+  },
+  {
+    "hanzi": "衣服",
+    "pinyin": "yīfu",
+    "arti": "pakaian, baju",
+    "contoh": {
+      "zh": "我想买衣服。",
+      "id": "Saya ingin membeli baju."
+    }
+  },
+  {
+    "hanzi": "桌子",
+    "pinyin": "zhuōzi",
+    "arti": "meja",
+    "contoh": {
+      "zh": "书在桌子上。",
+      "id": "Buku ada di atas meja."
+    }
+  },
+  {
+    "hanzi": "椅子",
+    "pinyin": "yǐzi",
+    "arti": "kursi",
+    "contoh": {
+      "zh": "请坐这把椅子。",
+      "id": "Silakan duduk di kursi ini."
+    }
+  },
+  {
+    "hanzi": "名字",
+    "pinyin": "míngzi",
+    "arti": "nama",
+    "contoh": {
+      "zh": "你的名字很好听。",
+      "id": "Namamu terdengar bagus."
+    }
+  },
+  {
+    "hanzi": "汉语",
+    "pinyin": "Hànyǔ",
+    "arti": "Bahasa Mandarin",
+    "contoh": {
+      "zh": "我在学汉语。",
+      "id": "Saya sedang belajar Bahasa Mandarin."
+    }
+  },
+  {
+    "hanzi": "字",
+    "pinyin": "zì",
+    "arti": "karakter, huruf",
+    "contoh": {
+      "zh": "这个字怎么写？",
+      "id": "Karakter ini bagaimana cara menulisnya?"
+    }
+  },
+  {
+    "hanzi": "飞机",
+    "pinyin": "fēijī",
+    "arti": "pesawat",
+    "contoh": {
+      "zh": "我坐飞机去北京。",
+      "id": "Saya naik pesawat ke Beijing."
+    }
+  },
+  {
+    "hanzi": "出租车",
+    "pinyin": "chūzūchē",
+    "arti": "taksi",
+    "contoh": {
+      "zh": "我们坐出租车吧。",
+      "id": "Ayo kita naik taksi."
+    }
+  },
+  {
+    "hanzi": "火车站",
+    "pinyin": "huǒchēzhàn",
+    "arti": "stasiun kereta",
+    "contoh": {
+      "zh": "火车站在前面。",
+      "id": "Stasiun kereta ada di depan."
+    }
+  },
+  {
+    "hanzi": "不",
+    "pinyin": "bù",
+    "arti": "tidak",
+    "contoh": {
+      "zh": "我不喜欢。",
+      "id": "Saya tidak suka."
+    }
+  },
+  {
+    "hanzi": "没",
+    "pinyin": "méi",
+    "arti": "tidak (sudah)",
+    "contoh": {
+      "zh": "我没有钱。",
+      "id": "Saya tidak punya uang."
+    }
+  },
+  {
+    "hanzi": "很",
+    "pinyin": "hěn",
+    "arti": "sangat",
+    "contoh": {
+      "zh": "今天很热。",
+      "id": "Hari ini sangat panas."
+    }
+  },
+  {
+    "hanzi": "太",
+    "pinyin": "tài",
+    "arti": "terlalu",
+    "contoh": {
+      "zh": "这个太贵了。",
+      "id": "Ini terlalu mahal."
+    }
+  },
+  {
+    "hanzi": "都",
+    "pinyin": "dōu",
+    "arti": "semua",
+    "contoh": {
+      "zh": "我们都是学生。",
+      "id": "Kami semua adalah murid."
+    }
+  },
+  {
+    "hanzi": "也",
+    "pinyin": "yě",
+    "arti": "juga",
+    "contoh": {
+      "zh": "我也喜欢。",
+      "id": "Saya juga suka."
+    }
+  },
+  {
+    "hanzi": "还",
+    "pinyin": "hái",
+    "arti": "masih, juga",
+    "contoh": {
+      "zh": "他还在学校。",
+      "id": "Dia masih di sekolah."
+    }
+  },
+  {
+    "hanzi": "和",
+    "pinyin": "hé",
+    "arti": "dan",
+    "contoh": {
+      "zh": "我和他是朋友。",
+      "id": "Saya dan dia adalah teman."
+    }
+  },
+  {
+    "hanzi": "在",
+    "pinyin": "zài",
+    "arti": "di, sedang",
+    "contoh": {
+      "zh": "我在家。",
+      "id": "Saya di rumah."
+    }
+  },
+  {
+    "hanzi": "的",
+    "pinyin": "de",
+    "arti": "(partikel kepunyaan)",
+    "contoh": {
+      "zh": "这是我的书。",
+      "id": "Ini adalah buku saya."
+    }
+  },
+  {
+    "hanzi": "了",
+    "pinyin": "le",
+    "arti": "(partikel perubahan)",
+    "contoh": {
+      "zh": "我吃了饭。",
+      "id": "Saya sudah makan."
+    }
+  },
+  {
+    "hanzi": "吗",
+    "pinyin": "ma",
+    "arti": "(partikel pertanyaan)",
+    "contoh": {
+      "zh": "你好吗？",
+      "id": "Apa kabar?"
+    }
+  },
+  {
+    "hanzi": "呢",
+    "pinyin": "ne",
+    "arti": "(partikel balik tanya)",
+    "contoh": {
+      "zh": "你呢？",
+      "id": "Kalau kamu?"
+    }
+  },
+  {
+    "hanzi": "个",
+    "pinyin": "gè",
+    "arti": "(kata bantu bilangan umum)",
+    "contoh": {
+      "zh": "一个人。",
+      "id": "Satu orang."
+    }
+  },
+  {
+    "hanzi": "岁",
+    "pinyin": "suì",
+    "arti": "tahun (usia)",
+    "contoh": {
+      "zh": "你几岁？",
+      "id": "Kamu berapa tahun?"
+    }
+  },
+  {
+    "hanzi": "本",
+    "pinyin": "běn",
+    "arti": "(kata bantu bilangan buku)",
+    "contoh": {
+      "zh": "两本书。",
+      "id": "Dua buah buku."
+    }
+  },
+  {
+    "hanzi": "些",
+    "pinyin": "xiē",
+    "arti": "beberapa",
+    "contoh": {
+      "zh": "一些水果。",
+      "id": "Beberapa buah."
+    }
+  },
+  {
+    "hanzi": "块",
+    "pinyin": "kuài",
+    "arti": "yuan (satuan uang)",
+    "contoh": {
+      "zh": "十块钱。",
+      "id": "Sepuluh yuan."
+    }
+  },
+  {
+    "hanzi": "对",
+    "pinyin": "duì",
+    "arti": "benar, terhadap",
+    "contoh": {
+      "zh": "你说得对。",
+      "id": "Yang kamu katakan benar."
+    }
+  },
+  {
+    "hanzi": "几",
+    "pinyin": "jǐ",
+    "arti": "berapa",
+    "contoh": {
+      "zh": "你几岁？",
+      "id": "Kamu berapa tahun?"
+    }
+  },
+  {
+    "hanzi": "多少",
+    "pinyin": "duōshao",
+    "arti": "berapa (banyak)",
+    "contoh": {
+      "zh": "这个多少钱？",
+      "id": "Ini berapa harganya?"
+    }
+  },
+  {
+    "hanzi": "怎么",
+    "pinyin": "zěnme",
+    "arti": "bagaimana",
+    "contoh": {
+      "zh": "这个字怎么读？",
+      "id": "Karakter ini bagaimana cara membacanya?"
+    }
+  },
+  {
+    "hanzi": "怎么样",
+    "pinyin": "zěnmeyàng",
+    "arti": "bagaimana (keadaan)",
+    "contoh": {
+      "zh": "你怎么样？",
+      "id": "Kamu bagaimana kabarnya?"
+    }
+  },
+  {
+    "hanzi": "为什么",
+    "pinyin": "wèishénme",
+    "arti": "mengapa, kenapa",
+    "contoh": {
+      "zh": "你为什么不来？",
+      "id": "Kenapa kamu tidak datang?"
+    }
+  },
+  {
+    "hanzi": "哪里",
+    "pinyin": "nǎlǐ",
+    "arti": "di mana",
+    "contoh": {
+      "zh": "你家在哪里？",
+      "id": "Rumahmu di mana?"
+    }
+  },
+  {
+    "hanzi": "请",
+    "pinyin": "qǐng",
+    "arti": "silakan, tolong",
+    "contoh": {
+      "zh": "请坐。",
+      "id": "Silakan duduk."
+    }
+  },
+  {
+    "hanzi": "谢谢",
+    "pinyin": "xièxie",
+    "arti": "terima kasih",
+    "contoh": {
+      "zh": "谢谢你的帮助。",
+      "id": "Terima kasih atas bantuanmu."
+    }
+  },
+  {
+    "hanzi": "不客气",
+    "pinyin": "bú kèqi",
+    "arti": "sama-sama",
+    "contoh": {
+      "zh": "不客气！",
+      "id": "Sama-sama!"
+    }
+  },
+  {
+    "hanzi": "再见",
+    "pinyin": "zàijiàn",
+    "arti": "sampai jumpa",
+    "contoh": {
+      "zh": "明天再见！",
+      "id": "Sampai jumpa besok!"
+    }
+  },
+  {
+    "hanzi": "对不起",
+    "pinyin": "duìbuqǐ",
+    "arti": "maaf",
+    "contoh": {
+      "zh": "对不起，我迟到了。",
+      "id": "Maaf, saya terlambat."
+    }
+  },
+  {
+    "hanzi": "没关系",
+    "pinyin": "méi guānxi",
+    "arti": "tidak apa-apa",
+    "contoh": {
+      "zh": "没关系，没问题。",
+      "id": "Tidak apa-apa, tidak masalah."
+    }
+  },
+  {
+    "hanzi": "你好",
+    "pinyin": "nǐ hǎo",
+    "arti": "halo, apa kabar",
+    "contoh": {
+      "zh": "你好，很高兴认识你。",
+      "id": "Halo, senang berkenalan denganmu."
+    }
+  },
+  {
+    "hanzi": "号",
+    "pinyin": "hào",
+    "arti": "tanggal, nomor",
+    "contoh": {
+      "zh": "今天几号？",
+      "id": "Hari ini tanggal berapa?"
+    }
+  },
+  {
+    "hanzi": "岁",
+    "pinyin": "suì",
+    "arti": "tahun (umur)",
+    "contoh": {
+      "zh": "她二十岁了。",
+      "id": "Dia sudah dua puluh tahun."
+    }
+  },
+  {
+    "hanzi": "电话",
+    "pinyin": "diànhuà",
+    "arti": "telepon",
+    "contoh": {
+      "zh": "你的电话号码是多少？",
+      "id": "Nomor teleponmu berapa?"
+    }
+  },
+  {
+    "hanzi": "喂",
+    "pinyin": "wèi",
+    "arti": "halo (di telepon)",
+    "contoh": {
+      "zh": "喂，你好！",
+      "id": "Halo (di telepon)!"
+    }
+  },
+  {
+    "hanzi": "中午",
+    "pinyin": "zhōngwǔ",
+    "arti": "siang",
+    "contoh": {
+      "zh": "中午我们吃饭。",
+      "id": "Siang hari kami makan."
+    }
+  },
+  {
+    "hanzi": "太…了",
+    "pinyin": "tài...le",
+    "arti": "terlalu...",
+    "contoh": {
+      "zh": "太好了！",
+      "id": "Bagus sekali!"
+    }
+  },
+  {
+    "hanzi": "看见",
+    "pinyin": "kànjiàn",
+    "arti": "melihat (berhasil)",
+    "contoh": {
+      "zh": "我看见他了。",
+      "id": "Saya melihat dia."
+    }
+  },
+  {
+    "hanzi": "高",
+    "pinyin": "gāo",
+    "arti": "tinggi",
+    "contoh": {
+      "zh": "他很高。",
+      "id": "Dia sangat tinggi."
+    }
+  },
+  {
+    "hanzi": "下",
+    "pinyin": "xià",
+    "arti": "turun",
+    "contoh": {
+      "zh": "下车。",
+      "id": "Turun dari kendaraan."
+    }
+  },
+  {
+    "hanzi": "点",
+    "pinyin": "diǎn",
+    "arti": "sedikit",
+    "contoh": {
+      "zh": "请等一下。",
+      "id": "Tolong tunggu sebentar."
+    }
+  }
+]

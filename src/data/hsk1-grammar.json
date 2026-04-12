@@ -1,0 +1,287 @@
+[
+  {
+    "title": "Kalimat dengan 是 (shì) — \"adalah\"",
+    "pattern": "Subjek + 是 + Objek",
+    "explanation": "Kata 是 (shì) digunakan seperti kata \"adalah\" dalam Bahasa Indonesia. Dipakai untuk memperkenalkan diri, menyatakan identitas, atau menjelaskan sesuatu.",
+    "examples": [
+      {
+        "zh": "我是学生。",
+        "id": "Saya adalah murid."
+      },
+      {
+        "zh": "他是老师。",
+        "id": "Dia adalah guru."
+      },
+      {
+        "zh": "这是我的书。",
+        "id": "Ini adalah buku saya."
+      }
+    ]
+  },
+  {
+    "title": "Pertanyaan dengan 吗 (ma)",
+    "pattern": "Kalimat pernyataan + 吗？",
+    "explanation": "Cara paling mudah membuat pertanyaan ya/tidak dalam Bahasa Mandarin: tambahkan 吗 di akhir kalimat pernyataan. Tidak perlu mengubah urutan kata.",
+    "examples": [
+      {
+        "zh": "你是学生吗？",
+        "id": "Apakah kamu murid?"
+      },
+      {
+        "zh": "他好吗？",
+        "id": "Apakah dia baik-baik saja?"
+      },
+      {
+        "zh": "你喜欢中国菜吗？",
+        "id": "Apakah kamu suka masakan Tiongkok?"
+      }
+    ]
+  },
+  {
+    "title": "Negasi dengan 不 (bù) dan 没 (méi)",
+    "pattern": "Subjek + 不/没 + Kata Kerja",
+    "explanation": "Gunakan 不 untuk menolak atau menyangkal sesuatu yang bersifat kebiasaan, kemauan, atau keadaan. Gunakan 没 untuk menyangkal bahwa sesuatu sudah terjadi, atau untuk mengatakan \"tidak punya\" (没有).",
+    "examples": [
+      {
+        "zh": "我不喜欢咖啡。",
+        "id": "Saya tidak suka kopi."
+      },
+      {
+        "zh": "她没去学校。",
+        "id": "Dia tidak pergi ke sekolah."
+      },
+      {
+        "zh": "我没有钱。",
+        "id": "Saya tidak punya uang."
+      }
+    ]
+  },
+  {
+    "title": "Partikel 的 (de) — Kepunyaan",
+    "pattern": "Pemilik + 的 + Benda",
+    "explanation": "Partikel 的 menunjukkan kepemilikan, seperti \"punya\" atau \"milik\" dalam Bahasa Indonesia. Mirip dengan akhiran \"-nya\" atau kata \"punya\".",
+    "examples": [
+      {
+        "zh": "我的书。",
+        "id": "Buku saya."
+      },
+      {
+        "zh": "她的猫很可爱。",
+        "id": "Kucingnya sangat lucu."
+      },
+      {
+        "zh": "这是谁的电脑？",
+        "id": "Ini komputer siapa?"
+      }
+    ]
+  },
+  {
+    "title": "Kata Keterangan 很 (hěn) — \"sangat\"",
+    "pattern": "Subjek + 很 + Kata Sifat",
+    "explanation": "Dalam Bahasa Mandarin, kata sifat tidak langsung mengikuti subjek. Kamu perlu menambahkan 很 di antaranya. Kadang 很 tidak berarti \"sangat\" secara harfiah, tapi hanya sebagai penghubung.",
+    "examples": [
+      {
+        "zh": "她很漂亮。",
+        "id": "Dia sangat cantik."
+      },
+      {
+        "zh": "今天很冷。",
+        "id": "Hari ini sangat dingin."
+      },
+      {
+        "zh": "这本书很好。",
+        "id": "Buku ini sangat bagus."
+      }
+    ]
+  },
+  {
+    "title": "Kata Tanya 什么 (shénme), 谁 (shéi), 哪里 (nǎlǐ)",
+    "pattern": "Subjek + Kata Kerja + 什么/谁/哪里？",
+    "explanation": "Kata tanya dalam Bahasa Mandarin diletakkan di posisi jawaban yang diharapkan, BUKAN di awal kalimat seperti Bahasa Indonesia/Inggris.",
+    "examples": [
+      {
+        "zh": "你叫什么名字？",
+        "id": "Nama kamu siapa?"
+      },
+      {
+        "zh": "他是谁？",
+        "id": "Dia siapa?"
+      },
+      {
+        "zh": "你住在哪里？",
+        "id": "Kamu tinggal di mana?"
+      }
+    ]
+  },
+  {
+    "title": "Menyatakan Kepemilikan dengan 有 (yǒu)",
+    "pattern": "Subjek + 有 + Objek",
+    "explanation": "有 berarti \"punya\" atau \"ada\". Bentuk negatifnya selalu 没有 (méiyǒu), bukan 不有.",
+    "examples": [
+      {
+        "zh": "我有一个姐姐。",
+        "id": "Saya punya seorang kakak perempuan."
+      },
+      {
+        "zh": "你有电脑吗？",
+        "id": "Apakah kamu punya komputer?"
+      },
+      {
+        "zh": "学校里有很多学生。",
+        "id": "Di dalam sekolah ada banyak murid."
+      }
+    ]
+  },
+  {
+    "title": "Menunjukkan Lokasi dengan 在 (zài)",
+    "pattern": "Subjek + 在 + Tempat",
+    "explanation": "在 digunakan untuk menunjukkan lokasi (\"di mana sesuatu berada\") atau sedang melakukan sesuatu (\"sedang\").",
+    "examples": [
+      {
+        "zh": "我在家。",
+        "id": "Saya di rumah."
+      },
+      {
+        "zh": "他在学校学习。",
+        "id": "Dia belajar di sekolah."
+      },
+      {
+        "zh": "猫在桌子下面。",
+        "id": "Kucing ada di bawah meja."
+      }
+    ]
+  },
+  {
+    "title": "Kata Bantu Bilangan 个 (gè), 本 (běn), dll.",
+    "pattern": "Angka + Kata Bantu Bilangan + Kata Benda",
+    "explanation": "Bahasa Mandarin membutuhkan kata bantu bilangan (measure word) di antara angka dan kata benda. 个 adalah yang paling umum dan bisa dipakai untuk banyak hal. 本 khusus untuk buku, 只 untuk hewan kecil.",
+    "examples": [
+      {
+        "zh": "一个人。",
+        "id": "Satu orang."
+      },
+      {
+        "zh": "三本书。",
+        "id": "Tiga buah buku."
+      },
+      {
+        "zh": "两只猫。",
+        "id": "Dua ekor kucing."
+      }
+    ]
+  },
+  {
+    "title": "Menyatakan Waktu",
+    "pattern": "Subjek + Waktu + Kata Kerja + Objek",
+    "explanation": "Keterangan waktu dalam Bahasa Mandarin bisa diletakkan SEBELUM kata kerja atau di AWAL kalimat (setelah subjek). Urutan: tahun → bulan → tanggal → hari → jam.",
+    "examples": [
+      {
+        "zh": "我明天去学校。",
+        "id": "Saya besok pergi ke sekolah."
+      },
+      {
+        "zh": "他下午三点来。",
+        "id": "Dia datang jam tiga sore."
+      },
+      {
+        "zh": "我们星期六不上课。",
+        "id": "Kami hari Sabtu tidak ada kelas."
+      }
+    ]
+  },
+  {
+    "title": "Partikel 了 (le) — Perubahan/Selesai",
+    "pattern": "Subjek + Kata Kerja + 了 + Objek",
+    "explanation": "了 menandakan bahwa suatu aksi sudah selesai dilakukan, atau ada perubahan keadaan. Bisa diletakkan setelah kata kerja atau di akhir kalimat.",
+    "examples": [
+      {
+        "zh": "我吃了饭。",
+        "id": "Saya sudah makan."
+      },
+      {
+        "zh": "他来了。",
+        "id": "Dia sudah datang."
+      },
+      {
+        "zh": "下雨了。",
+        "id": "Sudah mulai hujan."
+      }
+    ]
+  },
+  {
+    "title": "Kemampuan dengan 会 (huì) dan 能 (néng)",
+    "pattern": "Subjek + 会/能 + Kata Kerja",
+    "explanation": "会 menunjukkan kemampuan yang dipelajari (bisa karena sudah belajar). 能 menunjukkan kemampuan fisik atau izin (boleh/mampu).",
+    "examples": [
+      {
+        "zh": "我会说中文。",
+        "id": "Saya bisa berbicara Bahasa Mandarin."
+      },
+      {
+        "zh": "你能来吗？",
+        "id": "Kamu bisa datang?"
+      },
+      {
+        "zh": "他不会开车。",
+        "id": "Dia tidak bisa mengendarai mobil."
+      }
+    ]
+  },
+  {
+    "title": "Keinginan dengan 想 (xiǎng)",
+    "pattern": "Subjek + 想 + Kata Kerja + Objek",
+    "explanation": "想 berarti \"ingin\" atau \"mau\". Diletakkan sebelum kata kerja utama.",
+    "examples": [
+      {
+        "zh": "我想喝水。",
+        "id": "Saya ingin minum air."
+      },
+      {
+        "zh": "你想去哪里？",
+        "id": "Kamu ingin pergi ke mana?"
+      },
+      {
+        "zh": "她想买新衣服。",
+        "id": "Dia ingin membeli baju baru."
+      }
+    ]
+  },
+  {
+    "title": "也 (yě) dan 都 (dōu) — \"juga\" dan \"semua\"",
+    "pattern": "Subjek + 也/都 + Kata Kerja",
+    "explanation": "也 berarti \"juga\", selalu diletakkan SEBELUM kata kerja. 都 berarti \"semua\", juga diletakkan sebelum kata kerja. Keduanya tidak pernah diletakkan setelah kata kerja.",
+    "examples": [
+      {
+        "zh": "我也是学生。",
+        "id": "Saya juga murid."
+      },
+      {
+        "zh": "我们都喜欢中国菜。",
+        "id": "Kami semua suka masakan Tiongkok."
+      },
+      {
+        "zh": "他们也都很高兴。",
+        "id": "Mereka juga semua sangat senang."
+      }
+    ]
+  },
+  {
+    "title": "Bertanya Jumlah: 几 (jǐ) dan 多少 (duōshao)",
+    "pattern": "Subjek + 有 + 几/多少 + Kata Bantu Bilangan + Kata Benda？",
+    "explanation": "几 dipakai untuk menanyakan jumlah kecil (biasanya di bawah 10) dan HARUS diikuti kata bantu bilangan. 多少 untuk jumlah besar dan tidak perlu kata bantu bilangan.",
+    "examples": [
+      {
+        "zh": "你几岁？",
+        "id": "Kamu berapa tahun?"
+      },
+      {
+        "zh": "你有几个孩子？",
+        "id": "Kamu punya berapa anak?"
+      },
+      {
+        "zh": "这个多少钱？",
+        "id": "Ini berapa harganya?"
+      }
+    ]
+  }
+]

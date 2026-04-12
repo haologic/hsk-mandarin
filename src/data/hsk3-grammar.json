@@ -1,0 +1,262 @@
+[
+  {
+    "title": "1. 把 (bǎ) — Kalimat 把",
+    "pattern": "Subjek + 把 + Objek + Kata Kerja + Komplemen",
+    "explanation": "Digunakan untuk menunjukkan tindakan yang dilakukan terhadap objek tertentu, menekankan objek yang terkena dampak.",
+    "examples": [
+      {
+        "zh": "请你把门关上。",
+        "id": "Tolong tutup pintunya."
+      },
+      {
+        "zh": "他把作业做完了。",
+        "id": "Dia sudah menyelesaikan PR-nya."
+      }
+    ]
+  },
+  {
+    "title": "2. 被 (bèi) — Kalimat Pasif",
+    "pattern": "Objek + 被 + (Pelaku) + Kata Kerja",
+    "explanation": "Digunakan untuk menyatakan kalimat pasif, mirip \"di-\" dalam bahasa Indonesia.",
+    "examples": [
+      {
+        "zh": "我的手机被弟弟弄坏了。",
+        "id": "Ponsel saya dirusakkan oleh adik."
+      },
+      {
+        "zh": "那本书被借走了。",
+        "id": "Buku itu sudah dipinjam."
+      }
+    ]
+  },
+  {
+    "title": "3. 越来越 (yuè lái yuè) — Semakin...",
+    "pattern": "越来越 + Kata Sifat/Kata Kerja",
+    "explanation": "Menyatakan sesuatu yang berubah secara bertahap, semakin lama semakin...",
+    "examples": [
+      {
+        "zh": "天气越来越冷了。",
+        "id": "Cuaca semakin dingin."
+      },
+      {
+        "zh": "他的中文越来越好了。",
+        "id": "Bahasa Mandarinnya semakin bagus."
+      }
+    ]
+  },
+  {
+    "title": "4. 越...越... (yuè...yuè...) — Semakin... semakin...",
+    "pattern": "越 + A + 越 + B",
+    "explanation": "Dua hal yang meningkat secara bersamaan.",
+    "examples": [
+      {
+        "zh": "我越学越有兴趣。",
+        "id": "Semakin saya belajar semakin tertarik."
+      },
+      {
+        "zh": "路上的车越来越多。",
+        "id": "Mobil di jalan semakin banyak."
+      }
+    ]
+  },
+  {
+    "title": "5. 不但...而且... (búdàn...érqiě...) — Tidak hanya... tapi juga...",
+    "pattern": "不但 + A，而且 + B",
+    "explanation": "Menyatakan penambahan informasi positif.",
+    "examples": [
+      {
+        "zh": "她不但会说中文，而且会写汉字。",
+        "id": "Dia tidak hanya bisa berbicara bahasa Mandarin, tapi juga bisa menulis aksara."
+      }
+    ]
+  },
+  {
+    "title": "6. 虽然...但是... (suīrán...dànshì...) — Meskipun... tapi...",
+    "pattern": "虽然 + A，但是 + B",
+    "explanation": "Menyatakan kontras antara dua hal.",
+    "examples": [
+      {
+        "zh": "虽然很累，但是我很开心。",
+        "id": "Meskipun capek, tapi saya senang."
+      }
+    ]
+  },
+  {
+    "title": "7. 只要...就... (zhǐyào...jiù...) — Asalkan... maka...",
+    "pattern": "只要 + Syarat，就 + Hasil",
+    "explanation": "Menyatakan syarat yang cukup untuk mendapatkan hasil.",
+    "examples": [
+      {
+        "zh": "只要你努力，就能成功。",
+        "id": "Asalkan kamu berusaha keras, pasti bisa berhasil."
+      }
+    ]
+  },
+  {
+    "title": "8. 无论...都... (wúlùn...dōu...) — Tidak peduli... tetap...",
+    "pattern": "无论 + Kondisi，都 + Hasil",
+    "explanation": "Menyatakan hasil tidak berubah dalam kondisi apapun.",
+    "examples": [
+      {
+        "zh": "无论多忙，我都要锻炼身体。",
+        "id": "Tidak peduli seberapa sibuk, saya tetap harus berolahraga."
+      }
+    ]
+  },
+  {
+    "title": "9. 既然...就... (jìrán...jiù...) — Karena sudah... maka...",
+    "pattern": "既然 + Fakta，就 + Kesimpulan",
+    "explanation": "Menyatakan kesimpulan logis berdasarkan fakta yang sudah ada.",
+    "examples": [
+      {
+        "zh": "既然你不喜欢，就不要买了。",
+        "id": "Karena kamu tidak suka, ya jangan beli."
+      }
+    ]
+  },
+  {
+    "title": "10. 对...来说 (duì...lái shuō) — Bagi...",
+    "pattern": "对 + Orang/Benda + 来说",
+    "explanation": "Menyatakan sudut pandang atau perspektif seseorang.",
+    "examples": [
+      {
+        "zh": "对我来说，健康最重要。",
+        "id": "Bagi saya, kesehatan paling penting."
+      }
+    ]
+  },
+  {
+    "title": "11. 连...都/也... (lián...dōu/yě...) — Bahkan... juga/pun...",
+    "pattern": "连 + Objek + 都/也 + Kata Kerja",
+    "explanation": "Menekankan sesuatu yang tidak terduga, \"bahkan\".",
+    "examples": [
+      {
+        "zh": "他连自己的名字都不会写。",
+        "id": "Dia bahkan namanya sendiri pun tidak bisa menulis."
+      }
+    ]
+  },
+  {
+    "title": "12. 着 (zhe) — Sedang (Keadaan Berlangsung)",
+    "pattern": "Kata Kerja + 着",
+    "explanation": "Menunjukkan keadaan yang sedang berlangsung atau berlanjut.",
+    "examples": [
+      {
+        "zh": "门开着呢。",
+        "id": "Pintunya terbuka."
+      },
+      {
+        "zh": "她穿着一件红色的裙子。",
+        "id": "Dia memakai gaun merah."
+      }
+    ]
+  },
+  {
+    "title": "13. 地 (de) — Keterangan Cara",
+    "pattern": "Kata Sifat + 地 + Kata Kerja",
+    "explanation": "Menghubungkan kata sifat sebagai keterangan cara sebelum kata kerja.",
+    "examples": [
+      {
+        "zh": "她高兴地笑了。",
+        "id": "Dia tertawa dengan gembira."
+      },
+      {
+        "zh": "他认真地听课。",
+        "id": "Dia mendengarkan pelajaran dengan serius."
+      }
+    ]
+  },
+  {
+    "title": "14. 得 (de) — Komplemen Derajat",
+    "pattern": "Kata Kerja + 得 + Deskripsi",
+    "explanation": "Menyatakan seberapa baik atau buruknya suatu tindakan dilakukan.",
+    "examples": [
+      {
+        "zh": "他说中文说得很流利。",
+        "id": "Dia berbicara bahasa Mandarin dengan sangat lancar."
+      },
+      {
+        "zh": "她唱歌唱得非常好听。",
+        "id": "Dia menyanyi dengan sangat merdu."
+      }
+    ]
+  },
+  {
+    "title": "15. 是...的 (shì...de) — Menekankan Detail",
+    "pattern": "是 + (Waktu/Tempat/Cara) + Kata Kerja + 的",
+    "explanation": "Menekankan kapan, di mana, atau bagaimana sesuatu terjadi (bukan apakah terjadi).",
+    "examples": [
+      {
+        "zh": "我是坐飞机来的。",
+        "id": "Saya datang naik pesawat (menekankan cara)."
+      },
+      {
+        "zh": "他是去年毕业的。",
+        "id": "Dia lulus tahun lalu (menekankan waktu)."
+      }
+    ]
+  },
+  {
+    "title": "16. 除了...以外 (chúle...yǐwài) — Selain...",
+    "pattern": "除了 + A + 以外，还/都 + B",
+    "explanation": "\"Selain A, juga B\" (inklusi) atau \"Selain A, semuanya B\" (eksklusi).",
+    "examples": [
+      {
+        "zh": "除了中文以外，他还会说英文。",
+        "id": "Selain bahasa Mandarin, dia juga bisa bahasa Inggris."
+      },
+      {
+        "zh": "除了他以外，大家都来了。",
+        "id": "Selain dia, semuanya sudah datang."
+      }
+    ]
+  },
+  {
+    "title": "17. 先...再... (xiān...zài...) — Dulu... baru...",
+    "pattern": "先 + Tindakan 1，再 + Tindakan 2",
+    "explanation": "Menyatakan urutan tindakan.",
+    "examples": [
+      {
+        "zh": "先吃饭，再去散步。",
+        "id": "Makan dulu, baru pergi jalan-jalan."
+      }
+    ]
+  },
+  {
+    "title": "18. 一边...一边... (yìbiān...yìbiān...) — Sambil...",
+    "pattern": "一边 + Tindakan 1，一边 + Tindakan 2",
+    "explanation": "Menyatakan dua tindakan yang dilakukan bersamaan.",
+    "examples": [
+      {
+        "zh": "她一边吃早饭，一边看新闻。",
+        "id": "Dia makan sarapan sambil menonton berita."
+      }
+    ]
+  },
+  {
+    "title": "19. 不是...而是... (búshì...érshì...) — Bukan... melainkan...",
+    "pattern": "不是 + A，而是 + B",
+    "explanation": "Mengoreksi atau mengklarifikasi sebuah pernyataan.",
+    "examples": [
+      {
+        "zh": "我不是不想去，而是没有时间。",
+        "id": "Bukan saya tidak mau pergi, melainkan tidak ada waktu."
+      }
+    ]
+  },
+  {
+    "title": "20. 要是...就... (yàoshi...jiù...) — Kalau... maka...",
+    "pattern": "要是 + Kondisi，就 + Hasil",
+    "explanation": "Menyatakan pengandaian/kondisional.",
+    "examples": [
+      {
+        "zh": "要是明天下雨，我们就不去了。",
+        "id": "Kalau besok hujan, kita tidak jadi pergi."
+      },
+      {
+        "zh": "要是你有空，就来我家玩吧。",
+        "id": "Kalau kamu ada waktu, datang main ke rumahku ya."
+      }
+    ]
+  }
+]

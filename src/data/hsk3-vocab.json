@@ -1,0 +1,2567 @@
+[
+  {
+    "hanzi": "环境",
+    "pinyin": "huánjìng",
+    "arti": "lingkungan",
+    "contoh": {
+      "zh": "我们要保护环境。",
+      "id": "Kita harus melindungi lingkungan."
+    }
+  },
+  {
+    "hanzi": "自然",
+    "pinyin": "zìrán",
+    "arti": "alam; alami",
+    "contoh": {
+      "zh": "这里的自然风景很美。",
+      "id": "Pemandangan alam di sini sangat indah."
+    }
+  },
+  {
+    "hanzi": "空气",
+    "pinyin": "kōngqì",
+    "arti": "udara",
+    "contoh": {
+      "zh": "今天的空气质量不太好。",
+      "id": "Kualitas udara hari ini kurang baik."
+    }
+  },
+  {
+    "hanzi": "河",
+    "pinyin": "hé",
+    "arti": "sungai",
+    "contoh": {
+      "zh": "这条河很长。",
+      "id": "Sungai ini sangat panjang."
+    }
+  },
+  {
+    "hanzi": "树",
+    "pinyin": "shù",
+    "arti": "pohon",
+    "contoh": {
+      "zh": "公园里有很多树。",
+      "id": "Di taman ada banyak pohon."
+    }
+  },
+  {
+    "hanzi": "花",
+    "pinyin": "huā",
+    "arti": "bunga",
+    "contoh": {
+      "zh": "春天的花开得很漂亮。",
+      "id": "Bunga di musim semi mekar dengan indah."
+    }
+  },
+  {
+    "hanzi": "草",
+    "pinyin": "cǎo",
+    "arti": "rumput",
+    "contoh": {
+      "zh": "请不要踩草地。",
+      "id": "Tolong jangan injak rumput."
+    }
+  },
+  {
+    "hanzi": "山",
+    "pinyin": "shān",
+    "arti": "gunung",
+    "contoh": {
+      "zh": "周末我们去爬山吧。",
+      "id": "Akhir pekan kita pergi mendaki gunung ya."
+    }
+  },
+  {
+    "hanzi": "森林",
+    "pinyin": "sēnlín",
+    "arti": "hutan",
+    "contoh": {
+      "zh": "森林里住着很多动物。",
+      "id": "Di hutan tinggal banyak hewan."
+    }
+  },
+  {
+    "hanzi": "海",
+    "pinyin": "hǎi",
+    "arti": "laut",
+    "contoh": {
+      "zh": "我小时候常去海边玩。",
+      "id": "Waktu kecil saya sering bermain di tepi laut."
+    }
+  },
+  {
+    "hanzi": "太阳",
+    "pinyin": "tàiyáng",
+    "arti": "matahari",
+    "contoh": {
+      "zh": "太阳出来了，天气变暖了。",
+      "id": "Matahari muncul, cuaca menjadi hangat."
+    }
+  },
+  {
+    "hanzi": "月亮",
+    "pinyin": "yuèliang",
+    "arti": "bulan",
+    "contoh": {
+      "zh": "今晚的月亮又大又圆。",
+      "id": "Bulan malam ini besar dan bulat."
+    }
+  },
+  {
+    "hanzi": "星星",
+    "pinyin": "xīngxing",
+    "arti": "bintang",
+    "contoh": {
+      "zh": "乡下能看到很多星星。",
+      "id": "Di pedesaan bisa melihat banyak bintang."
+    }
+  },
+  {
+    "hanzi": "风",
+    "pinyin": "fēng",
+    "arti": "angin",
+    "contoh": {
+      "zh": "今天风很大，注意保暖。",
+      "id": "Hari ini anginnya kencang, perhatikan kehangatan."
+    }
+  },
+  {
+    "hanzi": "云",
+    "pinyin": "yún",
+    "arti": "awan",
+    "contoh": {
+      "zh": "天上有很多白云。",
+      "id": "Di langit ada banyak awan putih."
+    }
+  },
+  {
+    "hanzi": "污染",
+    "pinyin": "wūrǎn",
+    "arti": "polusi; mencemari",
+    "contoh": {
+      "zh": "工厂的污染越来越严重。",
+      "id": "Polusi pabrik semakin parah."
+    }
+  },
+  {
+    "hanzi": "保护",
+    "pinyin": "bǎohù",
+    "arti": "melindungi",
+    "contoh": {
+      "zh": "保护动物是大家的责任。",
+      "id": "Melindungi hewan adalah tanggung jawab semua orang."
+    }
+  },
+  {
+    "hanzi": "教育",
+    "pinyin": "jiàoyù",
+    "arti": "pendidikan",
+    "contoh": {
+      "zh": "教育对每个人都很重要。",
+      "id": "Pendidikan sangat penting bagi setiap orang."
+    }
+  },
+  {
+    "hanzi": "大学",
+    "pinyin": "dàxué",
+    "arti": "universitas",
+    "contoh": {
+      "zh": "她明年要上大学了。",
+      "id": "Tahun depan dia akan masuk universitas."
+    }
+  },
+  {
+    "hanzi": "专业",
+    "pinyin": "zhuānyè",
+    "arti": "jurusan; profesional",
+    "contoh": {
+      "zh": "你的专业是什么？",
+      "id": "Jurusanmu apa?"
+    }
+  },
+  {
+    "hanzi": "毕业",
+    "pinyin": "bìyè",
+    "arti": "lulus",
+    "contoh": {
+      "zh": "他去年从大学毕业了。",
+      "id": "Dia lulus dari universitas tahun lalu."
+    }
+  },
+  {
+    "hanzi": "知识",
+    "pinyin": "zhīshi",
+    "arti": "pengetahuan",
+    "contoh": {
+      "zh": "学习新知识让我很开心。",
+      "id": "Belajar pengetahuan baru membuatku senang."
+    }
+  },
+  {
+    "hanzi": "研究",
+    "pinyin": "yánjiū",
+    "arti": "penelitian; meneliti",
+    "contoh": {
+      "zh": "他在研究中国历史。",
+      "id": "Dia sedang meneliti sejarah Tiongkok."
+    }
+  },
+  {
+    "hanzi": "科学",
+    "pinyin": "kēxué",
+    "arti": "ilmu pengetahuan; sains",
+    "contoh": {
+      "zh": "科学技术发展得很快。",
+      "id": "Ilmu pengetahuan dan teknologi berkembang sangat cepat."
+    }
+  },
+  {
+    "hanzi": "数学",
+    "pinyin": "shùxué",
+    "arti": "matematika",
+    "contoh": {
+      "zh": "她的数学成绩一直很好。",
+      "id": "Nilai matematikanya selalu bagus."
+    }
+  },
+  {
+    "hanzi": "历史",
+    "pinyin": "lìshǐ",
+    "arti": "sejarah",
+    "contoh": {
+      "zh": "中国有很长的历史。",
+      "id": "Tiongkok memiliki sejarah yang sangat panjang."
+    }
+  },
+  {
+    "hanzi": "文化",
+    "pinyin": "wénhuà",
+    "arti": "budaya",
+    "contoh": {
+      "zh": "我对中国文化很感兴趣。",
+      "id": "Saya sangat tertarik dengan budaya Tiongkok."
+    }
+  },
+  {
+    "hanzi": "教授",
+    "pinyin": "jiàoshòu",
+    "arti": "profesor",
+    "contoh": {
+      "zh": "这位教授讲课很有趣。",
+      "id": "Profesor ini mengajar dengan sangat menarik."
+    }
+  },
+  {
+    "hanzi": "成绩",
+    "pinyin": "chéngjì",
+    "arti": "nilai; prestasi",
+    "contoh": {
+      "zh": "这次考试的成绩不错。",
+      "id": "Nilai ujian kali ini cukup bagus."
+    }
+  },
+  {
+    "hanzi": "奖学金",
+    "pinyin": "jiǎngxuéjīn",
+    "arti": "beasiswa",
+    "contoh": {
+      "zh": "她拿到了奖学金去留学。",
+      "id": "Dia mendapat beasiswa untuk studi ke luar negeri."
+    }
+  },
+  {
+    "hanzi": "留学",
+    "pinyin": "liúxué",
+    "arti": "studi ke luar negeri",
+    "contoh": {
+      "zh": "越来越多的人出国留学。",
+      "id": "Semakin banyak orang studi ke luar negeri."
+    }
+  },
+  {
+    "hanzi": "经验",
+    "pinyin": "jīngyàn",
+    "arti": "pengalaman",
+    "contoh": {
+      "zh": "工作经验对找工作很重要。",
+      "id": "Pengalaman kerja sangat penting untuk mencari pekerjaan."
+    }
+  },
+  {
+    "hanzi": "技术",
+    "pinyin": "jìshù",
+    "arti": "teknologi",
+    "contoh": {
+      "zh": "现在的技术发展很快。",
+      "id": "Teknologi sekarang berkembang sangat cepat."
+    }
+  },
+  {
+    "hanzi": "网络",
+    "pinyin": "wǎngluò",
+    "arti": "internet; jaringan",
+    "contoh": {
+      "zh": "网络让我们的生活更方便。",
+      "id": "Internet membuat hidup kita lebih nyaman."
+    }
+  },
+  {
+    "hanzi": "手机",
+    "pinyin": "shǒujī",
+    "arti": "ponsel",
+    "contoh": {
+      "zh": "我的手机没电了。",
+      "id": "Ponsel saya kehabisan baterai."
+    }
+  },
+  {
+    "hanzi": "电脑",
+    "pinyin": "diànnǎo",
+    "arti": "komputer",
+    "contoh": {
+      "zh": "我需要用电脑写报告。",
+      "id": "Saya perlu pakai komputer untuk menulis laporan."
+    }
+  },
+  {
+    "hanzi": "信息",
+    "pinyin": "xìnxī",
+    "arti": "informasi; pesan",
+    "contoh": {
+      "zh": "请把信息发到我手机上。",
+      "id": "Tolong kirim informasinya ke ponsel saya."
+    }
+  },
+  {
+    "hanzi": "网站",
+    "pinyin": "wǎngzhàn",
+    "arti": "situs web",
+    "contoh": {
+      "zh": "这个网站的内容很丰富。",
+      "id": "Konten situs web ini sangat kaya."
+    }
+  },
+  {
+    "hanzi": "软件",
+    "pinyin": "ruǎnjiàn",
+    "arti": "perangkat lunak",
+    "contoh": {
+      "zh": "你用什么软件学中文？",
+      "id": "Kamu pakai perangkat lunak apa untuk belajar bahasa Mandarin?"
+    }
+  },
+  {
+    "hanzi": "数据",
+    "pinyin": "shùjù",
+    "arti": "data",
+    "contoh": {
+      "zh": "我们需要分析这些数据。",
+      "id": "Kita perlu menganalisis data ini."
+    }
+  },
+  {
+    "hanzi": "密码",
+    "pinyin": "mìmǎ",
+    "arti": "kata sandi",
+    "contoh": {
+      "zh": "请输入你的密码。",
+      "id": "Silakan masukkan kata sandi Anda."
+    }
+  },
+  {
+    "hanzi": "下载",
+    "pinyin": "xiàzài",
+    "arti": "mengunduh",
+    "contoh": {
+      "zh": "你可以在网上下载这个软件。",
+      "id": "Kamu bisa mengunduh perangkat lunak ini di internet."
+    }
+  },
+  {
+    "hanzi": "上传",
+    "pinyin": "shàngchuán",
+    "arti": "mengunggah",
+    "contoh": {
+      "zh": "请把照片上传到网站上。",
+      "id": "Tolong unggah foto ke situs web."
+    }
+  },
+  {
+    "hanzi": "搜索",
+    "pinyin": "sōusuǒ",
+    "arti": "mencari (di internet)",
+    "contoh": {
+      "zh": "你可以在网上搜索答案。",
+      "id": "Kamu bisa mencari jawabannya di internet."
+    }
+  },
+  {
+    "hanzi": "广告",
+    "pinyin": "guǎnggào",
+    "arti": "iklan",
+    "contoh": {
+      "zh": "网上的广告太多了。",
+      "id": "Iklan di internet terlalu banyak."
+    }
+  },
+  {
+    "hanzi": "程序",
+    "pinyin": "chéngxù",
+    "arti": "program",
+    "contoh": {
+      "zh": "这个程序运行得很好。",
+      "id": "Program ini berjalan dengan baik."
+    }
+  },
+  {
+    "hanzi": "联系",
+    "pinyin": "liánxì",
+    "arti": "menghubungi; kontak",
+    "contoh": {
+      "zh": "有问题请随时联系我。",
+      "id": "Kalau ada masalah, silakan hubungi saya kapan saja."
+    }
+  },
+  {
+    "hanzi": "传统",
+    "pinyin": "chuántǒng",
+    "arti": "tradisi; tradisional",
+    "contoh": {
+      "zh": "春节是中国最重要的传统节日。",
+      "id": "Imlek adalah hari raya tradisional terpenting di Tiongkok."
+    }
+  },
+  {
+    "hanzi": "节日",
+    "pinyin": "jiérì",
+    "arti": "hari raya",
+    "contoh": {
+      "zh": "中秋节是一个重要的节日。",
+      "id": "Festival Pertengahan Musim Gugur adalah hari raya penting."
+    }
+  },
+  {
+    "hanzi": "风俗",
+    "pinyin": "fēngsú",
+    "arti": "adat istiadat",
+    "contoh": {
+      "zh": "每个地方有不同的风俗。",
+      "id": "Setiap daerah memiliki adat istiadat yang berbeda."
+    }
+  },
+  {
+    "hanzi": "礼物",
+    "pinyin": "lǐwù",
+    "arti": "hadiah",
+    "contoh": {
+      "zh": "过年的时候大家会送礼物。",
+      "id": "Saat tahun baru, semua orang saling memberi hadiah."
+    }
+  },
+  {
+    "hanzi": "习惯",
+    "pinyin": "xíguàn",
+    "arti": "kebiasaan",
+    "contoh": {
+      "zh": "你有什么学习的好习惯？",
+      "id": "Kamu punya kebiasaan belajar baik apa?"
+    }
+  },
+  {
+    "hanzi": "艺术",
+    "pinyin": "yìshù",
+    "arti": "seni",
+    "contoh": {
+      "zh": "书法是一种中国传统艺术。",
+      "id": "Kaligrafi adalah seni tradisional Tiongkok."
+    }
+  },
+  {
+    "hanzi": "音乐",
+    "pinyin": "yīnyuè",
+    "arti": "musik",
+    "contoh": {
+      "zh": "她喜欢听中国音乐。",
+      "id": "Dia suka mendengarkan musik Tiongkok."
+    }
+  },
+  {
+    "hanzi": "故事",
+    "pinyin": "gùshi",
+    "arti": "cerita",
+    "contoh": {
+      "zh": "奶奶给我讲了一个有趣的故事。",
+      "id": "Nenek menceritakan sebuah cerita menarik kepadaku."
+    }
+  },
+  {
+    "hanzi": "博物馆",
+    "pinyin": "bówùguǎn",
+    "arti": "museum",
+    "contoh": {
+      "zh": "周末我们去博物馆参观吧。",
+      "id": "Akhir pekan kita pergi mengunjungi museum ya."
+    }
+  },
+  {
+    "hanzi": "表演",
+    "pinyin": "biǎoyǎn",
+    "arti": "pertunjukan; tampil",
+    "contoh": {
+      "zh": "今晚有一个精彩的表演。",
+      "id": "Malam ini ada pertunjukan yang luar biasa."
+    }
+  },
+  {
+    "hanzi": "古代",
+    "pinyin": "gǔdài",
+    "arti": "zaman kuno",
+    "contoh": {
+      "zh": "古代中国有很多发明。",
+      "id": "Tiongkok zaman kuno memiliki banyak penemuan."
+    }
+  },
+  {
+    "hanzi": "现代",
+    "pinyin": "xiàndài",
+    "arti": "modern",
+    "contoh": {
+      "zh": "现代生活离不开科技。",
+      "id": "Kehidupan modern tidak bisa lepas dari teknologi."
+    }
+  },
+  {
+    "hanzi": "民族",
+    "pinyin": "mínzú",
+    "arti": "suku bangsa; etnis",
+    "contoh": {
+      "zh": "中国有五十六个民族。",
+      "id": "Tiongkok memiliki lima puluh enam suku bangsa."
+    }
+  },
+  {
+    "hanzi": "语言",
+    "pinyin": "yǔyán",
+    "arti": "bahasa",
+    "contoh": {
+      "zh": "学习新的语言很有趣。",
+      "id": "Belajar bahasa baru sangat menarik."
+    }
+  },
+  {
+    "hanzi": "翻译",
+    "pinyin": "fānyì",
+    "arti": "menerjemahkan; penerjemah",
+    "contoh": {
+      "zh": "她的工作是翻译中文书。",
+      "id": "Pekerjaannya adalah menerjemahkan buku bahasa Mandarin."
+    }
+  },
+  {
+    "hanzi": "关系",
+    "pinyin": "guānxi",
+    "arti": "hubungan",
+    "contoh": {
+      "zh": "他们的关系很好。",
+      "id": "Hubungan mereka sangat baik."
+    }
+  },
+  {
+    "hanzi": "友谊",
+    "pinyin": "yǒuyì",
+    "arti": "persahabatan",
+    "contoh": {
+      "zh": "真正的友谊是很珍贵的。",
+      "id": "Persahabatan sejati sangat berharga."
+    }
+  },
+  {
+    "hanzi": "邀请",
+    "pinyin": "yāoqǐng",
+    "arti": "mengundang",
+    "contoh": {
+      "zh": "我邀请你来参加我的生日聚会。",
+      "id": "Aku mengundangmu datang ke pesta ulang tahunku."
+    }
+  },
+  {
+    "hanzi": "聚会",
+    "pinyin": "jùhuì",
+    "arti": "pesta; pertemuan",
+    "contoh": {
+      "zh": "周末我们一起聚会吧。",
+      "id": "Akhir pekan kita berkumpul bersama ya."
+    }
+  },
+  {
+    "hanzi": "交流",
+    "pinyin": "jiāoliú",
+    "arti": "bertukar pikiran; berkomunikasi",
+    "contoh": {
+      "zh": "我们经常交流学习经验。",
+      "id": "Kami sering bertukar pengalaman belajar."
+    }
+  },
+  {
+    "hanzi": "尊重",
+    "pinyin": "zūnzhòng",
+    "arti": "menghormati",
+    "contoh": {
+      "zh": "我们要尊重每个人的想法。",
+      "id": "Kita harus menghormati pemikiran setiap orang."
+    }
+  },
+  {
+    "hanzi": "信任",
+    "pinyin": "xìnrèn",
+    "arti": "percaya; kepercayaan",
+    "contoh": {
+      "zh": "朋友之间最重要的是信任。",
+      "id": "Hal terpenting di antara teman adalah kepercayaan."
+    }
+  },
+  {
+    "hanzi": "误会",
+    "pinyin": "wùhuì",
+    "arti": "salah paham",
+    "contoh": {
+      "zh": "这只是一个误会，别生气了。",
+      "id": "Ini hanya salah paham, jangan marah lagi."
+    }
+  },
+  {
+    "hanzi": "感情",
+    "pinyin": "gǎnqíng",
+    "arti": "perasaan; emosi",
+    "contoh": {
+      "zh": "他是一个很有感情的人。",
+      "id": "Dia adalah orang yang sangat penuh perasaan."
+    }
+  },
+  {
+    "hanzi": "道歉",
+    "pinyin": "dàoqiàn",
+    "arti": "minta maaf",
+    "contoh": {
+      "zh": "做错了事要学会道歉。",
+      "id": "Kalau melakukan kesalahan harus belajar minta maaf."
+    }
+  },
+  {
+    "hanzi": "原谅",
+    "pinyin": "yuánliàng",
+    "arti": "memaafkan",
+    "contoh": {
+      "zh": "请你原谅我的错误。",
+      "id": "Tolong maafkan kesalahan saya."
+    }
+  },
+  {
+    "hanzi": "鼓励",
+    "pinyin": "gǔlì",
+    "arti": "menyemangati",
+    "contoh": {
+      "zh": "老师经常鼓励学生要努力。",
+      "id": "Guru sering menyemangati murid agar rajin."
+    }
+  },
+  {
+    "hanzi": "帮忙",
+    "pinyin": "bāngmáng",
+    "arti": "membantu",
+    "contoh": {
+      "zh": "谢谢你帮忙搬东西。",
+      "id": "Terima kasih sudah membantu memindahkan barang."
+    }
+  },
+  {
+    "hanzi": "陪",
+    "pinyin": "péi",
+    "arti": "menemani",
+    "contoh": {
+      "zh": "周末我陪你去看电影。",
+      "id": "Akhir pekan aku menemanimu nonton film."
+    }
+  },
+  {
+    "hanzi": "约",
+    "pinyin": "yuē",
+    "arti": "janjian; mengajak",
+    "contoh": {
+      "zh": "我们约好了明天见面。",
+      "id": "Kita sudah janjian bertemu besok."
+    }
+  },
+  {
+    "hanzi": "健康",
+    "pinyin": "jiànkāng",
+    "arti": "sehat; kesehatan",
+    "contoh": {
+      "zh": "健康比什么都重要。",
+      "id": "Kesehatan lebih penting dari segalanya."
+    }
+  },
+  {
+    "hanzi": "医院",
+    "pinyin": "yīyuàn",
+    "arti": "rumah sakit",
+    "contoh": {
+      "zh": "他生病了，要去医院。",
+      "id": "Dia sakit, harus ke rumah sakit."
+    }
+  },
+  {
+    "hanzi": "检查",
+    "pinyin": "jiǎnchá",
+    "arti": "memeriksa",
+    "contoh": {
+      "zh": "你应该去医院检查一下。",
+      "id": "Kamu sebaiknya pergi ke rumah sakit untuk diperiksa."
+    }
+  },
+  {
+    "hanzi": "感冒",
+    "pinyin": "gǎnmào",
+    "arti": "masuk angin; flu",
+    "contoh": {
+      "zh": "天气变冷了，小心感冒。",
+      "id": "Cuaca berubah dingin, hati-hati flu."
+    }
+  },
+  {
+    "hanzi": "发烧",
+    "pinyin": "fāshāo",
+    "arti": "demam",
+    "contoh": {
+      "zh": "孩子发烧了，快去看医生。",
+      "id": "Anak demam, cepat pergi ke dokter."
+    }
+  },
+  {
+    "hanzi": "锻炼",
+    "pinyin": "duànliàn",
+    "arti": "berolahraga",
+    "contoh": {
+      "zh": "每天锻炼身体对健康有好处。",
+      "id": "Berolahraga setiap hari baik untuk kesehatan."
+    }
+  },
+  {
+    "hanzi": "减肥",
+    "pinyin": "jiǎnféi",
+    "arti": "diet; menurunkan berat badan",
+    "contoh": {
+      "zh": "她正在减肥，不吃甜的东西。",
+      "id": "Dia sedang diet, tidak makan makanan manis."
+    }
+  },
+  {
+    "hanzi": "习惯",
+    "pinyin": "xíguàn",
+    "arti": "kebiasaan",
+    "contoh": {
+      "zh": "早睡早起是好习惯。",
+      "id": "Tidur awal bangun awal adalah kebiasaan baik."
+    }
+  },
+  {
+    "hanzi": "药",
+    "pinyin": "yào",
+    "arti": "obat",
+    "contoh": {
+      "zh": "医生让他每天吃三次药。",
+      "id": "Dokter menyuruhnya minum obat tiga kali sehari."
+    }
+  },
+  {
+    "hanzi": "疼",
+    "pinyin": "téng",
+    "arti": "sakit; nyeri",
+    "contoh": {
+      "zh": "我的头很疼。",
+      "id": "Kepala saya sangat sakit."
+    }
+  },
+  {
+    "hanzi": "瘦",
+    "pinyin": "shòu",
+    "arti": "kurus",
+    "contoh": {
+      "zh": "你最近瘦了很多。",
+      "id": "Kamu belakangan ini kurus banyak."
+    }
+  },
+  {
+    "hanzi": "胖",
+    "pinyin": "pàng",
+    "arti": "gemuk",
+    "contoh": {
+      "zh": "吃太多甜食会变胖。",
+      "id": "Makan terlalu banyak makanan manis bisa jadi gemuk."
+    }
+  },
+  {
+    "hanzi": "休息",
+    "pinyin": "xiūxi",
+    "arti": "istirahat",
+    "contoh": {
+      "zh": "工作太累了，你该休息一下。",
+      "id": "Kerja terlalu capek, kamu sebaiknya istirahat sebentar."
+    }
+  },
+  {
+    "hanzi": "精神",
+    "pinyin": "jīngshén",
+    "arti": "semangat; mental",
+    "contoh": {
+      "zh": "今天你的精神看起来很好。",
+      "id": "Hari ini semangatmu terlihat bagus."
+    }
+  },
+  {
+    "hanzi": "营养",
+    "pinyin": "yíngyǎng",
+    "arti": "nutrisi; gizi",
+    "contoh": {
+      "zh": "多吃蔬菜水果，营养更均衡。",
+      "id": "Perbanyak makan sayur dan buah, nutrisi lebih seimbang."
+    }
+  },
+  {
+    "hanzi": "工作",
+    "pinyin": "gōngzuò",
+    "arti": "pekerjaan; bekerja",
+    "contoh": {
+      "zh": "他的工作很忙。",
+      "id": "Pekerjaannya sangat sibuk."
+    }
+  },
+  {
+    "hanzi": "公司",
+    "pinyin": "gōngsī",
+    "arti": "perusahaan",
+    "contoh": {
+      "zh": "这家公司在北京。",
+      "id": "Perusahaan ini berada di Beijing."
+    }
+  },
+  {
+    "hanzi": "经理",
+    "pinyin": "jīnglǐ",
+    "arti": "manajer",
+    "contoh": {
+      "zh": "我们的经理是个很好的人。",
+      "id": "Manajer kami adalah orang yang sangat baik."
+    }
+  },
+  {
+    "hanzi": "工资",
+    "pinyin": "gōngzī",
+    "arti": "gaji",
+    "contoh": {
+      "zh": "这个月的工资已经发了。",
+      "id": "Gaji bulan ini sudah dibayar."
+    }
+  },
+  {
+    "hanzi": "加班",
+    "pinyin": "jiābān",
+    "arti": "lembur",
+    "contoh": {
+      "zh": "这个星期我每天都在加班。",
+      "id": "Minggu ini saya lembur setiap hari."
+    }
+  },
+  {
+    "hanzi": "面试",
+    "pinyin": "miànshì",
+    "arti": "wawancara kerja",
+    "contoh": {
+      "zh": "明天我有一个很重要的面试。",
+      "id": "Besok saya punya wawancara kerja yang sangat penting."
+    }
+  },
+  {
+    "hanzi": "简历",
+    "pinyin": "jiǎnlì",
+    "arti": "CV; resume",
+    "contoh": {
+      "zh": "请把你的简历发给我。",
+      "id": "Tolong kirimkan CV kamu ke saya."
+    }
+  },
+  {
+    "hanzi": "同事",
+    "pinyin": "tóngshì",
+    "arti": "rekan kerja",
+    "contoh": {
+      "zh": "我的同事们都很友好。",
+      "id": "Rekan-rekan kerja saya semuanya ramah."
+    }
+  },
+  {
+    "hanzi": "辞职",
+    "pinyin": "cízhí",
+    "arti": "mengundurkan diri",
+    "contoh": {
+      "zh": "他决定辞职去创业。",
+      "id": "Dia memutuskan mengundurkan diri untuk berwirausaha."
+    }
+  },
+  {
+    "hanzi": "任务",
+    "pinyin": "rènwu",
+    "arti": "tugas",
+    "contoh": {
+      "zh": "今天的任务已经完成了。",
+      "id": "Tugas hari ini sudah selesai."
+    }
+  },
+  {
+    "hanzi": "合同",
+    "pinyin": "hétong",
+    "arti": "kontrak",
+    "contoh": {
+      "zh": "我们签了一年的合同。",
+      "id": "Kami menandatangani kontrak satu tahun."
+    }
+  },
+  {
+    "hanzi": "压力",
+    "pinyin": "yālì",
+    "arti": "tekanan",
+    "contoh": {
+      "zh": "工作压力太大了。",
+      "id": "Tekanan kerja terlalu besar."
+    }
+  },
+  {
+    "hanzi": "成功",
+    "pinyin": "chénggōng",
+    "arti": "sukses; berhasil",
+    "contoh": {
+      "zh": "只要努力就会成功。",
+      "id": "Asalkan berusaha keras pasti berhasil."
+    }
+  },
+  {
+    "hanzi": "失败",
+    "pinyin": "shībài",
+    "arti": "gagal",
+    "contoh": {
+      "zh": "失败是成功之母。",
+      "id": "Kegagalan adalah ibu dari kesuksesan."
+    }
+  },
+  {
+    "hanzi": "机会",
+    "pinyin": "jīhuì",
+    "arti": "kesempatan",
+    "contoh": {
+      "zh": "这是一个很好的机会。",
+      "id": "Ini adalah kesempatan yang sangat bagus."
+    }
+  },
+  {
+    "hanzi": "交通",
+    "pinyin": "jiāotōng",
+    "arti": "lalu lintas",
+    "contoh": {
+      "zh": "这个城市的交通很方便。",
+      "id": "Lalu lintas di kota ini sangat nyaman."
+    }
+  },
+  {
+    "hanzi": "航班",
+    "pinyin": "hángbān",
+    "arti": "penerbangan",
+    "contoh": {
+      "zh": "我们的航班是晚上八点的。",
+      "id": "Penerbangan kami pukul delapan malam."
+    }
+  },
+  {
+    "hanzi": "签证",
+    "pinyin": "qiānzhèng",
+    "arti": "visa",
+    "contoh": {
+      "zh": "去中国旅游需要办签证。",
+      "id": "Berwisata ke Tiongkok perlu mengurus visa."
+    }
+  },
+  {
+    "hanzi": "护照",
+    "pinyin": "hùzhào",
+    "arti": "paspor",
+    "contoh": {
+      "zh": "出国前要检查护照有没有过期。",
+      "id": "Sebelum ke luar negeri harus periksa apakah paspor sudah kedaluwarsa."
+    }
+  },
+  {
+    "hanzi": "行李",
+    "pinyin": "xíngli",
+    "arti": "bagasi",
+    "contoh": {
+      "zh": "你的行李太重了。",
+      "id": "Bagasimu terlalu berat."
+    }
+  },
+  {
+    "hanzi": "旅游",
+    "pinyin": "lǚyóu",
+    "arti": "berwisata",
+    "contoh": {
+      "zh": "暑假我们打算去欧洲旅游。",
+      "id": "Liburan musim panas kami berencana berwisata ke Eropa."
+    }
+  },
+  {
+    "hanzi": "景点",
+    "pinyin": "jǐngdiǎn",
+    "arti": "tempat wisata",
+    "contoh": {
+      "zh": "这个景点很有名。",
+      "id": "Tempat wisata ini sangat terkenal."
+    }
+  },
+  {
+    "hanzi": "地铁",
+    "pinyin": "dìtiě",
+    "arti": "kereta bawah tanah",
+    "contoh": {
+      "zh": "坐地铁比开车快。",
+      "id": "Naik kereta bawah tanah lebih cepat daripada menyetir."
+    }
+  },
+  {
+    "hanzi": "高铁",
+    "pinyin": "gāotiě",
+    "arti": "kereta cepat",
+    "contoh": {
+      "zh": "坐高铁从北京到上海只要四个半小时。",
+      "id": "Naik kereta cepat dari Beijing ke Shanghai hanya empat setengah jam."
+    }
+  },
+  {
+    "hanzi": "出发",
+    "pinyin": "chūfā",
+    "arti": "berangkat",
+    "contoh": {
+      "zh": "我们明天早上六点出发。",
+      "id": "Kita berangkat besok pagi pukul enam."
+    }
+  },
+  {
+    "hanzi": "到达",
+    "pinyin": "dàodá",
+    "arti": "tiba",
+    "contoh": {
+      "zh": "飞机已经到达机场了。",
+      "id": "Pesawat sudah tiba di bandara."
+    }
+  },
+  {
+    "hanzi": "方向",
+    "pinyin": "fāngxiàng",
+    "arti": "arah",
+    "contoh": {
+      "zh": "请问，火车站在哪个方向？",
+      "id": "Permisi, stasiun kereta api di arah mana?"
+    }
+  },
+  {
+    "hanzi": "距离",
+    "pinyin": "jùlí",
+    "arti": "jarak",
+    "contoh": {
+      "zh": "学校离我家的距离不远。",
+      "id": "Jarak sekolah dari rumah saya tidak jauh."
+    }
+  },
+  {
+    "hanzi": "旅客",
+    "pinyin": "lǚkè",
+    "arti": "penumpang; wisatawan",
+    "contoh": {
+      "zh": "旅客们请注意安全。",
+      "id": "Para penumpang harap perhatikan keselamatan."
+    }
+  },
+  {
+    "hanzi": "导游",
+    "pinyin": "dǎoyóu",
+    "arti": "pemandu wisata",
+    "contoh": {
+      "zh": "我们的导游说得很清楚。",
+      "id": "Pemandu wisata kami berbicara dengan sangat jelas."
+    }
+  },
+  {
+    "hanzi": "味道",
+    "pinyin": "wèidao",
+    "arti": "rasa",
+    "contoh": {
+      "zh": "这道菜的味道很好。",
+      "id": "Rasa masakan ini sangat enak."
+    }
+  },
+  {
+    "hanzi": "食物",
+    "pinyin": "shíwù",
+    "arti": "makanan",
+    "contoh": {
+      "zh": "新鲜的食物更健康。",
+      "id": "Makanan segar lebih sehat."
+    }
+  },
+  {
+    "hanzi": "饮料",
+    "pinyin": "yǐnliào",
+    "arti": "minuman",
+    "contoh": {
+      "zh": "你想喝什么饮料？",
+      "id": "Kamu mau minum minuman apa?"
+    }
+  },
+  {
+    "hanzi": "甜",
+    "pinyin": "tián",
+    "arti": "manis",
+    "contoh": {
+      "zh": "这个蛋糕太甜了。",
+      "id": "Kue ini terlalu manis."
+    }
+  },
+  {
+    "hanzi": "咸",
+    "pinyin": "xián",
+    "arti": "asin",
+    "contoh": {
+      "zh": "汤有点儿咸了。",
+      "id": "Supnya agak asin."
+    }
+  },
+  {
+    "hanzi": "辣",
+    "pinyin": "là",
+    "arti": "pedas",
+    "contoh": {
+      "zh": "四川菜特别辣。",
+      "id": "Masakan Sichuan sangat pedas."
+    }
+  },
+  {
+    "hanzi": "酸",
+    "pinyin": "suān",
+    "arti": "asam",
+    "contoh": {
+      "zh": "这个水果有点儿酸。",
+      "id": "Buah ini agak asam."
+    }
+  },
+  {
+    "hanzi": "新鲜",
+    "pinyin": "xīnxiān",
+    "arti": "segar",
+    "contoh": {
+      "zh": "市场上的蔬菜很新鲜。",
+      "id": "Sayuran di pasar sangat segar."
+    }
+  },
+  {
+    "hanzi": "点菜",
+    "pinyin": "diǎncài",
+    "arti": "memesan makanan",
+    "contoh": {
+      "zh": "你来点菜吧，我不熟悉这里。",
+      "id": "Kamu yang pesan makanan ya, aku tidak familiar di sini."
+    }
+  },
+  {
+    "hanzi": "烤",
+    "pinyin": "kǎo",
+    "arti": "memanggang",
+    "contoh": {
+      "zh": "今晚我们一起烤肉吧。",
+      "id": "Malam ini kita memanggang daging bersama ya."
+    }
+  },
+  {
+    "hanzi": "煮",
+    "pinyin": "zhǔ",
+    "arti": "merebus",
+    "contoh": {
+      "zh": "妈妈在煮面条。",
+      "id": "Ibu sedang merebus mie."
+    }
+  },
+  {
+    "hanzi": "炒",
+    "pinyin": "chǎo",
+    "arti": "menumis; menggoreng",
+    "contoh": {
+      "zh": "我学会了炒鸡蛋。",
+      "id": "Saya sudah bisa menumis telur."
+    }
+  },
+  {
+    "hanzi": "材料",
+    "pinyin": "cáiliào",
+    "arti": "bahan",
+    "contoh": {
+      "zh": "做这道菜需要什么材料？",
+      "id": "Membuat masakan ini butuh bahan apa?"
+    }
+  },
+  {
+    "hanzi": "菜单",
+    "pinyin": "càidān",
+    "arti": "menu",
+    "contoh": {
+      "zh": "请给我们一份菜单。",
+      "id": "Tolong berikan kami menu."
+    }
+  },
+  {
+    "hanzi": "打包",
+    "pinyin": "dǎbāo",
+    "arti": "bungkus (dibawa pulang)",
+    "contoh": {
+      "zh": "吃不完的可以打包带走。",
+      "id": "Yang tidak habis bisa dibungkus dibawa pulang."
+    }
+  },
+  {
+    "hanzi": "高兴",
+    "pinyin": "gāoxìng",
+    "arti": "senang; gembira",
+    "contoh": {
+      "zh": "听到这个消息我很高兴。",
+      "id": "Mendengar kabar ini saya sangat senang."
+    }
+  },
+  {
+    "hanzi": "难过",
+    "pinyin": "nánguò",
+    "arti": "sedih",
+    "contoh": {
+      "zh": "失去朋友让他很难过。",
+      "id": "Kehilangan teman membuatnya sangat sedih."
+    }
+  },
+  {
+    "hanzi": "生气",
+    "pinyin": "shēngqì",
+    "arti": "marah",
+    "contoh": {
+      "zh": "别生气了，我跟你道歉。",
+      "id": "Jangan marah lagi, aku minta maaf."
+    }
+  },
+  {
+    "hanzi": "害怕",
+    "pinyin": "hàipà",
+    "arti": "takut",
+    "contoh": {
+      "zh": "她很害怕一个人走夜路。",
+      "id": "Dia sangat takut jalan malam sendirian."
+    }
+  },
+  {
+    "hanzi": "紧张",
+    "pinyin": "jǐnzhāng",
+    "arti": "gugup; tegang",
+    "contoh": {
+      "zh": "考试前我总是很紧张。",
+      "id": "Sebelum ujian aku selalu gugup."
+    }
+  },
+  {
+    "hanzi": "放松",
+    "pinyin": "fàngsōng",
+    "arti": "rileks",
+    "contoh": {
+      "zh": "周末的时候要学会放松自己。",
+      "id": "Saat akhir pekan harus bisa merilekskan diri."
+    }
+  },
+  {
+    "hanzi": "自信",
+    "pinyin": "zìxìn",
+    "arti": "percaya diri",
+    "contoh": {
+      "zh": "她是一个很自信的人。",
+      "id": "Dia adalah orang yang sangat percaya diri."
+    }
+  },
+  {
+    "hanzi": "骄傲",
+    "pinyin": "jiāo'ào",
+    "arti": "bangga; sombong",
+    "contoh": {
+      "zh": "妈妈为我感到骄傲。",
+      "id": "Ibu merasa bangga terhadapku."
+    }
+  },
+  {
+    "hanzi": "耐心",
+    "pinyin": "nàixīn",
+    "arti": "sabar",
+    "contoh": {
+      "zh": "做老师需要很大的耐心。",
+      "id": "Menjadi guru butuh kesabaran yang besar."
+    }
+  },
+  {
+    "hanzi": "勇敢",
+    "pinyin": "yǒnggǎn",
+    "arti": "berani",
+    "contoh": {
+      "zh": "遇到困难要勇敢面对。",
+      "id": "Menghadapi kesulitan harus berani menghadapinya."
+    }
+  },
+  {
+    "hanzi": "幽默",
+    "pinyin": "yōumò",
+    "arti": "humor; humoris",
+    "contoh": {
+      "zh": "他是一个很幽默的人。",
+      "id": "Dia adalah orang yang sangat humoris."
+    }
+  },
+  {
+    "hanzi": "温柔",
+    "pinyin": "wēnróu",
+    "arti": "lembut",
+    "contoh": {
+      "zh": "她说话的声音很温柔。",
+      "id": "Suaranya saat berbicara sangat lembut."
+    }
+  },
+  {
+    "hanzi": "诚实",
+    "pinyin": "chéngshí",
+    "arti": "jujur",
+    "contoh": {
+      "zh": "做人要诚实。",
+      "id": "Hidup harus jujur."
+    }
+  },
+  {
+    "hanzi": "后悔",
+    "pinyin": "hòuhuǐ",
+    "arti": "menyesal",
+    "contoh": {
+      "zh": "他很后悔没有好好学习。",
+      "id": "Dia sangat menyesal tidak belajar dengan baik."
+    }
+  },
+  {
+    "hanzi": "满意",
+    "pinyin": "mǎnyì",
+    "arti": "puas",
+    "contoh": {
+      "zh": "客人对我们的服务很满意。",
+      "id": "Tamu sangat puas dengan layanan kami."
+    }
+  },
+  {
+    "hanzi": "邻居",
+    "pinyin": "línjū",
+    "arti": "tetangga",
+    "contoh": {
+      "zh": "我的邻居是一对老夫妻。",
+      "id": "Tetangga saya adalah sepasang suami istri tua."
+    }
+  },
+  {
+    "hanzi": "搬家",
+    "pinyin": "bānjiā",
+    "arti": "pindah rumah",
+    "contoh": {
+      "zh": "下个月我们要搬家了。",
+      "id": "Bulan depan kami akan pindah rumah."
+    }
+  },
+  {
+    "hanzi": "打扫",
+    "pinyin": "dǎsǎo",
+    "arti": "membersihkan",
+    "contoh": {
+      "zh": "周末我要打扫房间。",
+      "id": "Akhir pekan saya harus membersihkan kamar."
+    }
+  },
+  {
+    "hanzi": "洗衣服",
+    "pinyin": "xǐ yīfu",
+    "arti": "mencuci pakaian",
+    "contoh": {
+      "zh": "今天的衣服我还没洗。",
+      "id": "Baju hari ini belum saya cuci."
+    }
+  },
+  {
+    "hanzi": "做饭",
+    "pinyin": "zuòfàn",
+    "arti": "memasak",
+    "contoh": {
+      "zh": "今天晚上我来做饭。",
+      "id": "Malam ini aku yang memasak."
+    }
+  },
+  {
+    "hanzi": "家具",
+    "pinyin": "jiājù",
+    "arti": "perabot; furnitur",
+    "contoh": {
+      "zh": "我们买了一些新家具。",
+      "id": "Kami membeli beberapa perabot baru."
+    }
+  },
+  {
+    "hanzi": "钥匙",
+    "pinyin": "yàoshi",
+    "arti": "kunci",
+    "contoh": {
+      "zh": "我忘带钥匙了。",
+      "id": "Saya lupa membawa kunci."
+    }
+  },
+  {
+    "hanzi": "空调",
+    "pinyin": "kōngtiáo",
+    "arti": "AC",
+    "contoh": {
+      "zh": "天气太热了，开空调吧。",
+      "id": "Cuaca terlalu panas, nyalakan AC ya."
+    }
+  },
+  {
+    "hanzi": "电梯",
+    "pinyin": "diàntī",
+    "arti": "lift; elevator",
+    "contoh": {
+      "zh": "电梯坏了，我们走楼梯吧。",
+      "id": "Lift rusak, kita naik tangga ya."
+    }
+  },
+  {
+    "hanzi": "阳台",
+    "pinyin": "yángtái",
+    "arti": "balkon",
+    "contoh": {
+      "zh": "我喜欢在阳台上喝咖啡。",
+      "id": "Saya suka minum kopi di balkon."
+    }
+  },
+  {
+    "hanzi": "厨房",
+    "pinyin": "chúfáng",
+    "arti": "dapur",
+    "contoh": {
+      "zh": "厨房里有很多好吃的东西。",
+      "id": "Di dapur ada banyak makanan enak."
+    }
+  },
+  {
+    "hanzi": "客厅",
+    "pinyin": "kètīng",
+    "arti": "ruang tamu",
+    "contoh": {
+      "zh": "我们在客厅看电视吧。",
+      "id": "Kita menonton TV di ruang tamu ya."
+    }
+  },
+  {
+    "hanzi": "卧室",
+    "pinyin": "wòshì",
+    "arti": "kamar tidur",
+    "contoh": {
+      "zh": "卧室里有一张大床。",
+      "id": "Di kamar tidur ada satu tempat tidur besar."
+    }
+  },
+  {
+    "hanzi": "垃圾",
+    "pinyin": "lājī",
+    "arti": "sampah",
+    "contoh": {
+      "zh": "请把垃圾分类处理。",
+      "id": "Tolong buang sampah dengan dipilah."
+    }
+  },
+  {
+    "hanzi": "修理",
+    "pinyin": "xiūlǐ",
+    "arti": "memperbaiki",
+    "contoh": {
+      "zh": "我的电脑需要修理一下。",
+      "id": "Komputer saya perlu diperbaiki."
+    }
+  },
+  {
+    "hanzi": "价格",
+    "pinyin": "jiàgé",
+    "arti": "harga",
+    "contoh": {
+      "zh": "这件衣服的价格太高了。",
+      "id": "Harga baju ini terlalu mahal."
+    }
+  },
+  {
+    "hanzi": "打折",
+    "pinyin": "dǎzhé",
+    "arti": "diskon",
+    "contoh": {
+      "zh": "这家店今天打折。",
+      "id": "Toko ini hari ini ada diskon."
+    }
+  },
+  {
+    "hanzi": "便宜",
+    "pinyin": "piányi",
+    "arti": "murah",
+    "contoh": {
+      "zh": "网上买东西更便宜。",
+      "id": "Beli barang di internet lebih murah."
+    }
+  },
+  {
+    "hanzi": "贵",
+    "pinyin": "guì",
+    "arti": "mahal",
+    "contoh": {
+      "zh": "这个包太贵了，我买不起。",
+      "id": "Tas ini terlalu mahal, saya tidak sanggup membeli."
+    }
+  },
+  {
+    "hanzi": "付款",
+    "pinyin": "fùkuǎn",
+    "arti": "membayar",
+    "contoh": {
+      "zh": "你可以用手机付款。",
+      "id": "Kamu bisa membayar pakai ponsel."
+    }
+  },
+  {
+    "hanzi": "信用卡",
+    "pinyin": "xìnyòngkǎ",
+    "arti": "kartu kredit",
+    "contoh": {
+      "zh": "这里可以用信用卡吗？",
+      "id": "Di sini bisa pakai kartu kredit?"
+    }
+  },
+  {
+    "hanzi": "零钱",
+    "pinyin": "língqián",
+    "arti": "uang kecil; kembalian",
+    "contoh": {
+      "zh": "对不起，我没有零钱。",
+      "id": "Maaf, saya tidak punya uang kecil."
+    }
+  },
+  {
+    "hanzi": "超市",
+    "pinyin": "chāoshì",
+    "arti": "supermarket",
+    "contoh": {
+      "zh": "我要去超市买些东西。",
+      "id": "Saya mau pergi ke supermarket beli beberapa barang."
+    }
+  },
+  {
+    "hanzi": "质量",
+    "pinyin": "zhìliàng",
+    "arti": "kualitas",
+    "contoh": {
+      "zh": "这个产品的质量非常好。",
+      "id": "Kualitas produk ini sangat bagus."
+    }
+  },
+  {
+    "hanzi": "退",
+    "pinyin": "tuì",
+    "arti": "mengembalikan; retur",
+    "contoh": {
+      "zh": "这件衣服不合适，我想退。",
+      "id": "Baju ini tidak pas, saya mau kembalikan."
+    }
+  },
+  {
+    "hanzi": "换",
+    "pinyin": "huàn",
+    "arti": "menukar",
+    "contoh": {
+      "zh": "这双鞋太小了，能换一双吗？",
+      "id": "Sepatu ini terlalu kecil, bisa ditukar?"
+    }
+  },
+  {
+    "hanzi": "存钱",
+    "pinyin": "cún qián",
+    "arti": "menabung",
+    "contoh": {
+      "zh": "她每个月都存钱。",
+      "id": "Dia menabung setiap bulan."
+    }
+  },
+  {
+    "hanzi": "花钱",
+    "pinyin": "huā qián",
+    "arti": "mengeluarkan uang",
+    "contoh": {
+      "zh": "旅游的时候不要花太多钱。",
+      "id": "Saat berwisata jangan mengeluarkan terlalu banyak uang."
+    }
+  },
+  {
+    "hanzi": "商品",
+    "pinyin": "shāngpǐn",
+    "arti": "produk; barang dagangan",
+    "contoh": {
+      "zh": "这些商品都是进口的。",
+      "id": "Produk-produk ini semuanya impor."
+    }
+  },
+  {
+    "hanzi": "顾客",
+    "pinyin": "gùkè",
+    "arti": "pelanggan",
+    "contoh": {
+      "zh": "顾客的满意度最重要。",
+      "id": "Kepuasan pelanggan paling penting."
+    }
+  },
+  {
+    "hanzi": "新闻",
+    "pinyin": "xīnwén",
+    "arti": "berita",
+    "contoh": {
+      "zh": "你看了今天的新闻吗？",
+      "id": "Kamu sudah lihat berita hari ini?"
+    }
+  },
+  {
+    "hanzi": "报纸",
+    "pinyin": "bàozhǐ",
+    "arti": "koran",
+    "contoh": {
+      "zh": "爷爷每天早上看报纸。",
+      "id": "Kakek membaca koran setiap pagi."
+    }
+  },
+  {
+    "hanzi": "杂志",
+    "pinyin": "zázhì",
+    "arti": "majalah",
+    "contoh": {
+      "zh": "她喜欢看时尚杂志。",
+      "id": "Dia suka membaca majalah fashion."
+    }
+  },
+  {
+    "hanzi": "记者",
+    "pinyin": "jìzhě",
+    "arti": "wartawan",
+    "contoh": {
+      "zh": "记者们正在报道这个事件。",
+      "id": "Para wartawan sedang meliput kejadian ini."
+    }
+  },
+  {
+    "hanzi": "消息",
+    "pinyin": "xiāoxi",
+    "arti": "kabar; informasi",
+    "contoh": {
+      "zh": "你有他的消息吗？",
+      "id": "Kamu ada kabar tentang dia?"
+    }
+  },
+  {
+    "hanzi": "通知",
+    "pinyin": "tōngzhī",
+    "arti": "pemberitahuan",
+    "contoh": {
+      "zh": "学校发了一个通知。",
+      "id": "Sekolah mengeluarkan sebuah pemberitahuan."
+    }
+  },
+  {
+    "hanzi": "讨论",
+    "pinyin": "tǎolùn",
+    "arti": "mendiskusikan",
+    "contoh": {
+      "zh": "我们讨论一下这个问题吧。",
+      "id": "Ayo kita diskusikan masalah ini."
+    }
+  },
+  {
+    "hanzi": "发表",
+    "pinyin": "fābiǎo",
+    "arti": "menerbitkan; mempublikasikan",
+    "contoh": {
+      "zh": "他发表了一篇文章。",
+      "id": "Dia menerbitkan sebuah artikel."
+    }
+  },
+  {
+    "hanzi": "内容",
+    "pinyin": "nèiróng",
+    "arti": "konten; isi",
+    "contoh": {
+      "zh": "这本书的内容很丰富。",
+      "id": "Isi buku ini sangat kaya."
+    }
+  },
+  {
+    "hanzi": "观众",
+    "pinyin": "guānzhòng",
+    "arti": "penonton",
+    "contoh": {
+      "zh": "演出结束后观众热烈鼓掌。",
+      "id": "Setelah pertunjukan selesai, penonton bertepuk tangan meriah."
+    }
+  },
+  {
+    "hanzi": "频道",
+    "pinyin": "píndào",
+    "arti": "saluran (TV)",
+    "contoh": {
+      "zh": "换一个频道看看吧。",
+      "id": "Ganti saluran lain untuk menonton ya."
+    }
+  },
+  {
+    "hanzi": "节目",
+    "pinyin": "jiémù",
+    "arti": "acara (TV)",
+    "contoh": {
+      "zh": "这个节目非常受欢迎。",
+      "id": "Acara ini sangat populer."
+    }
+  },
+  {
+    "hanzi": "评论",
+    "pinyin": "pínglùn",
+    "arti": "komentar; ulasan",
+    "contoh": {
+      "zh": "网友的评论很有趣。",
+      "id": "Komentar netizen sangat menarik."
+    }
+  },
+  {
+    "hanzi": "分享",
+    "pinyin": "fēnxiǎng",
+    "arti": "berbagi",
+    "contoh": {
+      "zh": "她喜欢在网上分享旅行照片。",
+      "id": "Dia suka berbagi foto perjalanan di internet."
+    }
+  },
+  {
+    "hanzi": "直播",
+    "pinyin": "zhíbō",
+    "arti": "siaran langsung",
+    "contoh": {
+      "zh": "今晚有一个直播活动。",
+      "id": "Malam ini ada acara siaran langsung."
+    }
+  },
+  {
+    "hanzi": "法律",
+    "pinyin": "fǎlǜ",
+    "arti": "hukum",
+    "contoh": {
+      "zh": "每个人都要遵守法律。",
+      "id": "Setiap orang harus mematuhi hukum."
+    }
+  },
+  {
+    "hanzi": "规定",
+    "pinyin": "guīdìng",
+    "arti": "peraturan; ketentuan",
+    "contoh": {
+      "zh": "公司有很多规定。",
+      "id": "Perusahaan punya banyak peraturan."
+    }
+  },
+  {
+    "hanzi": "允许",
+    "pinyin": "yǔnxǔ",
+    "arti": "mengizinkan",
+    "contoh": {
+      "zh": "这里不允许吸烟。",
+      "id": "Di sini tidak diizinkan merokok."
+    }
+  },
+  {
+    "hanzi": "禁止",
+    "pinyin": "jìnzhǐ",
+    "arti": "melarang",
+    "contoh": {
+      "zh": "禁止在教室里吃东西。",
+      "id": "Dilarang makan di dalam kelas."
+    }
+  },
+  {
+    "hanzi": "责任",
+    "pinyin": "zérèn",
+    "arti": "tanggung jawab",
+    "contoh": {
+      "zh": "这是每个公民的责任。",
+      "id": "Ini adalah tanggung jawab setiap warga negara."
+    }
+  },
+  {
+    "hanzi": "安全",
+    "pinyin": "ānquán",
+    "arti": "keamanan; aman",
+    "contoh": {
+      "zh": "安全是最重要的。",
+      "id": "Keamanan adalah yang terpenting."
+    }
+  },
+  {
+    "hanzi": "危险",
+    "pinyin": "wēixiǎn",
+    "arti": "bahaya; berbahaya",
+    "contoh": {
+      "zh": "在河里游泳很危险。",
+      "id": "Berenang di sungai sangat berbahaya."
+    }
+  },
+  {
+    "hanzi": "权利",
+    "pinyin": "quánlì",
+    "arti": "hak",
+    "contoh": {
+      "zh": "每个人都有说话的权利。",
+      "id": "Setiap orang punya hak untuk berbicara."
+    }
+  },
+  {
+    "hanzi": "证明",
+    "pinyin": "zhèngmíng",
+    "arti": "bukti; membuktikan",
+    "contoh": {
+      "zh": "你需要提供身份证明。",
+      "id": "Kamu perlu memberikan bukti identitas."
+    }
+  },
+  {
+    "hanzi": "罚款",
+    "pinyin": "fákuǎn",
+    "arti": "denda",
+    "contoh": {
+      "zh": "违反规定要交罚款。",
+      "id": "Melanggar peraturan harus membayar denda."
+    }
+  },
+  {
+    "hanzi": "经济",
+    "pinyin": "jīngjì",
+    "arti": "ekonomi",
+    "contoh": {
+      "zh": "中国的经济发展很快。",
+      "id": "Ekonomi Tiongkok berkembang sangat cepat."
+    }
+  },
+  {
+    "hanzi": "市场",
+    "pinyin": "shìchǎng",
+    "arti": "pasar",
+    "contoh": {
+      "zh": "这个产品在市场上很受欢迎。",
+      "id": "Produk ini sangat populer di pasar."
+    }
+  },
+  {
+    "hanzi": "竞争",
+    "pinyin": "jìngzhēng",
+    "arti": "persaingan",
+    "contoh": {
+      "zh": "市场竞争越来越激烈。",
+      "id": "Persaingan pasar semakin ketat."
+    }
+  },
+  {
+    "hanzi": "贸易",
+    "pinyin": "màoyì",
+    "arti": "perdagangan",
+    "contoh": {
+      "zh": "两国之间的贸易越来越多。",
+      "id": "Perdagangan antara kedua negara semakin banyak."
+    }
+  },
+  {
+    "hanzi": "投资",
+    "pinyin": "tóuzī",
+    "arti": "investasi",
+    "contoh": {
+      "zh": "他决定投资一家新公司。",
+      "id": "Dia memutuskan untuk berinvestasi di perusahaan baru."
+    }
+  },
+  {
+    "hanzi": "利润",
+    "pinyin": "lìrùn",
+    "arti": "keuntungan; profit",
+    "contoh": {
+      "zh": "今年的利润比去年高。",
+      "id": "Keuntungan tahun ini lebih tinggi dari tahun lalu."
+    }
+  },
+  {
+    "hanzi": "客户",
+    "pinyin": "kèhù",
+    "arti": "klien",
+    "contoh": {
+      "zh": "我们要认真对待每一位客户。",
+      "id": "Kita harus memperlakukan setiap klien dengan serius."
+    }
+  },
+  {
+    "hanzi": "品牌",
+    "pinyin": "pǐnpái",
+    "arti": "merek",
+    "contoh": {
+      "zh": "这个品牌在全世界都很有名。",
+      "id": "Merek ini terkenal di seluruh dunia."
+    }
+  },
+  {
+    "hanzi": "发展",
+    "pinyin": "fāzhǎn",
+    "arti": "perkembangan; berkembang",
+    "contoh": {
+      "zh": "城市的发展非常快。",
+      "id": "Perkembangan kota sangat cepat."
+    }
+  },
+  {
+    "hanzi": "合作",
+    "pinyin": "hézuò",
+    "arti": "kerja sama",
+    "contoh": {
+      "zh": "两家公司决定合作。",
+      "id": "Kedua perusahaan memutuskan untuk bekerja sama."
+    }
+  },
+  {
+    "hanzi": "改变",
+    "pinyin": "gǎibiàn",
+    "arti": "mengubah",
+    "contoh": {
+      "zh": "科技改变了我们的生活。",
+      "id": "Teknologi mengubah kehidupan kita."
+    }
+  },
+  {
+    "hanzi": "解决",
+    "pinyin": "jiějué",
+    "arti": "menyelesaikan (masalah)",
+    "contoh": {
+      "zh": "我们要一起解决这个问题。",
+      "id": "Kita harus bersama menyelesaikan masalah ini."
+    }
+  },
+  {
+    "hanzi": "提高",
+    "pinyin": "tígāo",
+    "arti": "meningkatkan",
+    "contoh": {
+      "zh": "多练习可以提高你的水平。",
+      "id": "Banyak berlatih bisa meningkatkan kemampuanmu."
+    }
+  },
+  {
+    "hanzi": "降低",
+    "pinyin": "jiàngdī",
+    "arti": "menurunkan",
+    "contoh": {
+      "zh": "商店降低了商品的价格。",
+      "id": "Toko menurunkan harga barang."
+    }
+  },
+  {
+    "hanzi": "增加",
+    "pinyin": "zēngjiā",
+    "arti": "menambah",
+    "contoh": {
+      "zh": "今年的学生人数增加了。",
+      "id": "Jumlah siswa tahun ini bertambah."
+    }
+  },
+  {
+    "hanzi": "减少",
+    "pinyin": "jiǎnshǎo",
+    "arti": "mengurangi",
+    "contoh": {
+      "zh": "我们要减少浪费。",
+      "id": "Kita harus mengurangi pemborosan."
+    }
+  },
+  {
+    "hanzi": "选择",
+    "pinyin": "xuǎnzé",
+    "arti": "memilih",
+    "contoh": {
+      "zh": "你选择了哪个专业？",
+      "id": "Kamu memilih jurusan apa?"
+    }
+  },
+  {
+    "hanzi": "决定",
+    "pinyin": "juédìng",
+    "arti": "memutuskan",
+    "contoh": {
+      "zh": "他决定去中国留学。",
+      "id": "Dia memutuskan pergi studi ke Tiongkok."
+    }
+  },
+  {
+    "hanzi": "比较",
+    "pinyin": "bǐjiào",
+    "arti": "membandingkan; cukup",
+    "contoh": {
+      "zh": "这两个方案比较一下吧。",
+      "id": "Ayo bandingkan dua rencana ini."
+    }
+  },
+  {
+    "hanzi": "影响",
+    "pinyin": "yǐngxiǎng",
+    "arti": "mempengaruhi; pengaruh",
+    "contoh": {
+      "zh": "天气影响了我们的计划。",
+      "id": "Cuaca mempengaruhi rencana kita."
+    }
+  },
+  {
+    "hanzi": "表示",
+    "pinyin": "biǎoshì",
+    "arti": "menyatakan; menunjukkan",
+    "contoh": {
+      "zh": "他表示同意你的想法。",
+      "id": "Dia menyatakan setuju dengan pemikiranmu."
+    }
+  },
+  {
+    "hanzi": "代替",
+    "pinyin": "dàitì",
+    "arti": "menggantikan",
+    "contoh": {
+      "zh": "没人能代替妈妈的位置。",
+      "id": "Tidak ada yang bisa menggantikan posisi ibu."
+    }
+  },
+  {
+    "hanzi": "接受",
+    "pinyin": "jiēshòu",
+    "arti": "menerima",
+    "contoh": {
+      "zh": "我们愿意接受你的建议。",
+      "id": "Kami bersedia menerima saranmu."
+    }
+  },
+  {
+    "hanzi": "拒绝",
+    "pinyin": "jùjué",
+    "arti": "menolak",
+    "contoh": {
+      "zh": "她拒绝了他的邀请。",
+      "id": "Dia menolak undangannya."
+    }
+  },
+  {
+    "hanzi": "坚持",
+    "pinyin": "jiānchí",
+    "arti": "bertahan; gigih",
+    "contoh": {
+      "zh": "只要坚持就能成功。",
+      "id": "Asalkan gigih pasti bisa berhasil."
+    }
+  },
+  {
+    "hanzi": "复杂",
+    "pinyin": "fùzá",
+    "arti": "rumit; kompleks",
+    "contoh": {
+      "zh": "这个问题比较复杂。",
+      "id": "Masalah ini cukup rumit."
+    }
+  },
+  {
+    "hanzi": "简单",
+    "pinyin": "jiǎndān",
+    "arti": "sederhana; mudah",
+    "contoh": {
+      "zh": "这个方法很简单。",
+      "id": "Metode ini sangat mudah."
+    }
+  },
+  {
+    "hanzi": "丰富",
+    "pinyin": "fēngfù",
+    "arti": "kaya; beragam",
+    "contoh": {
+      "zh": "她的经验很丰富。",
+      "id": "Pengalamannya sangat kaya."
+    }
+  },
+  {
+    "hanzi": "普通",
+    "pinyin": "pǔtōng",
+    "arti": "biasa; umum",
+    "contoh": {
+      "zh": "他只是一个普通的学生。",
+      "id": "Dia hanya seorang siswa biasa."
+    }
+  },
+  {
+    "hanzi": "特别",
+    "pinyin": "tèbié",
+    "arti": "khusus; sangat",
+    "contoh": {
+      "zh": "今天的天气特别好。",
+      "id": "Cuaca hari ini sangat bagus."
+    }
+  },
+  {
+    "hanzi": "严重",
+    "pinyin": "yánzhòng",
+    "arti": "serius; parah",
+    "contoh": {
+      "zh": "污染问题越来越严重。",
+      "id": "Masalah polusi semakin parah."
+    }
+  },
+  {
+    "hanzi": "完美",
+    "pinyin": "wánměi",
+    "arti": "sempurna",
+    "contoh": {
+      "zh": "没有人是完美的。",
+      "id": "Tidak ada orang yang sempurna."
+    }
+  },
+  {
+    "hanzi": "合适",
+    "pinyin": "héshì",
+    "arti": "cocok; pas",
+    "contoh": {
+      "zh": "这件衣服很合适你。",
+      "id": "Baju ini sangat cocok untukmu."
+    }
+  },
+  {
+    "hanzi": "正常",
+    "pinyin": "zhèngcháng",
+    "arti": "normal",
+    "contoh": {
+      "zh": "这是正常的现象。",
+      "id": "Ini adalah fenomena normal."
+    }
+  },
+  {
+    "hanzi": "及时",
+    "pinyin": "jíshí",
+    "arti": "tepat waktu",
+    "contoh": {
+      "zh": "谢谢你及时通知我。",
+      "id": "Terima kasih sudah memberitahu saya tepat waktu."
+    }
+  },
+  {
+    "hanzi": "仔细",
+    "pinyin": "zǐxì",
+    "arti": "teliti; hati-hati",
+    "contoh": {
+      "zh": "做作业要仔细一点。",
+      "id": "Mengerjakan PR harus teliti sedikit."
+    }
+  },
+  {
+    "hanzi": "确实",
+    "pinyin": "quèshí",
+    "arti": "memang; benar-benar",
+    "contoh": {
+      "zh": "这道菜确实很好吃。",
+      "id": "Masakan ini memang sangat enak."
+    }
+  },
+  {
+    "hanzi": "突然",
+    "pinyin": "tūrán",
+    "arti": "tiba-tiba",
+    "contoh": {
+      "zh": "天气突然变冷了。",
+      "id": "Cuaca tiba-tiba berubah dingin."
+    }
+  },
+  {
+    "hanzi": "逐渐",
+    "pinyin": "zhújiàn",
+    "arti": "secara bertahap",
+    "contoh": {
+      "zh": "他的中文水平逐渐提高了。",
+      "id": "Kemampuan bahasa Mandarinnya meningkat secara bertahap."
+    }
+  },
+  {
+    "hanzi": "几乎",
+    "pinyin": "jīhū",
+    "arti": "hampir",
+    "contoh": {
+      "zh": "我几乎每天都去跑步。",
+      "id": "Saya hampir setiap hari pergi berlari."
+    }
+  },
+  {
+    "hanzi": "而且",
+    "pinyin": "érqiě",
+    "arti": "dan juga; lagipula",
+    "contoh": {
+      "zh": "他不但聪明，而且很努力。",
+      "id": "Dia tidak hanya pintar, tapi juga sangat rajin."
+    }
+  },
+  {
+    "hanzi": "不过",
+    "pinyin": "búguò",
+    "arti": "tapi; namun",
+    "contoh": {
+      "zh": "他很忙，不过还是来了。",
+      "id": "Dia sangat sibuk, tapi tetap datang."
+    }
+  },
+  {
+    "hanzi": "因此",
+    "pinyin": "yīncǐ",
+    "arti": "oleh karena itu",
+    "contoh": {
+      "zh": "他生病了，因此不能来。",
+      "id": "Dia sakit, oleh karena itu tidak bisa datang."
+    }
+  },
+  {
+    "hanzi": "否则",
+    "pinyin": "fǒuzé",
+    "arti": "kalau tidak; jika tidak",
+    "contoh": {
+      "zh": "快点走，否则会迟到。",
+      "id": "Cepat jalan, kalau tidak akan terlambat."
+    }
+  },
+  {
+    "hanzi": "另外",
+    "pinyin": "lìngwài",
+    "arti": "selain itu",
+    "contoh": {
+      "zh": "另外，我还有一个问题。",
+      "id": "Selain itu, saya masih punya satu pertanyaan."
+    }
+  },
+  {
+    "hanzi": "无论",
+    "pinyin": "wúlùn",
+    "arti": "tidak peduli; apapun",
+    "contoh": {
+      "zh": "无论多难，我都不会放弃。",
+      "id": "Tidak peduli seberapa sulit, saya tidak akan menyerah."
+    }
+  },
+  {
+    "hanzi": "只要",
+    "pinyin": "zhǐyào",
+    "arti": "asalkan",
+    "contoh": {
+      "zh": "只要你努力，就能做到。",
+      "id": "Asalkan kamu berusaha keras, pasti bisa."
+    }
+  },
+  {
+    "hanzi": "虽然",
+    "pinyin": "suīrán",
+    "arti": "meskipun",
+    "contoh": {
+      "zh": "虽然很累，但我很开心。",
+      "id": "Meskipun sangat capek, tapi saya senang."
+    }
+  },
+  {
+    "hanzi": "既然",
+    "pinyin": "jìrán",
+    "arti": "karena sudah; toh sudah",
+    "contoh": {
+      "zh": "既然来了，就好好玩吧。",
+      "id": "Karena sudah datang, ayo bermain dengan baik."
+    }
+  },
+  {
+    "hanzi": "总之",
+    "pinyin": "zǒngzhī",
+    "arti": "singkatnya; intinya",
+    "contoh": {
+      "zh": "总之，我们要加油。",
+      "id": "Intinya, kita harus semangat."
+    }
+  },
+  {
+    "hanzi": "首先",
+    "pinyin": "shǒuxiān",
+    "arti": "pertama-tama",
+    "contoh": {
+      "zh": "首先，我们要了解情况。",
+      "id": "Pertama-tama, kita harus memahami situasinya."
+    }
+  },
+  {
+    "hanzi": "然后",
+    "pinyin": "ránhòu",
+    "arti": "kemudian; lalu",
+    "contoh": {
+      "zh": "先吃饭，然后去散步。",
+      "id": "Makan dulu, lalu pergi jalan-jalan."
+    }
+  },
+  {
+    "hanzi": "最后",
+    "pinyin": "zuìhòu",
+    "arti": "terakhir; akhirnya",
+    "contoh": {
+      "zh": "最后，祝大家新年快乐！",
+      "id": "Terakhir, selamat tahun baru untuk semua!"
+    }
+  },
+  {
+    "hanzi": "世纪",
+    "pinyin": "shìjì",
+    "arti": "abad",
+    "contoh": {
+      "zh": "二十一世纪是科技的世纪。",
+      "id": "Abad ke-21 adalah abad teknologi."
+    }
+  },
+  {
+    "hanzi": "年代",
+    "pinyin": "niándài",
+    "arti": "dekade; era",
+    "contoh": {
+      "zh": "八十年代的音乐很好听。",
+      "id": "Musik era 80-an sangat enak didengar."
+    }
+  },
+  {
+    "hanzi": "期间",
+    "pinyin": "qījiān",
+    "arti": "selama; periode",
+    "contoh": {
+      "zh": "假期期间，公司不上班。",
+      "id": "Selama liburan, perusahaan tidak beroperasi."
+    }
+  },
+  {
+    "hanzi": "之前",
+    "pinyin": "zhīqián",
+    "arti": "sebelum",
+    "contoh": {
+      "zh": "出发之前请检查一下行李。",
+      "id": "Sebelum berangkat tolong periksa bagasi."
+    }
+  },
+  {
+    "hanzi": "之后",
+    "pinyin": "zhīhòu",
+    "arti": "setelah",
+    "contoh": {
+      "zh": "毕业之后你打算做什么？",
+      "id": "Setelah lulus kamu berencana melakukan apa?"
+    }
+  },
+  {
+    "hanzi": "来得及",
+    "pinyin": "láidejí",
+    "arti": "masih sempat",
+    "contoh": {
+      "zh": "别急，来得及。",
+      "id": "Jangan buru-buru, masih sempat."
+    }
+  },
+  {
+    "hanzi": "来不及",
+    "pinyin": "láibují",
+    "arti": "tidak sempat",
+    "contoh": {
+      "zh": "来不及了，我们快走吧。",
+      "id": "Tidak sempat lagi, ayo kita cepat jalan."
+    }
+  },
+  {
+    "hanzi": "倍",
+    "pinyin": "bèi",
+    "arti": "kali lipat",
+    "contoh": {
+      "zh": "今年的收入是去年的两倍。",
+      "id": "Pendapatan tahun ini dua kali lipat tahun lalu."
+    }
+  },
+  {
+    "hanzi": "大约",
+    "pinyin": "dàyuē",
+    "arti": "kira-kira",
+    "contoh": {
+      "zh": "大约需要两个小时。",
+      "id": "Kira-kira butuh dua jam."
+    }
+  },
+  {
+    "hanzi": "至少",
+    "pinyin": "zhìshǎo",
+    "arti": "setidaknya",
+    "contoh": {
+      "zh": "你至少要休息八个小时。",
+      "id": "Kamu setidaknya harus istirahat delapan jam."
+    }
+  },
+  {
+    "hanzi": "计划",
+    "pinyin": "jìhuà",
+    "arti": "rencana",
+    "contoh": {
+      "zh": "你有什么周末计划？",
+      "id": "Kamu punya rencana apa akhir pekan?"
+    }
+  },
+  {
+    "hanzi": "目标",
+    "pinyin": "mùbiāo",
+    "arti": "tujuan; target",
+    "contoh": {
+      "zh": "你的学习目标是什么？",
+      "id": "Tujuan belajarmu apa?"
+    }
+  },
+  {
+    "hanzi": "方法",
+    "pinyin": "fāngfǎ",
+    "arti": "metode; cara",
+    "contoh": {
+      "zh": "你用了什么学习方法？",
+      "id": "Kamu memakai metode belajar apa?"
+    }
+  },
+  {
+    "hanzi": "结果",
+    "pinyin": "jiéguǒ",
+    "arti": "hasil",
+    "contoh": {
+      "zh": "比赛的结果让人意外。",
+      "id": "Hasil pertandingan membuat orang terkejut."
+    }
+  },
+  {
+    "hanzi": "原因",
+    "pinyin": "yuányīn",
+    "arti": "alasan; sebab",
+    "contoh": {
+      "zh": "迟到的原因是什么？",
+      "id": "Alasan terlambat apa?"
+    }
+  },
+  {
+    "hanzi": "条件",
+    "pinyin": "tiáojiàn",
+    "arti": "syarat; kondisi",
+    "contoh": {
+      "zh": "这里的学习条件很好。",
+      "id": "Kondisi belajar di sini sangat bagus."
+    }
+  },
+  {
+    "hanzi": "情况",
+    "pinyin": "qíngkuàng",
+    "arti": "situasi; keadaan",
+    "contoh": {
+      "zh": "请你介绍一下目前的情况。",
+      "id": "Tolong perkenalkan situasi saat ini."
+    }
+  },
+  {
+    "hanzi": "困难",
+    "pinyin": "kùnnan",
+    "arti": "kesulitan; sulit",
+    "contoh": {
+      "zh": "学中文有什么困难？",
+      "id": "Belajar bahasa Mandarin ada kesulitan apa?"
+    }
+  },
+  {
+    "hanzi": "效果",
+    "pinyin": "xiàoguǒ",
+    "arti": "efek; hasil",
+    "contoh": {
+      "zh": "这个方法的效果很好。",
+      "id": "Efek metode ini sangat bagus."
+    }
+  },
+  {
+    "hanzi": "道理",
+    "pinyin": "dàolǐ",
+    "arti": "alasan logis; prinsip",
+    "contoh": {
+      "zh": "你说的有道理。",
+      "id": "Yang kamu katakan masuk akal."
+    }
+  },
+  {
+    "hanzi": "意见",
+    "pinyin": "yìjiàn",
+    "arti": "pendapat; saran",
+    "contoh": {
+      "zh": "大家有什么意见？",
+      "id": "Semua orang ada pendapat apa?"
+    }
+  },
+  {
+    "hanzi": "态度",
+    "pinyin": "tàidu",
+    "arti": "sikap",
+    "contoh": {
+      "zh": "他的工作态度很好。",
+      "id": "Sikap kerjanya sangat baik."
+    }
+  },
+  {
+    "hanzi": "感觉",
+    "pinyin": "gǎnjué",
+    "arti": "perasaan; merasa",
+    "contoh": {
+      "zh": "我感觉今天很累。",
+      "id": "Saya merasa hari ini sangat capek."
+    }
+  },
+  {
+    "hanzi": "梦想",
+    "pinyin": "mèngxiǎng",
+    "arti": "impian",
+    "contoh": {
+      "zh": "每个人都有自己的梦想。",
+      "id": "Setiap orang memiliki impiannya sendiri."
+    }
+  },
+  {
+    "hanzi": "希望",
+    "pinyin": "xīwàng",
+    "arti": "berharap; harapan",
+    "contoh": {
+      "zh": "我希望你一切顺利。",
+      "id": "Saya berharap semuanya lancar untukmu."
+    }
+  }
+]
