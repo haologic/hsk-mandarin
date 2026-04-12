@@ -13,7 +13,7 @@ if (redirectPath) {
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/hsk-mandarin">
       <App />
     </BrowserRouter>
   </React.StrictMode>
