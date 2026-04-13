@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HSK 1 — Kosakata & Grammar</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --vermillion: #E63946;
+      --vermillion-light: #fdecea;
+      --ink: #1a1a2e;
+      --ink-soft: #3d3d5c;
+      --muted: #6b7280;
+      --green: #16a34a;
+      --green-light: #dcfce7;
+      --gold: #c9a85c;
+      --bg: #f8f7f4;
+      --bg-card: #ffffff;
+      --border: #e5e7eb;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+      --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      height: 60px;
+    }
+
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .navbar-brand span {
+      color: var(--vermillion);
+    }
+
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+
+    .navbar-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--ink-soft);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 8px;
+      transition: all .18s ease;
+    }
+
+    .navbar-links a:hover {
+      background: var(--bg);
+      color: var(--ink);
+    }
+
+    .navbar-links a.nav-cta {
+      background: var(--vermillion);
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .navbar-links a.nav-cta:hover {
+      background: #c0303c;
+    }
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      padding: 14px 28px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .breadcrumb a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color .15s;
+    }
+
+    .breadcrumb a:hover { color: var(--vermillion); }
+
+    .breadcrumb-sep {
+      margin: 0 6px;
+      opacity: .5;
+    }
+
+    .breadcrumb-current {
+      color: var(--ink-soft);
+      font-weight: 500;
+    }
+
+    /* ===== PAGE HEADER ===== */
+    .page-header {
+      padding: 36px 28px 28px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .page-header h1 .level-badge {
+      display: inline-block;
+      background: var(--vermillion);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 6px;
+      margin-right: 10px;
+      vertical-align: middle;
+      position: relative;
+      top: -3px;
+    }
+
+    .page-header p {
+      font-size: 0.97rem;
+      color: var(--ink-soft);
+      max-width: 620px;
+      line-height: 1.65;
+    }
+
+    .header-stats {
+      display: flex;
+      gap: 20px;
+      margin-top: 18px;
+      flex-wrap: wrap;
+    }
+
+    .stat-chip {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 5px 14px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--ink-soft);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .stat-chip .stat-num {
+      font-weight: 700;
+      color: var(--vermillion);
+    }
+
+    /* ===== TAB NAV ===== */
+    .materi-nav-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 28px 24px;
+    }
+
+    .materi-nav {
+      display: flex;
+      gap: 6px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 5px;
+      box-shadow: var(--shadow-sm);
+      width: fit-content;
+    }
+
+    .materi-nav-btn {
+      padding: 9px 22px;
+      border: none;
+      border-radius: var(--radius-sm);
+      background: transparent;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--muted);
+      transition: all .2s ease;
+      white-space: nowrap;
+    }
+
+    .materi-nav-btn:hover {
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    .materi-nav-btn.active {
+      background: var(--vermillion);
+      color: #fff;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(230,57,70,.3);
+    }
+
+    /* ===== MAIN CONTAINER ===== */
+    .materi-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 28px 60px;
+    }
+
+    /* ===== SECTION TITLES ===== */
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .section-subtitle {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    /* ===== SEARCH BOX ===== */
+    .search-wrap {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      pointer-events: none;
+      font-size: 1rem;
+    }
+
+    .search-input {
+      width: 100%;
+      max-width: 420px;
+      padding: 10px 14px 10px 40px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: var(--ink);
+      background: var(--bg-card);
+      transition: border-color .2s, box-shadow .2s;
+      outline: none;
+    }
+
+    .search-input:focus {
+      border-color: var(--vermillion);
+      box-shadow: 0 0 0 3px rgba(230,57,70,.1);
+    }
+
+    .search-input::placeholder { color: var(--muted); }
+
+    .search-count {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* ===== VOCAB TABLE ===== */
+    .vocab-table-wrap {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .vocab-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    .vocab-table thead {
+      background: var(--ink);
+    }
+
+    .vocab-table thead th {
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 13px 16px;
+      text-align: left;
+    }
+
+    .vocab-table thead th:first-child {
+      width: 48px;
+      text-align: center;
+    }
+
+    .vocab-table tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background .15s;
+    }
+
+    .vocab-table tbody tr:last-child { border-bottom: none; }
+
+    .vocab-table tbody tr:hover { background: #fafafa; }
+
+    .vocab-table td {
+      padding: 14px 16px;
+      vertical-align: top;
+    }
+
+    .td-no {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding-top: 17px;
+    }
+
+    .td-hanzi {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.2;
+      min-width: 70px;
+    }
+
+    .td-pinyin {
+      font-style: italic;
+      color: var(--green);
+      font-size: 0.88rem;
+      font-weight: 500;
+      min-width: 110px;
+    }
+
+    .td-arti {
+      color: var(--ink-soft);
+      font-size: 0.88rem;
+      min-width: 140px;
+    }
+
+    .td-contoh {
+      min-width: 220px;
+    }
+
+    .contoh-zh {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 0.97rem;
+      color: var(--ink);
+      margin-bottom: 3px;
+    }
+
+    .contoh-id {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .no-results {
+      text-align: center;
+      padding: 48px 20px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .no-results span {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    /* ===== GRAMMAR CARDS ===== */
+    .grammar-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .grammar-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 26px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow .2s, transform .2s;
+    }
+
+    .grammar-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-1px);
+    }
+
+    .grammar-card-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .grammar-num {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      background: var(--vermillion);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.82rem;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .grammar-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+
+    .grammar-pattern {
+      background: var(--vermillion-light);
+      border-left: 3px solid var(--vermillion);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 10px 16px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--vermillion);
+      margin-bottom: 14px;
+    }
+
+    .grammar-explanation {
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .grammar-examples {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .example-item {
+      background: var(--bg);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+    }
+
+    .example-zh {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .example-id {
+      font-size: 0.83rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* ===== FOOTER ===== */
+    .page-footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      margin-top: 20px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 680px) {
+      .navbar { padding: 0 16px; }
+      .breadcrumb { padding: 12px 16px; }
+      .page-header { padding: 24px 16px 20px; }
+      .materi-nav-wrap { padding: 0 16px 20px; }
+      .materi-container { padding: 0 16px 48px; }
+
+      .materi-nav { width: 100%; }
+      .materi-nav-btn { flex: 1; font-size: 0.82rem; padding: 9px 10px; }
+
+      .vocab-table { font-size: 0.82rem; }
+      .td-hanzi { font-size: 1.2rem; min-width: 50px; }
+      .td-pinyin { min-width: 80px; }
+      .td-arti { min-width: 100px; }
+      .td-contoh { display: none; }
+
+      .grammar-card { padding: 18px; }
+      .grammar-title { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="menu.html" class="navbar-brand">H<span>S</span>K</a>
+    <ul class="navbar-links">
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="hsk1-soal.html" class="nav-cta">Latihan Soal</a></li>
+    </ul>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="menu.html">Menu</a>
+    <span class="breadcrumb-sep">›</span>
+    <span class="breadcrumb-current">HSK 1 Materi</span>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <h1>
+      <span class="level-badge">HSK 1</span>
+      Kosakata &amp; Grammar
+    </h1>
+    <p>150 kosakata resmi HSK Level 1 dan 15 poin grammar dasar. Semua contoh kalimat original, penjelasan dalam Bahasa Indonesia.</p>
+    <div class="header-stats">
+      <div class="stat-chip"><span class="stat-num" id="total-vocab">165</span> kosakata</div>
+      <div class="stat-chip"><span class="stat-num">15</span> poin grammar</div>
+      <div class="stat-chip">📖 HSK Level 1</div>
+    </div>
+  </header>
+
+  <!-- TAB NAV -->
+  <div class="materi-nav-wrap">
+    <div class="materi-nav">
+      <button class="materi-nav-btn active" onclick="showSection('kosakata', this)">📖 Kosakata (150+)</button>
+      <button class="materi-nav-btn" onclick="showSection('grammar', this)">📝 Grammar (15)</button>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="materi-container">
+
+    <!-- KOSAKATA SECTION -->
+    <section id="section-kosakata" class="materi-section">
+      <h2 class="section-title">Daftar Kosakata HSK 1</h2>
+      <p class="section-subtitle">Klik kolom untuk mengurutkan. Gunakan pencarian untuk menyaring kata.</p>
+
+      <div class="search-wrap">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          id="vocab-search"
+          class="search-input"
+          placeholder="Cari kosakata... (hanzi, pinyin, atau arti)"
+          oninput="filterVocab()"
+          autocomplete="off"
+          spellcheck="false"
+        />
+      </div>
+      <div class="search-count" id="search-count"></div>
+
+      <div class="vocab-table-wrap">
+        <table class="vocab-table" id="vocab-table">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Hanzi</th>
+              <th>Pinyin</th>
+              <th>Arti</th>
+              <th>Contoh Kalimat</th>
+            </tr>
+          </thead>
+          <tbody id="vocab-tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- GRAMMAR SECTION -->
+    <section id="section-grammar" class="materi-section" style="display:none">
+      <h2 class="section-title">Poin Grammar HSK 1</h2>
+      <p class="section-subtitle">15 pola dasar yang wajib dikuasai untuk lulus HSK Level 1.</p>
+      <div class="grammar-grid" id="grammar-grid"></div>
+    </section>
+
+  </div>
+
+  <footer class="page-footer">
+    HSK 1 Materi &mdash; Semua materi dalam Bahasa Indonesia
+  </footer>
+
+  <script>
+    // ===== AUTH CHECK =====
+    if (sessionStorage.getItem('hsk_auth') !== 'true') {
+      window.location.href = 'menu.html';
+    }
+
+    // ===== VOCABULARY DATA (165 items) =====
+    const vocabData = [
+      { hanzi: "我", pinyin: "wǒ", arti: "saya, aku", contoh: { zh: "我喜欢看书。", id: "Saya suka membaca buku." } },
+      { hanzi: "你", pinyin: "nǐ", arti: "kamu", contoh: { zh: "你叫什么名字？", id: "Kamu namanya siapa?" } },
+      { hanzi: "他", pinyin: "tā", arti: "dia (laki-laki)", contoh: { zh: "他是我的朋友。", id: "Dia adalah teman saya." } },
+      { hanzi: "她", pinyin: "tā", arti: "dia (perempuan)", contoh: { zh: "她很漂亮。", id: "Dia sangat cantik." } },
+      { hanzi: "我们", pinyin: "wǒmen", arti: "kami, kita", contoh: { zh: "我们一起去吧。", id: "Ayo kita pergi bersama." } },
+      { hanzi: "这", pinyin: "zhè", arti: "ini", contoh: { zh: "这是我的书。", id: "Ini adalah buku saya." } },
+      { hanzi: "那", pinyin: "nà", arti: "itu", contoh: { zh: "那个人是谁？", id: "Orang itu siapa?" } },
+      { hanzi: "哪", pinyin: "nǎ", arti: "mana, yang mana", contoh: { zh: "你住在哪？", id: "Kamu tinggal di mana?" } },
+      { hanzi: "谁", pinyin: "shéi", arti: "siapa", contoh: { zh: "他是谁？", id: "Dia siapa?" } },
+      { hanzi: "什么", pinyin: "shénme", arti: "apa", contoh: { zh: "你在做什么？", id: "Kamu sedang melakukan apa?" } },
+      { hanzi: "是", pinyin: "shì", arti: "adalah", contoh: { zh: "我是中国人。", id: "Saya adalah orang Tiongkok." } },
+      { hanzi: "有", pinyin: "yǒu", arti: "punya, ada", contoh: { zh: "我有一个哥哥。", id: "Saya punya seorang kakak laki-laki." } },
+      { hanzi: "看", pinyin: "kàn", arti: "melihat, menonton", contoh: { zh: "我在看电影。", id: "Saya sedang menonton film." } },
+      { hanzi: "听", pinyin: "tīng", arti: "mendengar", contoh: { zh: "请听老师说。", id: "Silakan dengarkan guru berbicara." } },
+      { hanzi: "说", pinyin: "shuō", arti: "berbicara, berkata", contoh: { zh: "他会说中文。", id: "Dia bisa berbicara Bahasa Mandarin." } },
+      { hanzi: "读", pinyin: "dú", arti: "membaca (keras)", contoh: { zh: "请读这个字。", id: "Tolong baca karakter ini." } },
+      { hanzi: "写", pinyin: "xiě", arti: "menulis", contoh: { zh: "我在写汉字。", id: "Saya sedang menulis karakter Mandarin." } },
+      { hanzi: "叫", pinyin: "jiào", arti: "memanggil, bernama", contoh: { zh: "我叫小红。", id: "Saya bernama Xiao Hong." } },
+      { hanzi: "来", pinyin: "lái", arti: "datang", contoh: { zh: "请来我家。", id: "Silakan datang ke rumah saya." } },
+      { hanzi: "去", pinyin: "qù", arti: "pergi", contoh: { zh: "我去学校。", id: "Saya pergi ke sekolah." } },
+      { hanzi: "吃", pinyin: "chī", arti: "makan", contoh: { zh: "我们吃饭吧。", id: "Ayo kita makan." } },
+      { hanzi: "喝", pinyin: "hē", arti: "minum", contoh: { zh: "你想喝什么？", id: "Kamu ingin minum apa?" } },
+      { hanzi: "做", pinyin: "zuò", arti: "melakukan, membuat", contoh: { zh: "你在做什么？", id: "Kamu sedang melakukan apa?" } },
+      { hanzi: "买", pinyin: "mǎi", arti: "membeli", contoh: { zh: "我想买一本书。", id: "Saya ingin membeli sebuah buku." } },
+      { hanzi: "住", pinyin: "zhù", arti: "tinggal", contoh: { zh: "你住在哪里？", id: "Kamu tinggal di mana?" } },
+      { hanzi: "学习", pinyin: "xuéxí", arti: "belajar", contoh: { zh: "我在学习中文。", id: "Saya sedang belajar Bahasa Mandarin." } },
+      { hanzi: "工作", pinyin: "gōngzuò", arti: "bekerja", contoh: { zh: "他在医院工作。", id: "Dia bekerja di rumah sakit." } },
+      { hanzi: "睡觉", pinyin: "shuìjiào", arti: "tidur", contoh: { zh: "我十点睡觉。", id: "Saya tidur jam sepuluh." } },
+      { hanzi: "打电话", pinyin: "dǎ diànhuà", arti: "menelepon", contoh: { zh: "我给妈妈打电话。", id: "Saya menelepon ibu." } },
+      { hanzi: "回", pinyin: "huí", arti: "kembali, pulang", contoh: { zh: "我六点回家。", id: "Saya pulang jam enam." } },
+      { hanzi: "想", pinyin: "xiǎng", arti: "ingin, berpikir", contoh: { zh: "我想去中国。", id: "Saya ingin pergi ke Tiongkok." } },
+      { hanzi: "会", pinyin: "huì", arti: "bisa, akan", contoh: { zh: "我会说中文。", id: "Saya bisa berbicara Bahasa Mandarin." } },
+      { hanzi: "能", pinyin: "néng", arti: "dapat, mampu", contoh: { zh: "你能来吗？", id: "Kamu bisa datang?" } },
+      { hanzi: "爱", pinyin: "ài", arti: "cinta, suka", contoh: { zh: "我爱我的家人。", id: "Saya mencintai keluarga saya." } },
+      { hanzi: "喜欢", pinyin: "xǐhuan", arti: "suka", contoh: { zh: "我喜欢吃苹果。", id: "Saya suka makan apel." } },
+      { hanzi: "认识", pinyin: "rènshi", arti: "mengenal", contoh: { zh: "很高兴认识你。", id: "Senang berkenalan denganmu." } },
+      { hanzi: "开", pinyin: "kāi", arti: "membuka, mengendarai", contoh: { zh: "请开门。", id: "Tolong buka pintu." } },
+      { hanzi: "坐", pinyin: "zuò", arti: "duduk, naik (kendaraan)", contoh: { zh: "请坐。", id: "Silakan duduk." } },
+      { hanzi: "下雨", pinyin: "xià yǔ", arti: "hujan", contoh: { zh: "今天下雨了。", id: "Hari ini hujan." } },
+      { hanzi: "好", pinyin: "hǎo", arti: "baik, bagus", contoh: { zh: "今天天气很好。", id: "Cuaca hari ini sangat bagus." } },
+      { hanzi: "大", pinyin: "dà", arti: "besar", contoh: { zh: "这个房间很大。", id: "Ruangan ini sangat besar." } },
+      { hanzi: "小", pinyin: "xiǎo", arti: "kecil", contoh: { zh: "我有一只小猫。", id: "Saya punya seekor kucing kecil." } },
+      { hanzi: "多", pinyin: "duō", arti: "banyak", contoh: { zh: "这里人很多。", id: "Di sini orangnya sangat banyak." } },
+      { hanzi: "少", pinyin: "shǎo", arti: "sedikit", contoh: { zh: "他的钱很少。", id: "Uangnya sangat sedikit." } },
+      { hanzi: "冷", pinyin: "lěng", arti: "dingin", contoh: { zh: "今天很冷。", id: "Hari ini sangat dingin." } },
+      { hanzi: "热", pinyin: "rè", arti: "panas", contoh: { zh: "北京的夏天很热。", id: "Musim panas di Beijing sangat panas." } },
+      { hanzi: "高兴", pinyin: "gāoxìng", arti: "senang, gembira", contoh: { zh: "我今天很高兴。", id: "Saya hari ini sangat senang." } },
+      { hanzi: "漂亮", pinyin: "piàoliang", arti: "cantik, indah", contoh: { zh: "这朵花很漂亮。", id: "Bunga ini sangat cantik." } },
+      { hanzi: "人", pinyin: "rén", arti: "orang", contoh: { zh: "那个人是我爸爸。", id: "Orang itu adalah ayah saya." } },
+      { hanzi: "朋友", pinyin: "péngyou", arti: "teman", contoh: { zh: "她是我的好朋友。", id: "Dia adalah teman baik saya." } },
+      { hanzi: "同学", pinyin: "tóngxué", arti: "teman sekelas", contoh: { zh: "他是我的同学。", id: "Dia adalah teman sekelas saya." } },
+      { hanzi: "老师", pinyin: "lǎoshī", arti: "guru", contoh: { zh: "王老师很好。", id: "Guru Wang sangat baik." } },
+      { hanzi: "学生", pinyin: "xuéshēng", arti: "murid, siswa", contoh: { zh: "我是学生。", id: "Saya adalah murid." } },
+      { hanzi: "医生", pinyin: "yīshēng", arti: "dokter", contoh: { zh: "他是一个医生。", id: "Dia adalah seorang dokter." } },
+      { hanzi: "爸爸", pinyin: "bàba", arti: "ayah", contoh: { zh: "我爸爸在工作。", id: "Ayah saya sedang bekerja." } },
+      { hanzi: "妈妈", pinyin: "māma", arti: "ibu", contoh: { zh: "妈妈在做饭。", id: "Ibu sedang memasak." } },
+      { hanzi: "儿子", pinyin: "érzi", arti: "anak laki-laki", contoh: { zh: "他的儿子三岁了。", id: "Anak laki-lakinya sudah tiga tahun." } },
+      { hanzi: "女儿", pinyin: "nǚ'ér", arti: "anak perempuan", contoh: { zh: "我的女儿很可爱。", id: "Anak perempuan saya sangat lucu." } },
+      { hanzi: "先生", pinyin: "xiānsheng", arti: "Tuan, Bapak", contoh: { zh: "李先生你好。", id: "Halo Bapak Li." } },
+      { hanzi: "小姐", pinyin: "xiǎojiě", arti: "Nona", contoh: { zh: "张小姐请进。", id: "Nona Zhang, silakan masuk." } },
+      { hanzi: "一", pinyin: "yī", arti: "satu", contoh: { zh: "我有一个弟弟。", id: "Saya punya seorang adik laki-laki." } },
+      { hanzi: "二", pinyin: "èr", arti: "dua", contoh: { zh: "他有二十块钱。", id: "Dia punya dua puluh yuan." } },
+      { hanzi: "三", pinyin: "sān", arti: "tiga", contoh: { zh: "我买了三本书。", id: "Saya membeli tiga buku." } },
+      { hanzi: "四", pinyin: "sì", arti: "empat", contoh: { zh: "我家有四口人。", id: "Keluarga saya ada empat orang." } },
+      { hanzi: "五", pinyin: "wǔ", arti: "lima", contoh: { zh: "现在五点了。", id: "Sekarang sudah jam lima." } },
+      { hanzi: "六", pinyin: "liù", arti: "enam", contoh: { zh: "他六岁了。", id: "Dia sudah enam tahun." } },
+      { hanzi: "七", pinyin: "qī", arti: "tujuh", contoh: { zh: "一个星期有七天。", id: "Satu minggu ada tujuh hari." } },
+      { hanzi: "八", pinyin: "bā", arti: "delapan", contoh: { zh: "我八点上课。", id: "Saya masuk kelas jam delapan." } },
+      { hanzi: "九", pinyin: "jiǔ", arti: "sembilan", contoh: { zh: "今天九月九号。", id: "Hari ini tanggal sembilan bulan sembilan." } },
+      { hanzi: "十", pinyin: "shí", arti: "sepuluh", contoh: { zh: "我十点睡觉。", id: "Saya tidur jam sepuluh." } },
+      { hanzi: "零", pinyin: "líng", arti: "nol", contoh: { zh: "今天零度。", id: "Hari ini nol derajat." } },
+      { hanzi: "两", pinyin: "liǎng", arti: "dua (untuk benda)", contoh: { zh: "我有两个孩子。", id: "Saya punya dua anak." } },
+      { hanzi: "百", pinyin: "bǎi", arti: "ratus", contoh: { zh: "这本书一百块。", id: "Buku ini seratus yuan." } },
+      { hanzi: "年", pinyin: "nián", arti: "tahun", contoh: { zh: "今年是二零二六年。", id: "Tahun ini adalah tahun 2026." } },
+      { hanzi: "月", pinyin: "yuè", arti: "bulan", contoh: { zh: "我三月去中国。", id: "Saya pergi ke Tiongkok bulan Maret." } },
+      { hanzi: "日", pinyin: "rì", arti: "hari, tanggal", contoh: { zh: "今天几月几日？", id: "Hari ini tanggal berapa?" } },
+      { hanzi: "星期", pinyin: "xīngqī", arti: "minggu", contoh: { zh: "今天星期几？", id: "Hari ini hari apa?" } },
+      { hanzi: "今天", pinyin: "jīntiān", arti: "hari ini", contoh: { zh: "今天星期一。", id: "Hari ini hari Senin." } },
+      { hanzi: "明天", pinyin: "míngtiān", arti: "besok", contoh: { zh: "明天你有空吗？", id: "Besok kamu ada waktu?" } },
+      { hanzi: "昨天", pinyin: "zuótiān", arti: "kemarin", contoh: { zh: "昨天我去了商店。", id: "Kemarin saya pergi ke toko." } },
+      { hanzi: "上午", pinyin: "shàngwǔ", arti: "pagi (sebelum siang)", contoh: { zh: "上午我在学校。", id: "Pagi hari saya di sekolah." } },
+      { hanzi: "下午", pinyin: "xiàwǔ", arti: "siang / sore", contoh: { zh: "下午你做什么？", id: "Sore hari kamu melakukan apa?" } },
+      { hanzi: "时候", pinyin: "shíhou", arti: "waktu, saat", contoh: { zh: "你什么时候来？", id: "Kamu datang kapan?" } },
+      { hanzi: "点", pinyin: "diǎn", arti: "jam (waktu)", contoh: { zh: "现在几点？", id: "Sekarang jam berapa?" } },
+      { hanzi: "分钟", pinyin: "fēnzhōng", arti: "menit", contoh: { zh: "等我五分钟。", id: "Tunggu saya lima menit." } },
+      { hanzi: "现在", pinyin: "xiànzài", arti: "sekarang", contoh: { zh: "现在我们上课。", id: "Sekarang kita masuk kelas." } },
+      { hanzi: "中国", pinyin: "Zhōngguó", arti: "Tiongkok", contoh: { zh: "我想去中国。", id: "Saya ingin pergi ke Tiongkok." } },
+      { hanzi: "北京", pinyin: "Běijīng", arti: "Beijing", contoh: { zh: "北京很大。", id: "Beijing sangat besar." } },
+      { hanzi: "家", pinyin: "jiā", arti: "rumah, keluarga", contoh: { zh: "我的家在这里。", id: "Rumah saya di sini." } },
+      { hanzi: "学校", pinyin: "xuéxiào", arti: "sekolah", contoh: { zh: "我的学校很大。", id: "Sekolah saya sangat besar." } },
+      { hanzi: "饭店", pinyin: "fàndiàn", arti: "restoran, hotel", contoh: { zh: "我们在饭店吃饭。", id: "Kami makan di restoran." } },
+      { hanzi: "商店", pinyin: "shāngdiàn", arti: "toko", contoh: { zh: "我去商店买东西。", id: "Saya pergi ke toko membeli barang." } },
+      { hanzi: "医院", pinyin: "yīyuàn", arti: "rumah sakit", contoh: { zh: "他在医院工作。", id: "Dia bekerja di rumah sakit." } },
+      { hanzi: "前面", pinyin: "qiánmiàn", arti: "di depan", contoh: { zh: "学校在前面。", id: "Sekolah ada di depan." } },
+      { hanzi: "后面", pinyin: "hòumiàn", arti: "di belakang", contoh: { zh: "我坐在后面。", id: "Saya duduk di belakang." } },
+      { hanzi: "里面", pinyin: "lǐmiàn", arti: "di dalam", contoh: { zh: "猫在里面。", id: "Kucing ada di dalam." } },
+      { hanzi: "上", pinyin: "shàng", arti: "atas", contoh: { zh: "书在桌子上。", id: "Buku ada di atas meja." } },
+      { hanzi: "下", pinyin: "xià", arti: "bawah", contoh: { zh: "猫在桌子下。", id: "Kucing ada di bawah meja." } },
+      { hanzi: "水", pinyin: "shuǐ", arti: "air", contoh: { zh: "请给我一杯水。", id: "Tolong beri saya segelas air." } },
+      { hanzi: "茶", pinyin: "chá", arti: "teh", contoh: { zh: "你想喝茶吗？", id: "Kamu mau minum teh?" } },
+      { hanzi: "米饭", pinyin: "mǐfàn", arti: "nasi", contoh: { zh: "我想吃米饭。", id: "Saya mau makan nasi." } },
+      { hanzi: "菜", pinyin: "cài", arti: "sayur, masakan", contoh: { zh: "这个菜很好吃。", id: "Masakan ini sangat enak." } },
+      { hanzi: "苹果", pinyin: "píngguǒ", arti: "apel", contoh: { zh: "我买了一个苹果。", id: "Saya membeli sebuah apel." } },
+      { hanzi: "杯子", pinyin: "bēizi", arti: "gelas, cangkir", contoh: { zh: "这个杯子是我的。", id: "Gelas ini punya saya." } },
+      { hanzi: "水果", pinyin: "shuǐguǒ", arti: "buah-buahan", contoh: { zh: "我喜欢吃水果。", id: "Saya suka makan buah." } },
+      { hanzi: "钱", pinyin: "qián", arti: "uang", contoh: { zh: "你有多少钱？", id: "Kamu punya berapa uang?" } },
+      { hanzi: "东西", pinyin: "dōngxi", arti: "barang, benda", contoh: { zh: "你买了什么东西？", id: "Kamu membeli barang apa?" } },
+      { hanzi: "书", pinyin: "shū", arti: "buku", contoh: { zh: "这本书很好。", id: "Buku ini sangat bagus." } },
+      { hanzi: "电脑", pinyin: "diànnǎo", arti: "komputer", contoh: { zh: "我用电脑工作。", id: "Saya menggunakan komputer untuk bekerja." } },
+      { hanzi: "电视", pinyin: "diànshì", arti: "televisi", contoh: { zh: "我在看电视。", id: "Saya sedang menonton televisi." } },
+      { hanzi: "电影", pinyin: "diànyǐng", arti: "film", contoh: { zh: "这个电影很好看。", id: "Film ini sangat bagus." } },
+      { hanzi: "天气", pinyin: "tiānqì", arti: "cuaca", contoh: { zh: "今天天气怎么样？", id: "Cuaca hari ini bagaimana?" } },
+      { hanzi: "猫", pinyin: "māo", arti: "kucing", contoh: { zh: "我家有一只猫。", id: "Rumah saya ada seekor kucing." } },
+      { hanzi: "狗", pinyin: "gǒu", arti: "anjing", contoh: { zh: "他的狗很大。", id: "Anjingnya sangat besar." } },
+      { hanzi: "衣服", pinyin: "yīfu", arti: "pakaian, baju", contoh: { zh: "我想买衣服。", id: "Saya ingin membeli baju." } },
+      { hanzi: "桌子", pinyin: "zhuōzi", arti: "meja", contoh: { zh: "书在桌子上。", id: "Buku ada di atas meja." } },
+      { hanzi: "椅子", pinyin: "yǐzi", arti: "kursi", contoh: { zh: "请坐这把椅子。", id: "Silakan duduk di kursi ini." } },
+      { hanzi: "名字", pinyin: "míngzi", arti: "nama", contoh: { zh: "你的名字很好听。", id: "Namamu terdengar bagus." } },
+      { hanzi: "汉语", pinyin: "Hànyǔ", arti: "Bahasa Mandarin", contoh: { zh: "我在学汉语。", id: "Saya sedang belajar Bahasa Mandarin." } },
+      { hanzi: "字", pinyin: "zì", arti: "karakter, huruf", contoh: { zh: "这个字怎么写？", id: "Karakter ini bagaimana cara menulisnya?" } },
+      { hanzi: "飞机", pinyin: "fēijī", arti: "pesawat", contoh: { zh: "我坐飞机去北京。", id: "Saya naik pesawat ke Beijing." } },
+      { hanzi: "出租车", pinyin: "chūzūchē", arti: "taksi", contoh: { zh: "我们坐出租车吧。", id: "Ayo kita naik taksi." } },
+      { hanzi: "火车站", pinyin: "huǒchēzhàn", arti: "stasiun kereta", contoh: { zh: "火车站在前面。", id: "Stasiun kereta ada di depan." } },
+      { hanzi: "不", pinyin: "bù", arti: "tidak", contoh: { zh: "我不喜欢。", id: "Saya tidak suka." } },
+      { hanzi: "没", pinyin: "méi", arti: "tidak (sudah)", contoh: { zh: "我没有钱。", id: "Saya tidak punya uang." } },
+      { hanzi: "很", pinyin: "hěn", arti: "sangat", contoh: { zh: "今天很热。", id: "Hari ini sangat panas." } },
+      { hanzi: "太", pinyin: "tài", arti: "terlalu", contoh: { zh: "这个太贵了。", id: "Ini terlalu mahal." } },
+      { hanzi: "都", pinyin: "dōu", arti: "semua", contoh: { zh: "我们都是学生。", id: "Kami semua adalah murid." } },
+      { hanzi: "也", pinyin: "yě", arti: "juga", contoh: { zh: "我也喜欢。", id: "Saya juga suka." } },
+      { hanzi: "还", pinyin: "hái", arti: "masih, juga", contoh: { zh: "他还在学校。", id: "Dia masih di sekolah." } },
+      { hanzi: "和", pinyin: "hé", arti: "dan", contoh: { zh: "我和他是朋友。", id: "Saya dan dia adalah teman." } },
+      { hanzi: "在", pinyin: "zài", arti: "di, sedang", contoh: { zh: "我在家。", id: "Saya di rumah." } },
+      { hanzi: "的", pinyin: "de", arti: "(partikel kepunyaan)", contoh: { zh: "这是我的书。", id: "Ini adalah buku saya." } },
+      { hanzi: "了", pinyin: "le", arti: "(partikel perubahan)", contoh: { zh: "我吃了饭。", id: "Saya sudah makan." } },
+      { hanzi: "吗", pinyin: "ma", arti: "(partikel pertanyaan)", contoh: { zh: "你好吗？", id: "Apa kabar?" } },
+      { hanzi: "呢", pinyin: "ne", arti: "(partikel balik tanya)", contoh: { zh: "你呢？", id: "Kalau kamu?" } },
+      { hanzi: "个", pinyin: "gè", arti: "(kata bantu bilangan umum)", contoh: { zh: "一个人。", id: "Satu orang." } },
+      { hanzi: "岁", pinyin: "suì", arti: "tahun (usia)", contoh: { zh: "你几岁？", id: "Kamu berapa tahun?" } },
+      { hanzi: "本", pinyin: "běn", arti: "(kata bantu bilangan buku)", contoh: { zh: "两本书。", id: "Dua buah buku." } },
+      { hanzi: "些", pinyin: "xiē", arti: "beberapa", contoh: { zh: "一些水果。", id: "Beberapa buah." } },
+      { hanzi: "块", pinyin: "kuài", arti: "yuan (satuan uang)", contoh: { zh: "十块钱。", id: "Sepuluh yuan." } },
+      { hanzi: "对", pinyin: "duì", arti: "benar, terhadap", contoh: { zh: "你说得对。", id: "Yang kamu katakan benar." } },
+      { hanzi: "几", pinyin: "jǐ", arti: "berapa", contoh: { zh: "你几岁？", id: "Kamu berapa tahun?" } },
+      { hanzi: "多少", pinyin: "duōshao", arti: "berapa (banyak)", contoh: { zh: "这个多少钱？", id: "Ini berapa harganya?" } },
+      { hanzi: "怎么", pinyin: "zěnme", arti: "bagaimana", contoh: { zh: "这个字怎么读？", id: "Karakter ini bagaimana cara membacanya?" } },
+      { hanzi: "怎么样", pinyin: "zěnmeyàng", arti: "bagaimana (keadaan)", contoh: { zh: "你怎么样？", id: "Kamu bagaimana kabarnya?" } },
+      { hanzi: "为什么", pinyin: "wèishénme", arti: "mengapa, kenapa", contoh: { zh: "你为什么不来？", id: "Kenapa kamu tidak datang?" } },
+      { hanzi: "哪里", pinyin: "nǎlǐ", arti: "di mana", contoh: { zh: "你家在哪里？", id: "Rumahmu di mana?" } },
+      { hanzi: "请", pinyin: "qǐng", arti: "silakan, tolong", contoh: { zh: "请坐。", id: "Silakan duduk." } },
+      { hanzi: "谢谢", pinyin: "xièxie", arti: "terima kasih", contoh: { zh: "谢谢你的帮助。", id: "Terima kasih atas bantuanmu." } },
+      { hanzi: "不客气", pinyin: "bú kèqi", arti: "sama-sama", contoh: { zh: "不客气！", id: "Sama-sama!" } },
+      { hanzi: "再见", pinyin: "zàijiàn", arti: "sampai jumpa", contoh: { zh: "明天再见！", id: "Sampai jumpa besok!" } },
+      { hanzi: "对不起", pinyin: "duìbuqǐ", arti: "maaf", contoh: { zh: "对不起，我迟到了。", id: "Maaf, saya terlambat." } },
+      { hanzi: "没关系", pinyin: "méi guānxi", arti: "tidak apa-apa", contoh: { zh: "没关系，没问题。", id: "Tidak apa-apa, tidak masalah." } },
+      { hanzi: "你好", pinyin: "nǐ hǎo", arti: "halo, apa kabar", contoh: { zh: "你好，很高兴认识你。", id: "Halo, senang berkenalan denganmu." } },
+      { hanzi: "号", pinyin: "hào", arti: "tanggal, nomor", contoh: { zh: "今天几号？", id: "Hari ini tanggal berapa?" } },
+      { hanzi: "岁", pinyin: "suì", arti: "tahun (umur)", contoh: { zh: "她二十岁了。", id: "Dia sudah dua puluh tahun." } },
+      { hanzi: "电话", pinyin: "diànhuà", arti: "telepon", contoh: { zh: "你的电话号码是多少？", id: "Nomor teleponmu berapa?" } },
+      { hanzi: "喂", pinyin: "wèi", arti: "halo (di telepon)", contoh: { zh: "喂，你好！", id: "Halo (di telepon)!" } },
+      { hanzi: "中午", pinyin: "zhōngwǔ", arti: "siang", contoh: { zh: "中午我们吃饭。", id: "Siang hari kami makan." } },
+      { hanzi: "太…了", pinyin: "tài...le", arti: "terlalu...", contoh: { zh: "太好了！", id: "Bagus sekali!" } },
+      { hanzi: "看见", pinyin: "kànjiàn", arti: "melihat (berhasil)", contoh: { zh: "我看见他了。", id: "Saya melihat dia." } },
+      { hanzi: "高", pinyin: "gāo", arti: "tinggi", contoh: { zh: "他很高。", id: "Dia sangat tinggi." } },
+      { hanzi: "下", pinyin: "xià", arti: "turun", contoh: { zh: "下车。", id: "Turun dari kendaraan." } },
+      { hanzi: "点", pinyin: "diǎn", arti: "sedikit", contoh: { zh: "请等一下。", id: "Tolong tunggu sebentar." } }
+    ];
+
+    // ===== GRAMMAR DATA (15 items) =====
+    const grammarData = [
+      {
+        title: "Kalimat dengan 是 (shì) — \"adalah\"",
+        pattern: "Subjek + 是 + Objek",
+        explanation: "Kata 是 (shì) digunakan seperti kata \"adalah\" dalam Bahasa Indonesia. Dipakai untuk memperkenalkan diri, menyatakan identitas, atau menjelaskan sesuatu.",
+        examples: [
+          { zh: "我是学生。", id: "Saya adalah murid." },
+          { zh: "他是老师。", id: "Dia adalah guru." },
+          { zh: "这是我的书。", id: "Ini adalah buku saya." }
+        ]
+      },
+      {
+        title: "Pertanyaan dengan 吗 (ma)",
+        pattern: "Kalimat pernyataan + 吗？",
+        explanation: "Cara paling mudah membuat pertanyaan ya/tidak dalam Bahasa Mandarin: tambahkan 吗 di akhir kalimat pernyataan. Tidak perlu mengubah urutan kata.",
+        examples: [
+          { zh: "你是学生吗？", id: "Apakah kamu murid?" },
+          { zh: "他好吗？", id: "Apakah dia baik-baik saja?" },
+          { zh: "你喜欢中国菜吗？", id: "Apakah kamu suka masakan Tiongkok?" }
+        ]
+      },
+      {
+        title: "Negasi dengan 不 (bù) dan 没 (méi)",
+        pattern: "Subjek + 不/没 + Kata Kerja",
+        explanation: "Gunakan 不 untuk menolak atau menyangkal sesuatu yang bersifat kebiasaan, kemauan, atau keadaan. Gunakan 没 untuk menyangkal bahwa sesuatu sudah terjadi, atau untuk mengatakan \"tidak punya\" (没有).",
+        examples: [
+          { zh: "我不喜欢咖啡。", id: "Saya tidak suka kopi." },
+          { zh: "她没去学校。", id: "Dia tidak pergi ke sekolah." },
+          { zh: "我没有钱。", id: "Saya tidak punya uang." }
+        ]
+      },
+      {
+        title: "Partikel 的 (de) — Kepunyaan",
+        pattern: "Pemilik + 的 + Benda",
+        explanation: "Partikel 的 menunjukkan kepemilikan, seperti \"punya\" atau \"milik\" dalam Bahasa Indonesia. Mirip dengan akhiran \"-nya\" atau kata \"punya\".",
+        examples: [
+          { zh: "我的书。", id: "Buku saya." },
+          { zh: "她的猫很可爱。", id: "Kucingnya sangat lucu." },
+          { zh: "这是谁的电脑？", id: "Ini komputer siapa?" }
+        ]
+      },
+      {
+        title: "Kata Keterangan 很 (hěn) — \"sangat\"",
+        pattern: "Subjek + 很 + Kata Sifat",
+        explanation: "Dalam Bahasa Mandarin, kata sifat tidak langsung mengikuti subjek. Kamu perlu menambahkan 很 di antaranya. Kadang 很 tidak berarti \"sangat\" secara harfiah, tapi hanya sebagai penghubung.",
+        examples: [
+          { zh: "她很漂亮。", id: "Dia sangat cantik." },
+          { zh: "今天很冷。", id: "Hari ini sangat dingin." },
+          { zh: "这本书很好。", id: "Buku ini sangat bagus." }
+        ]
+      },
+      {
+        title: "Kata Tanya 什么 (shénme), 谁 (shéi), 哪里 (nǎlǐ)",
+        pattern: "Subjek + Kata Kerja + 什么/谁/哪里？",
+        explanation: "Kata tanya dalam Bahasa Mandarin diletakkan di posisi jawaban yang diharapkan, BUKAN di awal kalimat seperti Bahasa Indonesia/Inggris.",
+        examples: [
+          { zh: "你叫什么名字？", id: "Nama kamu siapa?" },
+          { zh: "他是谁？", id: "Dia siapa?" },
+          { zh: "你住在哪里？", id: "Kamu tinggal di mana?" }
+        ]
+      },
+      {
+        title: "Menyatakan Kepemilikan dengan 有 (yǒu)",
+        pattern: "Subjek + 有 + Objek",
+        explanation: "有 berarti \"punya\" atau \"ada\". Bentuk negatifnya selalu 没有 (méiyǒu), bukan 不有.",
+        examples: [
+          { zh: "我有一个姐姐。", id: "Saya punya seorang kakak perempuan." },
+          { zh: "你有电脑吗？", id: "Apakah kamu punya komputer?" },
+          { zh: "学校里有很多学生。", id: "Di dalam sekolah ada banyak murid." }
+        ]
+      },
+      {
+        title: "Menunjukkan Lokasi dengan 在 (zài)",
+        pattern: "Subjek + 在 + Tempat",
+        explanation: "在 digunakan untuk menunjukkan lokasi (\"di mana sesuatu berada\") atau sedang melakukan sesuatu (\"sedang\").",
+        examples: [
+          { zh: "我在家。", id: "Saya di rumah." },
+          { zh: "他在学校学习。", id: "Dia belajar di sekolah." },
+          { zh: "猫在桌子下面。", id: "Kucing ada di bawah meja." }
+        ]
+      },
+      {
+        title: "Kata Bantu Bilangan 个 (gè), 本 (běn), dll.",
+        pattern: "Angka + Kata Bantu Bilangan + Kata Benda",
+        explanation: "Bahasa Mandarin membutuhkan kata bantu bilangan (measure word) di antara angka dan kata benda. 个 adalah yang paling umum dan bisa dipakai untuk banyak hal. 本 khusus untuk buku, 只 untuk hewan kecil.",
+        examples: [
+          { zh: "一个人。", id: "Satu orang." },
+          { zh: "三本书。", id: "Tiga buah buku." },
+          { zh: "两只猫。", id: "Dua ekor kucing." }
+        ]
+      },
+      {
+        title: "Menyatakan Waktu",
+        pattern: "Subjek + Waktu + Kata Kerja + Objek",
+        explanation: "Keterangan waktu dalam Bahasa Mandarin bisa diletakkan SEBELUM kata kerja atau di AWAL kalimat (setelah subjek). Urutan: tahun → bulan → tanggal → hari → jam.",
+        examples: [
+          { zh: "我明天去学校。", id: "Saya besok pergi ke sekolah." },
+          { zh: "他下午三点来。", id: "Dia datang jam tiga sore." },
+          { zh: "我们星期六不上课。", id: "Kami hari Sabtu tidak ada kelas." }
+        ]
+      },
+      {
+        title: "Partikel 了 (le) — Perubahan/Selesai",
+        pattern: "Subjek + Kata Kerja + 了 + Objek",
+        explanation: "了 menandakan bahwa suatu aksi sudah selesai dilakukan, atau ada perubahan keadaan. Bisa diletakkan setelah kata kerja atau di akhir kalimat.",
+        examples: [
+          { zh: "我吃了饭。", id: "Saya sudah makan." },
+          { zh: "他来了。", id: "Dia sudah datang." },
+          { zh: "下雨了。", id: "Sudah mulai hujan." }
+        ]
+      },
+      {
+        title: "Kemampuan dengan 会 (huì) dan 能 (néng)",
+        pattern: "Subjek + 会/能 + Kata Kerja",
+        explanation: "会 menunjukkan kemampuan yang dipelajari (bisa karena sudah belajar). 能 menunjukkan kemampuan fisik atau izin (boleh/mampu).",
+        examples: [
+          { zh: "我会说中文。", id: "Saya bisa berbicara Bahasa Mandarin." },
+          { zh: "你能来吗？", id: "Kamu bisa datang?" },
+          { zh: "他不会开车。", id: "Dia tidak bisa mengendarai mobil." }
+        ]
+      },
+      {
+        title: "Keinginan dengan 想 (xiǎng)",
+        pattern: "Subjek + 想 + Kata Kerja + Objek",
+        explanation: "想 berarti \"ingin\" atau \"mau\". Diletakkan sebelum kata kerja utama.",
+        examples: [
+          { zh: "我想喝水。", id: "Saya ingin minum air." },
+          { zh: "你想去哪里？", id: "Kamu ingin pergi ke mana?" },
+          { zh: "她想买新衣服。", id: "Dia ingin membeli baju baru." }
+        ]
+      },
+      {
+        title: "也 (yě) dan 都 (dōu) — \"juga\" dan \"semua\"",
+        pattern: "Subjek + 也/都 + Kata Kerja",
+        explanation: "也 berarti \"juga\", selalu diletakkan SEBELUM kata kerja. 都 berarti \"semua\", juga diletakkan sebelum kata kerja. Keduanya tidak pernah diletakkan setelah kata kerja.",
+        examples: [
+          { zh: "我也是学生。", id: "Saya juga murid." },
+          { zh: "我们都喜欢中国菜。", id: "Kami semua suka masakan Tiongkok." },
+          { zh: "他们也都很高兴。", id: "Mereka juga semua sangat senang." }
+        ]
+      },
+      {
+        title: "Bertanya Jumlah: 几 (jǐ) dan 多少 (duōshao)",
+        pattern: "Subjek + 有 + 几/多少 + Kata Bantu Bilangan + Kata Benda？",
+        explanation: "几 dipakai untuk menanyakan jumlah kecil (biasanya di bawah 10) dan HARUS diikuti kata bantu bilangan. 多少 untuk jumlah besar dan tidak perlu kata bantu bilangan.",
+        examples: [
+          { zh: "你几岁？", id: "Kamu berapa tahun?" },
+          { zh: "你有几个孩子？", id: "Kamu punya berapa anak?" },
+          { zh: "这个多少钱？", id: "Ini berapa harganya?" }
+        ]
+      }
+    ];
+
+    // ===== TAB SWITCHING =====
+    function showSection(section, btn) {
+      document.querySelectorAll('.materi-section').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.materi-nav-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById('section-' + section).style.display = 'block';
+      btn.classList.add('active');
+    }
+
+    // ===== RENDER VOCAB TABLE =====
+    let currentVocab = vocabData;
+
+    function renderVocabTable(data) {
+      const tbody = document.getElementById('vocab-tbody');
+      const countEl = document.getElementById('search-count');
+      const totalEl = document.getElementById('total-vocab');
+
+      totalEl.textContent = vocabData.length;
+
+      if (data.length === 0) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="5">
+              <div class="no-results">
+                <span>🔍</span>
+                Kata tidak ditemukan. Coba kata lain.
+              </div>
+            </td>
+          </tr>`;
+        countEl.textContent = 'Tidak ada hasil.';
+        return;
+      }
+
+      const rows = data.map((v, i) => {
+        const no = vocabData.indexOf(v) + 1;
+        return `
+          <tr>
+            <td class="td-no">${no}</td>
+            <td class="td-hanzi">${escHtml(v.hanzi)}</td>
+            <td class="td-pinyin">${escHtml(v.pinyin)}</td>
+            <td class="td-arti">${escHtml(v.arti)}</td>
+            <td class="td-contoh">
+              <div class="contoh-zh">${escHtml(v.contoh.zh)}</div>
+              <div class="contoh-id">${escHtml(v.contoh.id)}</div>
+            </td>
+          </tr>`;
+      }).join('');
+
+      tbody.innerHTML = rows;
+
+      if (data.length === vocabData.length) {
+        countEl.textContent = `Menampilkan semua ${data.length} kosakata.`;
+      } else {
+        countEl.textContent = `Ditemukan ${data.length} dari ${vocabData.length} kosakata.`;
+      }
+    }
+
+    // ===== VOCAB SEARCH FILTER =====
+    function filterVocab() {
+      const query = document.getElementById('vocab-search').value.trim().toLowerCase();
+      if (!query) {
+        renderVocabTable(vocabData);
+        return;
+      }
+      const filtered = vocabData.filter(v => {
+        return v.hanzi.toLowerCase().includes(query) ||
+               v.pinyin.toLowerCase().includes(query) ||
+               v.arti.toLowerCase().includes(query);
+      });
+      renderVocabTable(filtered);
+    }
+
+    // ===== RENDER GRAMMAR CARDS =====
+    function renderGrammarCards() {
+      const grid = document.getElementById('grammar-grid');
+      const cards = grammarData.map((g, i) => {
+        const examples = g.examples.map(ex => `
+          <div class="example-item">
+            <div class="example-zh">${escHtml(ex.zh)}</div>
+            <div class="example-id">${escHtml(ex.id)}</div>
+          </div>`).join('');
+
+        return `
+          <div class="grammar-card">
+            <div class="grammar-card-header">
+              <div class="grammar-num">${i + 1}</div>
+              <div class="grammar-title">${escHtml(g.title)}</div>
+            </div>
+            <div class="grammar-pattern">${escHtml(g.pattern)}</div>
+            <p class="grammar-explanation">${escHtml(g.explanation)}</p>
+            <div class="grammar-examples">${examples}</div>
+          </div>`;
+      }).join('');
+
+      grid.innerHTML = cards;
+    }
+
+    // ===== HTML ESCAPE UTILITY =====
+    function escHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    // ===== INIT =====
+    renderVocabTable(vocabData);
+    renderGrammarCards();
+  </script>
+</body>
+</html>

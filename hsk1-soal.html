@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HSK 1 — Latihan Soal</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --vermillion: #E63946;
+      --vermillion-light: #fdecea;
+      --ink: #1a1a2e;
+      --ink-soft: #3d3d5c;
+      --muted: #6b7280;
+      --green: #16a34a;
+      --green-light: #dcfce7;
+      --red: #dc2626;
+      --red-light: #fee2e2;
+      --gold: #c9a85c;
+      --bg: #f8f7f4;
+      --bg-card: #ffffff;
+      --border: #e5e7eb;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+      --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,.12);
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 28px;
+      height: 60px;
+    }
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .navbar-brand span { color: var(--vermillion); }
+    .navbar-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+    .navbar-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--ink-soft);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 8px;
+      transition: all .18s ease;
+    }
+    .navbar-links a:hover { background: var(--bg); color: var(--ink); }
+    .navbar-links a.nav-cta { background: var(--vermillion); color: #fff; font-weight: 600; }
+    .navbar-links a.nav-cta:hover { background: #c0303c; }
+
+    /* BREADCRUMB */
+    .breadcrumb {
+      padding: 12px 28px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1px solid var(--border);
+      background: #fff;
+    }
+    .breadcrumb a { color: var(--muted); text-decoration: none; transition: color .15s; }
+    .breadcrumb a:hover { color: var(--vermillion); }
+    .breadcrumb span { color: var(--ink); font-weight: 500; }
+
+    /* PAGE HEADER */
+    .page-header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #2c2c4a 60%, #3a2020 100%);
+      color: #fff;
+      padding: 52px 28px 48px;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+    .page-header h1 em { font-style: normal; color: #e8a0a0; }
+    .page-header p {
+      font-size: 1rem;
+      opacity: .8;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* MAIN CONTENT */
+    .page-body { max-width: 860px; margin: 0 auto; padding: 36px 20px 80px; }
+
+    /* BAB SELECTOR */
+    .bab-selector-section { margin-bottom: 36px; }
+    .bab-selector-title {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .bab-selector {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 10px;
+    }
+    .bab-btn {
+      background: #fff;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 8px;
+      cursor: pointer;
+      text-align: center;
+      transition: all .2s;
+      font-family: 'DM Sans', sans-serif;
+      position: relative;
+    }
+    .bab-btn:hover {
+      border-color: var(--vermillion);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .bab-btn.active {
+      background: var(--vermillion);
+      border-color: var(--vermillion);
+      color: #fff;
+    }
+    .bab-btn.completed {
+      border-color: var(--green);
+      background: var(--green-light);
+      color: var(--green);
+    }
+    .bab-btn.completed.active {
+      background: var(--green);
+      color: #fff;
+    }
+    .bab-btn-num {
+      font-size: 0.72rem;
+      font-weight: 600;
+      opacity: .6;
+      margin-bottom: 3px;
+    }
+    .bab-btn-title {
+      font-size: 0.75rem;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+    .bab-btn-check {
+      display: none;
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      font-size: 0.7rem;
+      background: var(--green);
+      color: #fff;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+    .bab-btn.completed .bab-btn-check { display: flex; }
+
+    /* QUIZ CONTAINER */
+    .soal-container {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    /* Empty state */
+    .soal-empty {
+      padding: 60px 24px;
+      text-align: center;
+      color: var(--muted);
+    }
+    .soal-empty .icon { font-size: 2.5rem; margin-bottom: 12px; }
+    .soal-empty p { font-size: 1rem; }
+
+    /* Progress bar */
+    .soal-progress {
+      background: var(--bg);
+      padding: 14px 24px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .soal-progress-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--ink-soft);
+      white-space: nowrap;
+    }
+    .progress-bar-outer {
+      flex: 1;
+      height: 6px;
+      background: var(--border);
+      border-radius: 100px;
+      overflow: hidden;
+    }
+    .progress-bar-inner {
+      height: 100%;
+      background: var(--vermillion);
+      border-radius: 100px;
+      transition: width .4s ease;
+    }
+    .soal-progress-score {
+      font-size: 0.82rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    /* Question area */
+    .soal-inner { padding: 28px 28px 24px; }
+
+    .soal-type-badge {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 18px;
+      background: rgba(230, 57, 70, .1);
+      color: var(--vermillion);
+      border: 1px solid rgba(230, 57, 70, .2);
+    }
+    .soal-type-badge.type-b {
+      background: rgba(201, 168, 92, .1);
+      color: #a07030;
+      border-color: rgba(201, 168, 92, .3);
+    }
+    .soal-type-badge.type-c {
+      background: rgba(26, 107, 74, .08);
+      color: #1a6b4a;
+      border-color: rgba(26, 107, 74, .2);
+    }
+
+    /* Chinese text */
+    .soal-text {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.5;
+      margin-bottom: 8px;
+      letter-spacing: .02em;
+    }
+
+    /* Paragraph box for type B */
+    .soal-paragraph {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 1rem;
+      line-height: 1.9;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--gold);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      margin-bottom: 18px;
+      color: var(--ink-soft);
+    }
+
+    /* Question text */
+    .soal-ask {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    /* Options */
+    .soal-options { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+    .soal-option {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      background: var(--bg);
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: all .18s;
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--ink);
+      width: 100%;
+    }
+    .soal-option:hover:not(.disabled) {
+      border-color: var(--vermillion);
+      background: var(--vermillion-light);
+    }
+    .soal-option.correct {
+      border-color: var(--green);
+      background: var(--green-light);
+      color: var(--green);
+    }
+    .soal-option.wrong {
+      border-color: var(--red);
+      background: var(--red-light);
+      color: var(--red);
+    }
+    .soal-option.disabled { cursor: not-allowed; }
+    .option-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--border);
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+      transition: all .18s;
+    }
+    .soal-option.correct .option-label { background: var(--green); color: #fff; }
+    .soal-option.wrong .option-label { background: var(--red); color: #fff; }
+
+    /* Feedback */
+    .soal-feedback {
+      padding: 12px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 18px;
+      display: none;
+    }
+    .soal-feedback.correct {
+      background: var(--green-light);
+      color: var(--green);
+      border: 1px solid rgba(22, 163, 74, .2);
+      display: block;
+    }
+    .soal-feedback.wrong {
+      background: var(--red-light);
+      color: var(--red);
+      border: 1px solid rgba(220, 38, 38, .2);
+      display: block;
+    }
+
+    /* Type C - Word arrangement */
+    .word-chips-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .word-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .word-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      background: #fff;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 500;
+      transition: all .18s;
+      color: var(--ink);
+    }
+    .word-chip:hover:not(.used) {
+      border-color: var(--vermillion);
+      background: var(--vermillion-light);
+      color: var(--vermillion);
+    }
+    .word-chip.used {
+      opacity: .35;
+      cursor: not-allowed;
+      background: var(--bg);
+      pointer-events: none;
+    }
+    .answer-area-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+    .answer-area {
+      min-height: 58px;
+      background: var(--bg);
+      border: 2px dashed var(--border);
+      border-radius: var(--radius);
+      padding: 10px 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 14px;
+      transition: border-color .18s;
+    }
+    .answer-area.has-words { border-color: var(--gold); border-style: solid; }
+    .answer-area .word-chip {
+      border-color: var(--gold);
+      background: rgba(201, 168, 92, .1);
+      cursor: pointer;
+      pointer-events: auto;
+      opacity: 1;
+    }
+    .answer-area .word-chip:hover { border-color: var(--red); background: var(--red-light); color: var(--red); }
+    .answer-placeholder {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    .type-c-actions { display: flex; gap: 10px; margin-bottom: 16px; }
+
+    /* Button styles */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 11px 22px;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-family: 'DM Sans', sans-serif;
+      cursor: pointer;
+      border: none;
+      transition: all .18s;
+    }
+    .btn-primary { background: var(--vermillion); color: #fff; }
+    .btn-primary:hover { background: #c0303c; }
+    .btn-primary:disabled { background: var(--muted); cursor: not-allowed; opacity: .6; }
+    .btn-outline {
+      background: transparent;
+      color: var(--muted);
+      border: 2px solid var(--border);
+    }
+    .btn-outline:hover { border-color: var(--muted); color: var(--ink); }
+    .btn-green { background: var(--green); color: #fff; }
+    .btn-green:hover { background: #14803d; }
+    .btn-next {
+      background: var(--ink);
+      color: #fff;
+      margin-top: 4px;
+    }
+    .btn-next:hover { background: #2c3e50; }
+
+    /* Results screen */
+    .results-screen {
+      padding: 52px 28px 48px;
+      text-align: center;
+    }
+    .score-circle-wrap { margin-bottom: 24px; }
+    .results-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.9rem;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+    .results-percent {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--vermillion);
+      margin-bottom: 6px;
+    }
+    .results-msg {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+    .results-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    /* Kunci Jawaban */
+    .kunci-section {
+      margin-top: 32px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .kunci-toggle {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--ink);
+      transition: background .15s;
+    }
+    .kunci-toggle:hover { background: var(--bg); }
+    .kunci-arrow { transition: transform .25s; font-size: 0.8rem; display: inline-block; }
+    .kunci-toggle.open .kunci-arrow { transform: rotate(180deg); }
+    .kunci-content { display: none; padding: 0 24px 24px; }
+    .kunci-content.open { display: block; }
+    .kunci-list { list-style: none; }
+    .kunci-item {
+      display: flex;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.88rem;
+      align-items: flex-start;
+    }
+    .kunci-item:last-child { border-bottom: none; }
+    .kunci-num { font-weight: 700; color: var(--muted); min-width: 30px; flex-shrink: 0; }
+    .kunci-q { color: var(--ink-soft); flex: 1; line-height: 1.4; }
+    .kunci-a { font-weight: 600; color: var(--green); flex-shrink: 0; max-width: 200px; text-align: right; }
+    .kunci-a.type-c { color: #a07030; font-family: 'Noto Sans SC', sans-serif; font-size: 0.85rem; }
+
+    @media (max-width: 640px) {
+      .page-body { padding: 20px 12px 60px; }
+      .soal-inner { padding: 18px 16px; }
+      .bab-selector { grid-template-columns: repeat(auto-fill, minmax(88px, 1fr)); gap: 8px; }
+      .navbar { padding: 0 16px; }
+      .soal-text { font-size: 1.4rem; }
+      .results-actions { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">汉<span>语</span> HSK</a>
+    <ul class="navbar-links">
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="hsk1-materi.html">Materi</a></li>
+      <li><a href="hsk1-soal.html" class="nav-cta">Latihan</a></li>
+    </ul>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="menu.html">Menu</a>
+    <span>›</span>
+    <a href="menu.html">HSK 1</a>
+    <span>›</span>
+    <span>Latihan Soal</span>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <h1>HSK 1 — <em>Latihan Soal</em></h1>
+    <p>20 bab latihan, masing-masing 40 soal. Total 800 soal untuk menguji pemahamanmu.</p>
+  </header>
+
+  <!-- MAIN BODY -->
+  <main class="page-body">
+
+    <!-- BAB SELECTOR -->
+    <section class="bab-selector-section">
+      <div class="bab-selector-title">Pilih Bab untuk Mulai</div>
+      <div class="bab-selector" id="babSelector"></div>
+    </section>
+
+    <!-- QUIZ AREA -->
+    <div class="soal-container" id="soalContainer">
+      <div class="soal-empty">
+        <div class="icon">📖</div>
+        <p>Pilih bab di atas untuk memulai latihan.</p>
+      </div>
+    </div>
+
+    <!-- KUNCI JAWABAN -->
+    <section class="kunci-section" id="kunciSection" style="display:none;">
+      <button class="kunci-toggle" id="kunciToggle" onclick="toggleKunci()">
+        <span>Lihat Kunci Jawaban</span>
+        <span class="kunci-arrow">▼</span>
+      </button>
+      <div class="kunci-content" id="kunciContent">
+        <ul class="kunci-list" id="kunciList"></ul>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Auth check
+    if (sessionStorage.getItem('hsk_auth') !== 'true') {
+      window.location.href = 'menu.html';
+    }
+
+    // ALL 800 QUESTIONS — 20 Bab x 40 Soal
+    const SOAL_DATA = [{"bab":1,"title":"Bab 1 — Salam & Perkenalan","questions":[{"type":"A","text":"你好，我叫小明。","ask":"Apa arti kalimat di atas?","options":["Halo, nama saya Xiao Ming.","Selamat pagi, saya guru.","Sampai jumpa, Xiao Ming.","Apa kabar, nama dia Xiao Ming."],"correct":0},{"type":"A","text":"你叫什么名字？","ask":"Arti kalimat ini adalah…","options":["Kamu tinggal di mana?","Kamu siapa?","Kamu namanya siapa?","Kamu mau ke mana?"],"correct":2},{"type":"A","text":"我是学生。","ask":"Apa arti kalimat di atas?","options":["Saya adalah guru.","Saya adalah murid.","Saya adalah dokter.","Saya suka belajar."],"correct":1},{"type":"A","text":"很高兴认识你。","ask":"Kalimat ini berarti…","options":["Saya sangat senang.","Terima kasih banyak.","Senang berkenalan denganmu.","Kamu sangat cantik."],"correct":2},{"type":"A","text":"她是我的朋友。","ask":"Apa arti kalimat ini?","options":["Dia adalah guru saya.","Dia adalah teman saya.","Dia adalah ibu saya.","Dia adalah murid saya."],"correct":1},{"type":"A","text":"你好吗？","ask":"Pertanyaan ini menanyakan…","options":["Siapa namamu?","Apa kabar?","Mau ke mana?","Kamu lapar?"],"correct":1},{"type":"A","text":"我不是老师。","ask":"Arti kalimat ini…","options":["Saya adalah guru.","Saya bukan guru.","Saya ingin jadi guru.","Guru saya tidak ada."],"correct":1},{"type":"A","text":"他叫什么？","ask":"Pertanyaan ini berarti…","options":["Dia mau apa?","Dia dari mana?","Dia namanya apa?","Dia berapa tahun?"],"correct":2},{"type":"A","text":"谢谢你。","ask":"Kalimat ini berarti…","options":["Maaf ya.","Tolong bantu saya.","Terima kasih.","Sama-sama."],"correct":2},{"type":"A","text":"不客气。","ask":"Arti dari kalimat ini…","options":["Tidak sopan.","Sama-sama.","Tidak mau.","Maafkan saya."],"correct":1},{"type":"A","text":"对不起，我迟到了。","ask":"Kalimat ini mengatakan…","options":["Maaf, saya terlambat.","Terima kasih, saya datang.","Tolong, saya sakit.","Permisi, saya pergi dulu."],"correct":0},{"type":"A","text":"没关系。","ask":"Arti kalimat ini…","options":["Tidak bisa.","Tidak apa-apa.","Tidak mau.","Tidak ada."],"correct":1},{"type":"A","text":"再见！","ask":"Kalimat ini diucapkan saat…","options":["Bertemu pertama kali.","Berterima kasih.","Berpisah/pamitan.","Minta maaf."],"correct":2},{"type":"A","text":"你是哪国人？","ask":"Pertanyaan ini menanyakan…","options":["Kamu tinggal di mana?","Kamu dari negara mana?","Kamu berapa tahun?","Kamu bekerja di mana?"],"correct":1},{"type":"A","text":"我是中国人。","ask":"Arti kalimat ini…","options":["Saya suka Tiongkok.","Saya pergi ke Tiongkok.","Saya adalah orang Tiongkok.","Saya belajar Bahasa Mandarin."],"correct":2},{"type":"B","paragraph":"小明今天第一天去学校。他很高兴。老师说：'你好，你叫什么名字？'小明说：'老师好，我叫小明。'老师说：'很高兴认识你。'","text":"小明今天去哪里？","options":["去医院","去商店","去学校","去饭店"],"correct":2},{"type":"B","paragraph":"小明今天第一天去学校。他很高兴。老师说：'你好，你叫什么名字？'小明说：'老师好，我叫小明。'老师说：'很高兴认识你。'","text":"小明的心情怎么样？","options":["很难过","很高兴","很生气","很害怕"],"correct":1},{"type":"B","paragraph":"小明今天第一天去学校。他很高兴。老师说：'你好，你叫什么名字？'小明说：'老师好，我叫小明。'老师说：'很高兴认识你。'","text":"谁问小明叫什么名字？","options":["妈妈","爸爸","同学","老师"],"correct":3},{"type":"B","paragraph":"我有一个好朋友，她叫小红。小红是学生，她很漂亮。我们在一个学校。我很高兴认识她。","text":"我的朋友叫什么？","options":["小明","小红","小花","小美"],"correct":1},{"type":"B","paragraph":"我有一个好朋友，她叫小红。小红是学生，她很漂亮。我们在一个学校。我很高兴认识她。","text":"小红是做什么的？","options":["老师","医生","学生","厨师"],"correct":2},{"type":"B","paragraph":"我有一个好朋友，她叫小红。小红是学生，她很漂亮。我们在一个学校。我很高兴认识她。","text":"他们在哪里？","options":["一个医院","一个学校","一个商店","一个饭店"],"correct":1},{"type":"B","paragraph":"张先生是老师。他在北京的学校工作。他有很多学生。学生们都很喜欢他。每天早上，学生们都说：'张老师好！'","text":"张先生的工作是什么？","options":["医生","老师","商人","司机"],"correct":1},{"type":"B","paragraph":"张先生是老师。他在北京的学校工作。他有很多学生。学生们都很喜欢他。每天早上，学生们都说：'张老师好！'","text":"张先生在哪个城市工作？","options":["上海","广州","北京","深圳"],"correct":2},{"type":"B","paragraph":"张先生是老师。他在北京的学校工作。他有很多学生。学生们都很喜欢他。每天早上，学生们都说：'张老师好！'","text":"学生们对张先生的态度怎么样？","options":["不喜欢他","害怕他","很喜欢他","不认识他"],"correct":2},{"type":"B","paragraph":"李小姐来自中国。她现在住在北京。她是一个医生。她在医院工作。她很忙，但是她很高兴。","text":"李小姐从哪里来？","options":["日本","韩国","中国","美国"],"correct":2},{"type":"B","paragraph":"李小姐来自中国。她现在住在北京。她是一个医生。她在医院工作。她很忙，但是她很高兴。","text":"李小姐的职业是什么？","options":["老师","学生","医生","商人"],"correct":2},{"type":"B","paragraph":"李小姐来自中国。她现在住在北京。她是一个医生。她在医院工作。她很忙，但是她很高兴。","text":"李小姐现在忙不忙？","options":["很忙","不忙","不知道","一般"],"correct":0},{"type":"B","paragraph":"小华和小美是同学。他们在一个学校学习。小华喜欢看书，小美喜欢写字。他们都是好学生。老师很喜欢他们。","text":"小华和小美是什么关系？","options":["朋友","同学","姐妹","不认识"],"correct":1},{"type":"B","paragraph":"小华和小美是同学。他们在一个学校学习。小华喜欢看书，小美喜欢写字。他们都是好学生。老师很喜欢他们。","text":"小华喜欢做什么？","options":["写字","看书","唱歌","画画"],"correct":1},{"type":"B","paragraph":"小华和小美是同学。他们在一个学校学习。小华喜欢看书，小美喜欢写字。他们都是好学生。老师很喜欢他们。","text":"老师觉得他们怎么样？","options":["不好","一般","很喜欢他们","不认识他们"],"correct":2},{"type":"C","words":["我","叫","小明"],"answer":"我叫小明。"},{"type":"C","words":["你","吗","好"],"answer":"你好吗？"},{"type":"C","words":["是","他","学生"],"answer":"他是学生。"},{"type":"C","words":["认识","高兴","你","很"],"answer":"很高兴认识你。"},{"type":"C","words":["的","她","朋友","是","我"],"answer":"她是我的朋友。"},{"type":"C","words":["是","老师","我","不"],"answer":"我不是老师。"},{"type":"C","words":["名字","什么","你","叫"],"answer":"你叫什么名字？"},{"type":"C","words":["中国人","我","是"],"answer":"我是中国人。"},{"type":"C","words":["谢谢","你"],"answer":"谢谢你。"},{"type":"C","words":["对不起","了","迟到","我"],"answer":"对不起，我迟到了。"}]},{"bab":2,"title":"Bab 2 — Keluarga","questions":[{"type":"A","text":"我家有四口人。","ask":"Keluarga \"saya\" terdiri dari berapa orang?","options":["3 orang","4 orang","5 orang","6 orang"],"correct":1},{"type":"A","text":"我爸爸是医生。","ask":"Ayah \"saya\" bekerja sebagai…","options":["Guru","Dokter","Pedagang","Petani"],"correct":1},{"type":"A","text":"我妈妈很漂亮。","ask":"Kalimat ini mengatakan ibu \"saya\"…","options":["Sangat sibuk","Sangat cantik","Sangat tinggi","Sangat tua"],"correct":1},{"type":"A","text":"我有一个哥哥。","ask":"\"Saya\" punya seorang…","options":["Adik laki-laki","Kakak perempuan","Kakak laki-laki","Adik perempuan"],"correct":2},{"type":"A","text":"她的女儿三岁了。","ask":"Anak perempuannya berusia…","options":["2 tahun","3 tahun","4 tahun","5 tahun"],"correct":1},{"type":"A","text":"我们都是一家人。","ask":"Arti kalimat ini…","options":["Kami semua adalah satu keluarga.","Kami semua adalah teman.","Kami semua pergi.","Kami semua senang."],"correct":0},{"type":"A","text":"他的儿子很高。","ask":"Anak laki-lakinya…","options":["Sangat pendek","Sangat tinggi","Sangat kecil","Sangat gemuk"],"correct":1},{"type":"A","text":"我爱我的家人。","ask":"Kalimat ini berarti…","options":["Saya mencintai keluarga saya.","Saya merindukan teman saya.","Saya suka rumah saya.","Saya ingin pulang."],"correct":0},{"type":"A","text":"妈妈在做饭。","ask":"Ibu sedang…","options":["Belajar","Tidur","Memasak","Bekerja"],"correct":2},{"type":"A","text":"爸爸在工作。","ask":"Ayah sedang…","options":["Memasak","Bekerja","Tidur","Bermain"],"correct":1},{"type":"A","text":"我的姐姐是老师。","ask":"Kakak perempuan \"saya\" adalah…","options":["Dokter","Murid","Guru","Perawat"],"correct":2},{"type":"A","text":"他没有弟弟。","ask":"Dia…","options":["Punya adik laki-laki","Tidak punya adik laki-laki","Punya kakak","Tidak punya teman"],"correct":1},{"type":"A","text":"她的妈妈很忙。","ask":"Ibu dia…","options":["Sangat cantik","Sangat sibuk","Sangat senang","Sangat tua"],"correct":1},{"type":"A","text":"你有几个孩子？","ask":"Pertanyaan ini menanyakan…","options":["Berapa umurmu?","Berapa anakmu?","Siapa namamu?","Di mana rumahmu?"],"correct":1},{"type":"A","text":"我的家在北京。","ask":"Rumah \"saya\" di…","options":["Shanghai","Guangzhou","Beijing","Nanjing"],"correct":2},{"type":"B","paragraph":"我家有五口人：爸爸、妈妈、哥哥、姐姐和我。爸爸是医生，妈妈是老师。哥哥在大学学习，姐姐在工作。我是学生。我们都很高兴。","text":"家里一共有几口人？","options":["3口","4口","5口","6口"],"correct":2},{"type":"B","paragraph":"我家有五口人：爸爸、妈妈、哥哥、姐姐和我。爸爸是医生，妈妈是老师。哥哥在大学学习，姐姐在工作。我是学生。我们都很高兴。","text":"妈妈的工作是什么？","options":["医生","老师","学生","商人"],"correct":1},{"type":"B","paragraph":"我家有五口人：爸爸、妈妈、哥哥、姐姐和我。爸爸是医生，妈妈是老师。哥哥在大学学习，姐姐在工作。我是学生。我们都很高兴。","text":"哥哥在做什么？","options":["工作","学习","做饭","睡觉"],"correct":1},{"type":"B","paragraph":"王先生有两个孩子。儿子叫王小明，今年十岁。女儿叫王小花，今年六岁。王先生的妻子是老师。他们住在上海。","text":"王先生有几个孩子？","options":["1个","2个","3个","4个"],"correct":1},{"type":"B","paragraph":"王先生有两个孩子。儿子叫王小明，今年十岁。女儿叫王小花，今年六岁。王先生的妻子是老师。他们住在上海。","text":"王小明今年多大？","options":["6岁","8岁","10岁","12岁"],"correct":2},{"type":"B","paragraph":"王先生有两个孩子。儿子叫王小明，今年十岁。女儿叫王小花，今年六岁。王先生的妻子是老师。他们住在上海。","text":"他们住在哪里？","options":["北京","上海","广州","深圳"],"correct":1},{"type":"B","paragraph":"小红很爱她的家人。每天早上，妈妈做饭。爸爸送小红去学校。下午，奶奶去学校接小红。晚上，他们一起吃饭。","text":"谁送小红去学校？","options":["妈妈","奶奶","爸爸","姐姐"],"correct":2},{"type":"B","paragraph":"小红很爱她的家人。每天早上，妈妈做饭。爸爸送小红去学校。下午，奶奶去学校接小红。晚上，他们一起吃饭。","text":"谁去学校接小红？","options":["妈妈","爸爸","奶奶","同学"],"correct":2},{"type":"B","paragraph":"小红很爱她的家人。每天早上，妈妈做饭。爸爸送小红去学校。下午，奶奶去学校接小红。晚上，他们一起吃饭。","text":"他们晚上做什么？","options":["看电视","一起吃饭","出去玩","睡觉"],"correct":1},{"type":"B","paragraph":"李明的哥哥在北京工作。他是一个医生。他很忙，每天工作很多小时。但是他很喜欢他的工作。星期天他回家看爸爸妈妈。","text":"李明的哥哥在哪里工作？","options":["上海","北京","广州","深圳"],"correct":1},{"type":"B","paragraph":"李明的哥哥在北京工作。他是一个医生。他很忙，每天工作很多小时。但是他很喜欢他的工作。星期天他回家看爸爸妈妈。","text":"哥哥是做什么的？","options":["老师","商人","医生","学生"],"correct":2},{"type":"B","paragraph":"李明的哥哥在北京工作。他是一个医生。他很忙，每天工作很多小时。但是他很喜欢他的工作。星期天他回家看爸爸妈妈。","text":"哥哥星期天做什么？","options":["工作","休息","回家看父母","去旅行"],"correct":2},{"type":"B","paragraph":"小美今年八岁了。她有一个弟弟，弟弟五岁。妈妈说小美是好姐姐，因为她每天帮弟弟写作业。爸爸也很高兴。","text":"小美今年几岁？","options":["5岁","6岁","7岁","8岁"],"correct":3},{"type":"B","paragraph":"小美今年八岁了。她有一个弟弟，弟弟五岁。妈妈说小美是好姐姐，因为她每天帮弟弟写作业。爸爸也很高兴。","text":"小美的弟弟多大？","options":["3岁","4岁","5岁","6岁"],"correct":2},{"type":"B","paragraph":"小美今年八岁了。她有一个弟弟，弟弟五岁。妈妈说小美是好姐姐，因为她每天帮弟弟写作业。爸爸也很高兴。","text":"小美每天帮弟弟做什么？","options":["做饭","写作业","洗衣服","打扫"],"correct":1},{"type":"C","words":["四口人","家","有","我"],"answer":"我家有四口人。"},{"type":"C","words":["爸爸","医生","是","我的"],"answer":"我的爸爸是医生。"},{"type":"C","words":["一个","有","我","哥哥"],"answer":"我有一个哥哥。"},{"type":"C","words":["妈妈","做饭","在"],"answer":"妈妈在做饭。"},{"type":"C","words":["爱","家人","的","我","我"],"answer":"我爱我的家人。"},{"type":"C","words":["孩子","你","几个","有"],"answer":"你有几个孩子？"},{"type":"C","words":["很","漂亮","妈妈","我的"],"answer":"我的妈妈很漂亮。"},{"type":"C","words":["工作","在","爸爸"],"answer":"爸爸在工作。"},{"type":"C","words":["高兴","很","我们","都"],"answer":"我们都很高兴。"},{"type":"C","words":["女儿","三岁","他的","了"],"answer":"他的女儿三岁了。"}]},{"bab":3,"title":"Bab 3 — Angka & Waktu","questions":[{"type":"A","text":"现在几点？","ask":"Pertanyaan ini menanyakan…","options":["Hari apa?","Jam berapa sekarang?","Tanggal berapa?","Kapan pergi?"],"correct":1},{"type":"A","text":"现在三点半。","ask":"Sekarang jam…","options":["3:00","3:15","3:30","3:45"],"correct":2},{"type":"A","text":"今天星期一。","ask":"Hari ini adalah hari…","options":["Minggu","Senin","Selasa","Rabu"],"correct":1},{"type":"A","text":"我八点上课。","ask":"\"Saya\" masuk kelas jam…","options":["7","8","9","10"],"correct":1},{"type":"A","text":"他十二点吃饭。","ask":"Dia makan jam…","options":["11","12","1","2"],"correct":1},{"type":"A","text":"今天几月几号？","ask":"Pertanyaan ini menanyakan…","options":["Hari apa?","Jam berapa?","Tanggal berapa?","Tahun berapa?"],"correct":2},{"type":"A","text":"明天是星期六。","ask":"Besok adalah hari…","options":["Jumat","Sabtu","Minggu","Senin"],"correct":1},{"type":"A","text":"我每天六点起床。","ask":"\"Saya\" bangun jam…","options":["5","6","7","8"],"correct":1},{"type":"A","text":"请等我十分钟。","ask":"Tolong tunggu saya…","options":["5 menit","10 menit","15 menit","20 menit"],"correct":1},{"type":"A","text":"今年是二零二六年。","ask":"Tahun ini adalah tahun…","options":["2024","2025","2026","2027"],"correct":2},{"type":"A","text":"我下午两点有课。","ask":"\"Saya\" ada kelas jam berapa?","options":["1 siang","2 siang","3 siang","4 siang"],"correct":1},{"type":"A","text":"昨天我去了商店。","ask":"\"Saya\" pergi ke toko…","options":["Hari ini","Kemarin","Besok","Minggu lalu"],"correct":1},{"type":"A","text":"一个星期有七天。","ask":"Satu minggu ada…","options":["5 hari","6 hari","7 hari","10 hari"],"correct":2},{"type":"A","text":"他下午五点回家。","ask":"Dia pulang jam…","options":["4 sore","5 sore","6 sore","7 sore"],"correct":1},{"type":"A","text":"这本书一百块。","ask":"Buku ini harganya…","options":["10 yuan","50 yuan","100 yuan","200 yuan"],"correct":2},{"type":"B","paragraph":"小明每天很忙。他早上七点起床。八点去学校上课。中午十二点在学校吃饭。下午三点下课。他五点回家。晚上十点睡觉。","text":"小明几点起床？","options":["6点","7点","8点","9点"],"correct":1},{"type":"B","paragraph":"小明每天很忙。他早上七点起床。八点去学校上课。中午十二点在学校吃饭。下午三点下课。他五点回家。晚上十点睡觉。","text":"小明几点下课？","options":["2点","3点","4点","5点"],"correct":1},{"type":"B","paragraph":"小明每天很忙。他早上七点起床。八点去学校上课。中午十二点在学校吃饭。下午三点下课。他五点回家。晚上十点睡觉。","text":"小明几点睡觉？","options":["9点","10点","11点","12点"],"correct":1},{"type":"B","paragraph":"今天是星期三，九月十五号。明天小红的妈妈生日。小红想买一个蛋糕。蛋糕五十块钱。小红有一百块钱，够了。","text":"今天星期几？","options":["星期二","星期三","星期四","星期五"],"correct":1},{"type":"B","paragraph":"今天是星期三，九月十五号。明天小红的妈妈生日。小红想买一个蛋糕。蛋糕五十块钱。小红有一百块钱，够了。","text":"妈妈的生日是几号？","options":["14号","15号","16号","17号"],"correct":2},{"type":"B","paragraph":"今天是星期三，九月十五号。明天小红的妈妈生日。小红想买一个蛋糕。蛋糕五十块钱。小红有一百块钱，够了。","text":"蛋糕多少钱？","options":["30块","50块","80块","100块"],"correct":1},{"type":"B","paragraph":"王老师每天早上六点半起床。七点吃早饭。他七点半去学校。上午他有四节课。下午两点到五点他在办公室。六点他回家。","text":"王老师几点起床？","options":["6:00","6:30","7:00","7:30"],"correct":1},{"type":"B","paragraph":"王老师每天早上六点半起床。七点吃早饭。他七点半去学校。上午他有四节课。下午两点到五点他在办公室。六点他回家。","text":"上午他有几节课？","options":["2节","3节","4节","5节"],"correct":2},{"type":"B","paragraph":"王老师每天早上六点半起床。七点吃早饭。他七点半去学校。上午他有四节课。下午两点到五点他在办公室。六点他回家。","text":"他几点回家？","options":["5点","6点","7点","8点"],"correct":1},{"type":"B","paragraph":"小花的一天：早上八点上课，十二点吃午饭，下午两点继续上课，四点下课。她五点去图书馆看书。七点回家吃晚饭。九点开始写作业。","text":"小花几点吃午饭？","options":["11点","12点","1点","2点"],"correct":1},{"type":"B","paragraph":"小花的一天：早上八点上课，十二点吃午饭，下午两点继续上课，四点下课。她五点去图书馆看书。七点回家吃晚饭。九点开始写作业。","text":"她五点做什么？","options":["回家","上课","去图书馆","吃饭"],"correct":2},{"type":"B","paragraph":"小花的一天：早上八点上课，十二点吃午饭，下午两点继续上课，四点下课。她五点去图书馆看书。七点回家吃晚饭。九点开始写作业。","text":"她几点写作业？","options":["8点","9点","10点","7点"],"correct":1},{"type":"B","paragraph":"今天是二零二六年三月一号，星期天。李先生一家去公园。他们早上九点出发。在公园玩了三个小时。中午十二点去饭店吃饭。下午两点回家。","text":"今天星期几？","options":["星期六","星期天","星期一","星期五"],"correct":1},{"type":"B","paragraph":"今天是二零二六年三月一号，星期天。李先生一家去公园。他们早上九点出发。在公园玩了三个小时。中午十二点去饭店吃饭。下午两点回家。","text":"他们在公园待了多长时间？","options":["1小时","2小时","3小时","4小时"],"correct":2},{"type":"B","paragraph":"今天是二零二六年三月一号，星期天。李先生一家去公园。他们早上九点出发。在公园玩了三个小时。中午十二点去饭店吃饭。下午两点回家。","text":"他们几点回家？","options":["1点","2点","3点","4点"],"correct":1},{"type":"C","words":["几点","现在"],"answer":"现在几点？"},{"type":"C","words":["星期一","今天"],"answer":"今天星期一。"},{"type":"C","words":["八点","上课","我"],"answer":"我八点上课。"},{"type":"C","words":["起床","六点","每天","我"],"answer":"我每天六点起床。"},{"type":"C","words":["十分钟","等","请","我"],"answer":"请等我十分钟。"},{"type":"C","words":["回家","五点","他","下午"],"answer":"他下午五点回家。"},{"type":"C","words":["明天","星期六","是"],"answer":"明天是星期六。"},{"type":"C","words":["一百块","书","这本"],"answer":"这本书一百块。"},{"type":"C","words":["吃饭","十二点","中午","我们"],"answer":"我们中午十二点吃饭。"},{"type":"C","words":["有","七天","一个","星期"],"answer":"一个星期有七天。"}]},{"bab":4,"title":"Bab 4 — Makanan & Minuman","questions":[{"type":"A","text":"你想吃什么？","ask":"Pertanyaan ini menanyakan…","options":["Kamu mau minum apa?","Kamu mau makan apa?","Kamu suka apa?","Kamu bisa apa?"],"correct":1},{"type":"A","text":"我想喝水。","ask":"\"Saya\" ingin…","options":["Makan nasi","Minum air","Makan buah","Minum teh"],"correct":1},{"type":"A","text":"这个菜很好吃。","ask":"Masakan ini…","options":["Sangat mahal","Sangat enak","Sangat pedas","Sangat banyak"],"correct":1},{"type":"A","text":"请给我一杯茶。","ask":"Tolong berikan saya…","options":["Segelas air","Secangkir teh","Seporsi nasi","Sebuah apel"],"correct":1},{"type":"A","text":"你喜欢吃水果吗？","ask":"Pertanyaan ini menanyakan apakah kamu suka…","options":["Makan sayur","Minum jus","Makan buah","Makan nasi"],"correct":2},{"type":"A","text":"我不喜欢喝咖啡。","ask":"\"Saya\" tidak suka…","options":["Minum teh","Minum susu","Minum kopi","Makan roti"],"correct":2},{"type":"A","text":"米饭和菜都很好吃。","ask":"Nasi dan masakan…","options":["Tidak enak","Sangat enak","Sangat mahal","Sangat banyak"],"correct":1},{"type":"A","text":"我买了三个苹果。","ask":"\"Saya\" membeli…","options":["2 apel","3 apel","4 apel","5 apel"],"correct":1},{"type":"A","text":"你想喝茶还是水？","ask":"Pertanyaan ini menanyakan pilihan antara…","options":["Kopi atau jus","Teh atau air","Susu atau kopi","Air atau jus"],"correct":1},{"type":"A","text":"我们去饭店吃饭吧。","ask":"Ayo kita pergi ke…","options":["Sekolah","Toko","Restoran","Rumah sakit"],"correct":2},{"type":"A","text":"这个太贵了。","ask":"Ini…","options":["Terlalu murah","Terlalu mahal","Terlalu besar","Terlalu kecil"],"correct":1},{"type":"A","text":"他每天喝很多水。","ask":"Dia setiap hari minum banyak…","options":["Teh","Kopi","Air","Susu"],"correct":2},{"type":"A","text":"我中午吃了米饭。","ask":"Siang hari \"saya\" makan…","options":["Roti","Mie","Nasi","Buah"],"correct":2},{"type":"A","text":"你的杯子在桌子上。","ask":"Gelasmu ada di…","options":["Di dalam tas","Di atas meja","Di bawah kursi","Di dalam lemari"],"correct":1},{"type":"A","text":"苹果和水果都很好。","ask":"Apel dan buah-buahan semuanya…","options":["Sangat mahal","Sangat bagus","Sangat besar","Sangat buruk"],"correct":1},{"type":"B","paragraph":"今天中午我和朋友去饭店吃饭。我点了一碗米饭和一个菜。朋友点了面条。我们还喝了两杯茶。一共花了五十块钱。","text":"他们中午去哪里？","options":["学校","医院","饭店","商店"],"correct":2},{"type":"B","paragraph":"今天中午我和朋友去饭店吃饭。我点了一碗米饭和一个菜。朋友点了面条。我们还喝了两杯茶。一共花了五十块钱。","text":"朋友点了什么？","options":["米饭","面条","苹果","水果"],"correct":1},{"type":"B","paragraph":"今天中午我和朋友去饭店吃饭。我点了一碗米饭和一个菜。朋友点了面条。我们还喝了两杯茶。一共花了五十块钱。","text":"他们一共花了多少钱？","options":["30块","40块","50块","60块"],"correct":2},{"type":"B","paragraph":"小明很喜欢吃水果。他每天吃一个苹果。他也喜欢喝水。他不喜欢喝咖啡，觉得太苦了。妈妈说多吃水果很好。","text":"小明每天吃什么水果？","options":["香蕉","苹果","橙子","西瓜"],"correct":1},{"type":"B","paragraph":"小明很喜欢吃水果。他每天吃一个苹果。他也喜欢喝水。他不喜欢喝咖啡，觉得太苦了。妈妈说多吃水果很好。","text":"小明为什么不喝咖啡？","options":["太贵","太苦","太甜","没有"],"correct":1},{"type":"B","paragraph":"小明很喜欢吃水果。他每天吃一个苹果。他也喜欢喝水。他不喜欢喝咖啡，觉得太苦了。妈妈说多吃水果很好。","text":"妈妈怎么说的？","options":["少喝水","多吃水果","少吃饭","多睡觉"],"correct":1},{"type":"B","paragraph":"这个饭店的菜很好吃。很多人来这里吃饭。米饭十块一碗，菜二十块一个。茶五块一杯。服务也很好。","text":"这个饭店的菜怎么样？","options":["不好吃","很好吃","太贵","太少"],"correct":1},{"type":"B","paragraph":"这个饭店的菜很好吃。很多人来这里吃饭。米饭十块一碗，菜二十块一个。茶五块一杯。服务也很好。","text":"米饭多少钱一碗？","options":["5块","10块","15块","20块"],"correct":1},{"type":"B","paragraph":"这个饭店的菜很好吃。很多人来这里吃饭。米饭十块一碗，菜二十块一个。茶五块一杯。服务也很好。","text":"茶多少钱？","options":["3块","5块","8块","10块"],"correct":1},{"type":"B","paragraph":"妈妈每天早上做早饭。今天她做了米饭和两个菜。爸爸说很好吃。小明喝了一杯水。妈妈说今天下午要去商店买水果。","text":"谁做的早饭？","options":["爸爸","小明","妈妈","姐姐"],"correct":2},{"type":"B","paragraph":"妈妈每天早上做早饭。今天她做了米饭和两个菜。爸爸说很好吃。小明喝了一杯水。妈妈说今天下午要去商店买水果。","text":"爸爸觉得早饭怎么样？","options":["不好吃","一般","很好吃","太少"],"correct":2},{"type":"B","paragraph":"妈妈每天早上做早饭。今天她做了米饭和两个菜。爸爸说很好吃。小明喝了一杯水。妈妈说今天下午要去商店买水果。","text":"妈妈下午要去做什么？","options":["上班","买水果","做饭","睡觉"],"correct":1},{"type":"B","paragraph":"王先生请朋友吃饭。他们去了一个很大的饭店。王先生点了很多菜。他们吃了两个小时。大家都说今天的饭很好吃。王先生很高兴。","text":"王先生请谁吃饭？","options":["家人","同学","朋友","老师"],"correct":2},{"type":"B","paragraph":"王先生请朋友吃饭。他们去了一个很大的饭店。王先生点了很多菜。他们吃了两个小时。大家都说今天的饭很好吃。王先生很高兴。","text":"他们吃了多长时间？","options":["1小时","2小时","3小时","半小时"],"correct":1},{"type":"B","paragraph":"王先生请朋友吃饭。他们去了一个很大的饭店。王先生点了很多菜。他们吃了两个小时。大家都说今天的饭很好吃。王先生很高兴。","text":"大家觉得饭怎么样？","options":["不好吃","一般","很好吃","太贵了"],"correct":2},{"type":"C","words":["什么","想","你","吃"],"answer":"你想吃什么？"},{"type":"C","words":["喝","想","水","我"],"answer":"我想喝水。"},{"type":"C","words":["好吃","菜","很","这个"],"answer":"这个菜很好吃。"},{"type":"C","words":["给","请","一杯","茶","我"],"answer":"请给我一杯茶。"},{"type":"C","words":["不","喜欢","喝","我","咖啡"],"answer":"我不喜欢喝咖啡。"},{"type":"C","words":["苹果","买了","三个","我"],"answer":"我买了三个苹果。"},{"type":"C","words":["吧","去","我们","饭店","吃饭"],"answer":"我们去饭店吃饭吧。"},{"type":"C","words":["太","了","贵","这个"],"answer":"这个太贵了。"},{"type":"C","words":["水果","吃","喜欢","我"],"answer":"我喜欢吃水果。"},{"type":"C","words":["米饭","了","吃","我","中午"],"answer":"我中午吃了米饭。"}]},{"bab":5,"title":"Bab 5 — Sekolah & Belajar","questions":[{"type":"A","text":"我在学校学习。","ask":"\"Saya\" belajar di…","options":["Rumah","Sekolah","Toko","Kantor"],"correct":1},{"type":"A","text":"你会说中文吗？","ask":"Pertanyaan ini menanyakan apakah kamu bisa…","options":["Menulis bahasa Mandarin","Berbicara bahasa Mandarin","Membaca bahasa Mandarin","Mendengar bahasa Mandarin"],"correct":1},{"type":"A","text":"老师在教我们汉语。","ask":"Guru sedang mengajarkan kami…","options":["Matematika","Bahasa Inggris","Bahasa Mandarin","Sejarah"],"correct":2},{"type":"A","text":"这个字怎么写？","ask":"Pertanyaan ini menanyakan cara…","options":["Membaca karakter","Menulis karakter","Mengucapkan karakter","Menghitung karakter"],"correct":1},{"type":"A","text":"请读这个字。","ask":"Tolong…karakter ini.","options":["Tulis","Baca","Hapus","Lihat"],"correct":1},{"type":"A","text":"我在写汉字。","ask":"\"Saya\" sedang…","options":["Membaca buku","Menulis karakter Mandarin","Mendengarkan guru","Berbicara Mandarin"],"correct":1},{"type":"A","text":"今天有很多作业。","ask":"Hari ini ada banyak…","options":["Ujian","PR / tugas","Kelas","Guru"],"correct":1},{"type":"A","text":"他的书在桌子上。","ask":"Bukunya ada di…","options":["Dalam tas","Di atas meja","Di bawah kursi","Di dalam lemari"],"correct":1},{"type":"A","text":"我们下午三点下课。","ask":"Kami selesai kelas jam…","options":["2 sore","3 sore","4 sore","5 sore"],"correct":1},{"type":"A","text":"你有几本书？","ask":"Kamu punya berapa…","options":["Pensil","Tas","Buku","Meja"],"correct":2},{"type":"A","text":"我喜欢学习中文。","ask":"\"Saya\" suka belajar…","options":["Bahasa Inggris","Bahasa Mandarin","Matematika","Musik"],"correct":1},{"type":"A","text":"同学们都在教室里。","ask":"Teman-teman sekelas semua ada di…","options":["Kantin","Ruang kelas","Perpustakaan","Lapangan"],"correct":1},{"type":"A","text":"他是一个好学生。","ask":"Dia adalah seorang…","options":["Murid yang baik","Guru yang baik","Dokter yang baik","Teman yang baik"],"correct":0},{"type":"A","text":"我用电脑写作业。","ask":"\"Saya\" menggunakan…untuk menulis PR.","options":["Buku","Telepon","Komputer","Pensil"],"correct":2},{"type":"A","text":"老师说请打开书。","ask":"Guru bilang tolong…buku.","options":["Tutup","Buka","Ambil","Beli"],"correct":1},{"type":"B","paragraph":"小花每天早上八点去学校。她学习汉语和数学。她最喜欢汉语课。老师教她读和写汉字。下午四点她回家。晚上她写作业。","text":"小花最喜欢什么课？","options":["数学","英语","汉语","音乐"],"correct":2},{"type":"B","paragraph":"小花每天早上八点去学校。她学习汉语和数学。她最喜欢汉语课。老师教她读和写汉字。下午四点她回家。晚上她写作业。","text":"老师教她什么？","options":["唱歌","读和写汉字","画画","跳舞"],"correct":1},{"type":"B","paragraph":"小花每天早上八点去学校。她学习汉语和数学。她最喜欢汉语课。老师教她读和写汉字。下午四点她回家。晚上她写作业。","text":"她什么时候写作业？","options":["早上","中午","下午","晚上"],"correct":3},{"type":"B","paragraph":"我们班有二十个学生。十二个男生，八个女生。我们的老师是王老师。她很好，每天教我们很多东西。大家都喜欢她。","text":"班上有多少学生？","options":["15个","18个","20个","25个"],"correct":2},{"type":"B","paragraph":"我们班有二十个学生。十二个男生，八个女生。我们的老师是王老师。她很好，每天教我们很多东西。大家都喜欢她。","text":"有几个女生？","options":["6个","8个","10个","12个"],"correct":1},{"type":"B","paragraph":"我们班有二十个学生。十二个男生，八个女生。我们的老师是王老师。她很好，每天教我们很多东西。大家都喜欢她。","text":"老师姓什么？","options":["李","张","王","赵"],"correct":2},{"type":"B","paragraph":"小明的书桌上有很多东西：三本书、两支笔、一个杯子。他的书包在椅子上。小明每天用电脑写作业。他的电脑是新的。","text":"桌子上有几本书？","options":["2本","3本","4本","5本"],"correct":1},{"type":"B","paragraph":"小明的书桌上有很多东西：三本书、两支笔、一个杯子。他的书包在椅子上。小明每天用电脑写作业。他的电脑是新的。","text":"书包在哪里？","options":["桌子上","椅子上","地上","书柜里"],"correct":1},{"type":"B","paragraph":"小明的书桌上有很多东西：三本书、两支笔、一个杯子。他的书包在椅子上。小明每天用电脑写作业。他的电脑是新的。","text":"小明用什么写作业？","options":["笔","手机","电脑","纸"],"correct":2},{"type":"B","paragraph":"今天是新学期的第一天。很多新同学来了。老师让大家自我介绍。每个人都说了自己的名字和爱好。小红说她喜欢看书。小明说他喜欢打球。","text":"今天是什么特别的日子？","options":["放假第一天","新学期第一天","考试的日子","毕业典礼"],"correct":1},{"type":"B","paragraph":"今天是新学期的第一天。很多新同学来了。老师让大家自我介绍。每个人都说了自己的名字和爱好。小红说她喜欢看书。小明说他喜欢打球。","text":"老师让大家做什么？","options":["写作业","自我介绍","看书","考试"],"correct":1},{"type":"B","paragraph":"今天是新学期的第一天。很多新同学来了。老师让大家自我介绍。每个人都说了自己的名字和爱好。小红说她喜欢看书。小明说他喜欢打球。","text":"小明的爱好是什么？","options":["看书","唱歌","打球","画画"],"correct":2},{"type":"B","paragraph":"学校的图书馆很大。里面有很多书。学生们可以在那里看书和学习。图书馆每天早上八点开门，下午六点关门。小花每天都去图书馆。","text":"图书馆怎么样？","options":["很小","很大","很旧","很远"],"correct":1},{"type":"B","paragraph":"学校的图书馆很大。里面有很多书。学生们可以在那里看书和学习。图书馆每天早上八点开门，下午六点关门。小花每天都去图书馆。","text":"图书馆几点关门？","options":["5点","6点","7点","8点"],"correct":1},{"type":"B","paragraph":"学校的图书馆很大。里面有很多书。学生们可以在那里看书和学习。图书馆每天早上八点开门，下午六点关门。小花每天都去图书馆。","text":"小花多久去一次图书馆？","options":["每周","每月","每天","偶尔"],"correct":2},{"type":"C","words":["学习","在","学校","我"],"answer":"我在学校学习。"},{"type":"C","words":["说","你","吗","会","中文"],"answer":"你会说中文吗？"},{"type":"C","words":["怎么","字","写","这个"],"answer":"这个字怎么写？"},{"type":"C","words":["很多","今天","作业","有"],"answer":"今天有很多作业。"},{"type":"C","words":["书","有","你","几本"],"answer":"你有几本书？"},{"type":"C","words":["学习","喜欢","我","中文"],"answer":"我喜欢学习中文。"},{"type":"C","words":["下课","三点","我们","下午"],"answer":"我们下午三点下课。"},{"type":"C","words":["电脑","写","用","我","作业"],"answer":"我用电脑写作业。"},{"type":"C","words":["好","是","一个","他","学生"],"answer":"他是一个好学生。"},{"type":"C","words":["在","上","桌子","他的","书"],"answer":"他的书在桌子上。"}]},{"bab":6,"title":"Bab 6 — Tempat & Lokasi","questions":[{"type":"A","text":"你住在哪里？","ask":"Pertanyaan ini menanyakan…","options":["Kamu bekerja di mana?","Kamu tinggal di mana?","Kamu pergi ke mana?","Kamu dari mana?"],"correct":1},{"type":"A","text":"我住在北京。","ask":"\"Saya\" tinggal di…","options":["Shanghai","Guangzhou","Beijing","Nanjing"],"correct":2},{"type":"A","text":"学校在前面。","ask":"Sekolah ada di…","options":["Belakang","Samping","Depan","Atas"],"correct":2},{"type":"A","text":"猫在桌子下面。","ask":"Kucing ada di…meja.","options":["Atas","Bawah","Samping","Dalam"],"correct":1},{"type":"A","text":"医院在学校后面。","ask":"Rumah sakit ada di…sekolah.","options":["Depan","Samping","Belakang","Dalam"],"correct":2},{"type":"A","text":"他在家里。","ask":"Dia ada di…","options":["Sekolah","Kantor","Rumah","Toko"],"correct":2},{"type":"A","text":"商店在哪里？","ask":"Pertanyaan ini menanyakan lokasi…","options":["Sekolah","Rumah sakit","Toko","Restoran"],"correct":2},{"type":"A","text":"我想去中国。","ask":"\"Saya\" ingin pergi ke…","options":["Jepang","Korea","Tiongkok","Amerika"],"correct":2},{"type":"A","text":"火车站很远。","ask":"Stasiun kereta…","options":["Sangat dekat","Sangat jauh","Sangat besar","Sangat kecil"],"correct":1},{"type":"A","text":"饭店在学校前面。","ask":"Restoran ada di…sekolah.","options":["Belakang","Dalam","Depan","Atas"],"correct":2},{"type":"A","text":"书在书包里面。","ask":"Buku ada di…tas.","options":["Atas","Bawah","Samping","Dalam"],"correct":3},{"type":"A","text":"请进来。","ask":"Silakan…","options":["Keluar","Masuk","Duduk","Berdiri"],"correct":1},{"type":"A","text":"他去学校了。","ask":"Dia sudah pergi ke…","options":["Rumah","Toko","Sekolah","Restoran"],"correct":2},{"type":"A","text":"我们坐出租车去吧。","ask":"Ayo kita pergi naik…","options":["Bus","Kereta","Taksi","Pesawat"],"correct":2},{"type":"A","text":"我坐飞机去北京。","ask":"\"Saya\" naik…ke Beijing.","options":["Kereta","Bus","Kapal","Pesawat"],"correct":3},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们去了哪里？","options":["商店","公园","学校","饭店"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们在公园待了多长时间？","options":["1小时","2小时","3小时","4小时"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"回家以后小明做了什么？","options":["看电视","睡觉","做作业","吃饭"],"correct":2},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"昨天是星期几？","options":["星期六","星期天","星期一","星期五"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"他们点了几个菜？","options":["2个","3个","4个","5个"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"吃完饭他们去了哪里？","options":["公园","家","商店","学校"],"correct":2},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"小红几点起床？","options":["6点","7点","8点","9点"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她的学校离家远吗？","options":["很远","不远","一般","不知道"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她怎么去学校？","options":["坐车","骑车","走路","坐地铁"],"correct":2},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"今天天气怎么样？","options":["很好","下雨","很热","很冷"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"小明等了多长时间？","options":["半小时","一小时","两小时","三小时"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"谁来接小明？","options":["爸爸","妈妈","姐姐","朋友"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"李老师教什么？","options":["数学","英语","中文","音乐"],"correct":2},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"他说话快不快？","options":["很快","很慢","一般","不说话"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"下课以后他做什么？","options":["回家","睡觉","帮学生回答问题","吃饭"],"correct":2},{"type":"C","words":["在","哪里","你","住"],"answer":"你住在哪里？"},{"type":"C","words":["去","我","想","中国"],"answer":"我想去中国。"},{"type":"C","words":["很","好","天气","今天"],"answer":"今天天气很好。"},{"type":"C","words":["多少","这个","钱"],"answer":"这个多少钱？"},{"type":"C","words":["喜欢","做","你","什么"],"answer":"你喜欢做什么？"},{"type":"C","words":["看","电影","我","喜欢"],"answer":"我喜欢看电影。"},{"type":"C","words":["坐","飞机","去","他","北京"],"answer":"他坐飞机去北京。"},{"type":"C","words":["在","家","他","里"],"answer":"他在家里。"},{"type":"C","words":["下雨","了","今天"],"answer":"今天下雨了。"},{"type":"C","words":["工作","做","什么","你"],"answer":"你做什么工作？"}]},{"bab":7,"title":"Bab 7 — Cuaca & Alam","questions":[{"type":"A","text":"今天天气怎么样？","ask":"Pertanyaan ini menanyakan…","options":["Hari apa?","Cuaca bagaimana?","Jam berapa?","Siapa itu?"],"correct":1},{"type":"A","text":"今天天气很好。","ask":"Cuaca hari ini…","options":["Sangat buruk","Sangat bagus","Sangat panas","Sangat dingin"],"correct":1},{"type":"A","text":"今天很冷。","ask":"Hari ini…","options":["Sangat panas","Sangat dingin","Sangat cerah","Sangat gelap"],"correct":1},{"type":"A","text":"北京的夏天很热。","ask":"Musim panas di Beijing…","options":["Sangat dingin","Sangat panas","Sangat sejuk","Sangat basah"],"correct":1},{"type":"A","text":"今天下雨了。","ask":"Hari ini…","options":["Cerah","Mendung","Hujan","Bersalju"],"correct":2},{"type":"A","text":"明天天气好吗？","ask":"Pertanyaan tentang cuaca…","options":["Hari ini","Kemarin","Besok","Minggu depan"],"correct":2},{"type":"A","text":"外面很热，我想喝水。","ask":"Di luar sangat panas, saya ingin…","options":["Makan","Tidur","Minum air","Pergi"],"correct":2},{"type":"A","text":"冬天北京很冷。","ask":"Musim dingin di Beijing…","options":["Sangat panas","Sangat dingin","Sangat bagus","Sangat cerah"],"correct":1},{"type":"A","text":"你喜欢什么天气？","ask":"Pertanyaan ini menanyakan…","options":["Suka cuaca apa?","Suka makanan apa?","Suka warna apa?","Suka film apa?"],"correct":0},{"type":"A","text":"今天二十度。","ask":"Suhu hari ini…","options":["10 derajat","15 derajat","20 derajat","25 derajat"],"correct":2},{"type":"A","text":"下雨了，带伞吧。","ask":"Hujan, bawa…","options":["Buku","Payung","Topi","Tas"],"correct":1},{"type":"A","text":"春天花很漂亮。","ask":"Di musim semi, bunga sangat…","options":["Banyak","Sedikit","Cantik","Besar"],"correct":2},{"type":"A","text":"他不喜欢冷天气。","ask":"Dia tidak suka cuaca…","options":["Panas","Dingin","Cerah","Sejuk"],"correct":1},{"type":"A","text":"今天风很大。","ask":"Hari ini anginnya sangat…","options":["Kecil","Besar/kencang","Lembut","Hangat"],"correct":1},{"type":"A","text":"昨天没有下雨。","ask":"Kemarin…","options":["Hujan","Tidak hujan","Salju","Sangat panas"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们去了哪里？","options":["商店","公园","学校","饭店"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们在公园待了多长时间？","options":["1小时","2小时","3小时","4小时"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"回家以后小明做了什么？","options":["看电视","睡觉","做作业","吃饭"],"correct":2},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"昨天是星期几？","options":["星期六","星期天","星期一","星期五"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"他们点了几个菜？","options":["2个","3个","4个","5个"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"吃完饭他们去了哪里？","options":["公园","家","商店","学校"],"correct":2},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"小红几点起床？","options":["6点","7点","8点","9点"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她的学校离家远吗？","options":["很远","不远","一般","不知道"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她怎么去学校？","options":["坐车","骑车","走路","坐地铁"],"correct":2},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"今天天气怎么样？","options":["很好","下雨","很热","很冷"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"小明等了多长时间？","options":["半小时","一小时","两小时","三小时"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"谁来接小明？","options":["爸爸","妈妈","姐姐","朋友"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"李老师教什么？","options":["数学","英语","中文","音乐"],"correct":2},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"他说话快不快？","options":["很快","很慢","一般","不说话"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"下课以后他做什么？","options":["回家","睡觉","帮学生回答问题","吃饭"],"correct":2},{"type":"C","words":["在","哪里","你","住"],"answer":"你住在哪里？"},{"type":"C","words":["去","我","想","中国"],"answer":"我想去中国。"},{"type":"C","words":["很","好","天气","今天"],"answer":"今天天气很好。"},{"type":"C","words":["多少","这个","钱"],"answer":"这个多少钱？"},{"type":"C","words":["喜欢","做","你","什么"],"answer":"你喜欢做什么？"},{"type":"C","words":["看","电影","我","喜欢"],"answer":"我喜欢看电影。"},{"type":"C","words":["坐","飞机","去","他","北京"],"answer":"他坐飞机去北京。"},{"type":"C","words":["在","家","他","里"],"answer":"他在家里。"},{"type":"C","words":["下雨","了","今天"],"answer":"今天下雨了。"},{"type":"C","words":["工作","做","什么","你"],"answer":"你做什么工作？"}]},{"bab":8,"title":"Bab 8 — Belanja & Harga","questions":[{"type":"A","text":"这个多少钱？","ask":"Pertanyaan ini menanyakan…","options":["Ini apa?","Ini punya siapa?","Ini berapa harganya?","Ini di mana?"],"correct":2},{"type":"A","text":"我想买一件衣服。","ask":"\"Saya\" ingin membeli…","options":["Sepatu","Baju","Celana","Topi"],"correct":1},{"type":"A","text":"太贵了，便宜一点吧。","ask":"Terlalu mahal, …sedikit.","options":["Murahkan","Tambah","Kurangi","Besarkan"],"correct":0},{"type":"A","text":"这件衣服一百块。","ask":"Baju ini harganya…","options":["50 yuan","80 yuan","100 yuan","120 yuan"],"correct":2},{"type":"A","text":"你要买什么？","ask":"Kamu mau membeli…","options":["Apa?","Berapa?","Di mana?","Kapan?"],"correct":0},{"type":"A","text":"我要两个苹果。","ask":"\"Saya\" mau…apel.","options":["1","2","3","4"],"correct":1},{"type":"A","text":"这个东西很好。","ask":"Barang ini sangat…","options":["Mahal","Murah","Bagus","Jelek"],"correct":2},{"type":"A","text":"你有零钱吗？","ask":"Kamu punya…?","options":["Kartu","Uang receh","Buku","Telepon"],"correct":1},{"type":"A","text":"一共五十块。","ask":"Totalnya…","options":["30 yuan","40 yuan","50 yuan","60 yuan"],"correct":2},{"type":"A","text":"我去商店买东西。","ask":"\"Saya\" pergi ke toko membeli…","options":["Makanan","Buku","Barang","Baju"],"correct":2},{"type":"A","text":"这个杯子二十块。","ask":"Gelas ini harganya…","options":["10 yuan","15 yuan","20 yuan","25 yuan"],"correct":2},{"type":"A","text":"他买了很多水果。","ask":"Dia membeli banyak…","options":["Sayur","Buah","Daging","Roti"],"correct":1},{"type":"A","text":"便宜的东西不一定不好。","ask":"Barang murah belum tentu…","options":["Mahal","Tidak bagus","Besar","Kecil"],"correct":1},{"type":"A","text":"我没有钱了。","ask":"\"Saya\" sudah tidak punya…","options":["Waktu","Uang","Teman","Buku"],"correct":1},{"type":"A","text":"商店里人很多。","ask":"Di dalam toko orangnya…","options":["Sedikit","Banyak","Tidak ada","Satu"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们去了哪里？","options":["商店","公园","学校","饭店"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们在公园待了多长时间？","options":["1小时","2小时","3小时","4小时"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"回家以后小明做了什么？","options":["看电视","睡觉","做作业","吃饭"],"correct":2},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"昨天是星期几？","options":["星期六","星期天","星期一","星期五"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"他们点了几个菜？","options":["2个","3个","4个","5个"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"吃完饭他们去了哪里？","options":["公园","家","商店","学校"],"correct":2},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"小红几点起床？","options":["6点","7点","8点","9点"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她的学校离家远吗？","options":["很远","不远","一般","不知道"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她怎么去学校？","options":["坐车","骑车","走路","坐地铁"],"correct":2},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"今天天气怎么样？","options":["很好","下雨","很热","很冷"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"小明等了多长时间？","options":["半小时","一小时","两小时","三小时"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"谁来接小明？","options":["爸爸","妈妈","姐姐","朋友"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"李老师教什么？","options":["数学","英语","中文","音乐"],"correct":2},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"他说话快不快？","options":["很快","很慢","一般","不说话"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"下课以后他做什么？","options":["回家","睡觉","帮学生回答问题","吃饭"],"correct":2},{"type":"C","words":["在","哪里","你","住"],"answer":"你住在哪里？"},{"type":"C","words":["去","我","想","中国"],"answer":"我想去中国。"},{"type":"C","words":["很","好","天气","今天"],"answer":"今天天气很好。"},{"type":"C","words":["多少","这个","钱"],"answer":"这个多少钱？"},{"type":"C","words":["喜欢","做","你","什么"],"answer":"你喜欢做什么？"},{"type":"C","words":["看","电影","我","喜欢"],"answer":"我喜欢看电影。"},{"type":"C","words":["坐","飞机","去","他","北京"],"answer":"他坐飞机去北京。"},{"type":"C","words":["在","家","他","里"],"answer":"他在家里。"},{"type":"C","words":["下雨","了","今天"],"answer":"今天下雨了。"},{"type":"C","words":["工作","做","什么","你"],"answer":"你做什么工作？"}]},{"bab":9,"title":"Bab 9 — Hobi & Kegiatan","questions":[{"type":"A","text":"你喜欢做什么？","ask":"Pertanyaan ini menanyakan…","options":["Kamu siapa?","Kamu suka melakukan apa?","Kamu mau ke mana?","Kamu punya apa?"],"correct":1},{"type":"A","text":"我喜欢看电影。","ask":"\"Saya\" suka…","options":["Membaca buku","Menonton film","Mendengar musik","Bermain bola"],"correct":1},{"type":"A","text":"他喜欢看电视。","ask":"Dia suka menonton…","options":["Film","Pertandingan","Televisi","Video"],"correct":2},{"type":"A","text":"她喜欢看书。","ask":"Dia suka…","options":["Menulis surat","Membaca buku","Bermain game","Bernyanyi"],"correct":1},{"type":"A","text":"我们一起去打球吧。","ask":"Ayo kita pergi…bersama.","options":["Makan","Bermain bola","Belajar","Belanja"],"correct":1},{"type":"A","text":"你想去哪里玩？","ask":"Kamu ingin pergi bermain di…","options":["Mana?","Kapan?","Berapa?","Siapa?"],"correct":0},{"type":"A","text":"周末我在家看电视。","ask":"Akhir pekan \"saya\" di rumah…","options":["Belajar","Menonton TV","Memasak","Tidur"],"correct":1},{"type":"A","text":"我不喜欢下雨天。","ask":"\"Saya\" tidak suka hari…","options":["Cerah","Panas","Hujan","Dingin"],"correct":2},{"type":"A","text":"他每天都看书。","ask":"Dia setiap hari…","options":["Bermain","Membaca buku","Menonton TV","Tidur"],"correct":1},{"type":"A","text":"你有什么爱好？","ask":"Pertanyaan ini menanyakan…","options":["Pekerjaan","Hobi","Keluarga","Sekolah"],"correct":1},{"type":"A","text":"我爱听音乐。","ask":"\"Saya\" suka mendengarkan…","options":["Radio","Guru","Musik","Teman"],"correct":2},{"type":"A","text":"她会唱中文歌。","ask":"Dia bisa menyanyikan lagu…","options":["Bahasa Inggris","Bahasa Mandarin","Bahasa Jepang","Bahasa Korea"],"correct":1},{"type":"A","text":"我想学做中国菜。","ask":"\"Saya\" ingin belajar membuat masakan…","options":["Jepang","Korea","Tiongkok","Indonesia"],"correct":2},{"type":"A","text":"他喜欢和朋友一起玩。","ask":"Dia suka…bersama teman.","options":["Belajar","Bekerja","Bermain","Tidur"],"correct":2},{"type":"A","text":"星期天我们去公园。","ask":"Hari Minggu kami pergi ke…","options":["Sekolah","Taman","Kantor","Toko"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们去了哪里？","options":["商店","公园","学校","饭店"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们在公园待了多长时间？","options":["1小时","2小时","3小时","4小时"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"回家以后小明做了什么？","options":["看电视","睡觉","做作业","吃饭"],"correct":2},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"昨天是星期几？","options":["星期六","星期天","星期一","星期五"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"他们点了几个菜？","options":["2个","3个","4个","5个"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"吃完饭他们去了哪里？","options":["公园","家","商店","学校"],"correct":2},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"小红几点起床？","options":["6点","7点","8点","9点"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她的学校离家远吗？","options":["很远","不远","一般","不知道"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她怎么去学校？","options":["坐车","骑车","走路","坐地铁"],"correct":2},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"今天天气怎么样？","options":["很好","下雨","很热","很冷"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"小明等了多长时间？","options":["半小时","一小时","两小时","三小时"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"谁来接小明？","options":["爸爸","妈妈","姐姐","朋友"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"李老师教什么？","options":["数学","英语","中文","音乐"],"correct":2},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"他说话快不快？","options":["很快","很慢","一般","不说话"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"下课以后他做什么？","options":["回家","睡觉","帮学生回答问题","吃饭"],"correct":2},{"type":"C","words":["在","哪里","你","住"],"answer":"你住在哪里？"},{"type":"C","words":["去","我","想","中国"],"answer":"我想去中国。"},{"type":"C","words":["很","好","天气","今天"],"answer":"今天天气很好。"},{"type":"C","words":["多少","这个","钱"],"answer":"这个多少钱？"},{"type":"C","words":["喜欢","做","你","什么"],"answer":"你喜欢做什么？"},{"type":"C","words":["看","电影","我","喜欢"],"answer":"我喜欢看电影。"},{"type":"C","words":["坐","飞机","去","他","北京"],"answer":"他坐飞机去北京。"},{"type":"C","words":["在","家","他","里"],"answer":"他在家里。"},{"type":"C","words":["下雨","了","今天"],"answer":"今天下雨了。"},{"type":"C","words":["工作","做","什么","你"],"answer":"你做什么工作？"}]},{"bab":10,"title":"Bab 10 — Transportasi","questions":[{"type":"A","text":"你怎么去学校？","ask":"Pertanyaan ini menanyakan…","options":["Kapan ke sekolah?","Bagaimana ke sekolah?","Dengan siapa ke sekolah?","Kenapa ke sekolah?"],"correct":1},{"type":"A","text":"我坐公交车去。","ask":"\"Saya\" pergi naik…","options":["Taksi","Bus","Kereta","Pesawat"],"correct":1},{"type":"A","text":"他坐飞机去中国。","ask":"Dia naik…ke Tiongkok.","options":["Kapal","Kereta","Bus","Pesawat"],"correct":3},{"type":"A","text":"出租车很贵。","ask":"Taksi sangat…","options":["Murah","Mahal","Cepat","Lambat"],"correct":1},{"type":"A","text":"火车站在哪里？","ask":"Di mana…?","options":["Bandara","Pelabuhan","Stasiun kereta","Halte bus"],"correct":2},{"type":"A","text":"我想坐火车去上海。","ask":"\"Saya\" ingin naik kereta ke…","options":["Beijing","Guangzhou","Shanghai","Nanjing"],"correct":2},{"type":"A","text":"你开车去吗？","ask":"Apakah kamu…pergi?","options":["Jalan kaki","Naik bus","Mengendarai mobil","Naik sepeda"],"correct":2},{"type":"A","text":"我每天走路去学校。","ask":"\"Saya\" setiap hari…ke sekolah.","options":["Naik bus","Naik taksi","Jalan kaki","Naik sepeda"],"correct":2},{"type":"A","text":"请在这里下车。","ask":"Silakan turun dari kendaraan…","options":["Di sini","Di sana","Di depan","Di belakang"],"correct":0},{"type":"A","text":"飞机票太贵了。","ask":"Tiket pesawat terlalu…","options":["Murah","Mahal","Kecil","Besar"],"correct":1},{"type":"A","text":"我们坐地铁去吧。","ask":"Ayo kita naik…pergi.","options":["Bus","Kereta bawah tanah","Taksi","Pesawat"],"correct":1},{"type":"A","text":"他骑自行车上班。","ask":"Dia naik…ke kantor.","options":["Motor","Mobil","Sepeda","Bus"],"correct":2},{"type":"A","text":"从这里到学校很近。","ask":"Dari sini ke sekolah sangat…","options":["Jauh","Dekat","Sulit","Mudah"],"correct":1},{"type":"A","text":"请问去火车站怎么走？","ask":"Permisi, bagaimana cara pergi ke…?","options":["Bandara","Stasiun kereta","Toko","Restoran"],"correct":1},{"type":"A","text":"上车吧，我们走。","ask":"Silakan naik kendaraan, kita…","options":["Berhenti","Pulang","Berangkat","Duduk"],"correct":2},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们去了哪里？","options":["商店","公园","学校","饭店"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们在公园待了多长时间？","options":["1小时","2小时","3小时","4小时"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"回家以后小明做了什么？","options":["看电视","睡觉","做作业","吃饭"],"correct":2},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"昨天是星期几？","options":["星期六","星期天","星期一","星期五"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"他们点了几个菜？","options":["2个","3个","4个","5个"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"吃完饭他们去了哪里？","options":["公园","家","商店","学校"],"correct":2},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"小红几点起床？","options":["6点","7点","8点","9点"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她的学校离家远吗？","options":["很远","不远","一般","不知道"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她怎么去学校？","options":["坐车","骑车","走路","坐地铁"],"correct":2},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"今天天气怎么样？","options":["很好","下雨","很热","很冷"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"小明等了多长时间？","options":["半小时","一小时","两小时","三小时"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"谁来接小明？","options":["爸爸","妈妈","姐姐","朋友"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"李老师教什么？","options":["数学","英语","中文","音乐"],"correct":2},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"他说话快不快？","options":["很快","很慢","一般","不说话"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"下课以后他做什么？","options":["回家","睡觉","帮学生回答问题","吃饭"],"correct":2},{"type":"C","words":["在","哪里","你","住"],"answer":"你住在哪里？"},{"type":"C","words":["去","我","想","中国"],"answer":"我想去中国。"},{"type":"C","words":["很","好","天气","今天"],"answer":"今天天气很好。"},{"type":"C","words":["多少","这个","钱"],"answer":"这个多少钱？"},{"type":"C","words":["喜欢","做","你","什么"],"answer":"你喜欢做什么？"},{"type":"C","words":["看","电影","我","喜欢"],"answer":"我喜欢看电影。"},{"type":"C","words":["坐","飞机","去","他","北京"],"answer":"他坐飞机去北京。"},{"type":"C","words":["在","家","他","里"],"answer":"他在家里。"},{"type":"C","words":["下雨","了","今天"],"answer":"今天下雨了。"},{"type":"C","words":["工作","做","什么","你"],"answer":"你做什么工作？"}]},{"bab":11,"title":"Bab 11 — Kesehatan & Tubuh","questions":[{"type":"A","text":"你怎么了？","ask":"Pertanyaan ini menanyakan…","options":["Kamu mau ke mana?","Kamu kenapa? / Ada apa?","Kamu siapa?","Kamu dari mana?"],"correct":1},{"type":"A","text":"我不舒服。","ask":"\"Saya\" merasa…","options":["Senang","Tidak enak badan","Lapar","Lelah"],"correct":1},{"type":"A","text":"他去医院了。","ask":"Dia sudah pergi ke…","options":["Sekolah","Kantor","Rumah sakit","Toko"],"correct":2},{"type":"A","text":"医生说多喝水。","ask":"Dokter bilang banyak minum…","options":["Teh","Air","Susu","Jus"],"correct":1},{"type":"A","text":"我今天很累。","ask":"\"Saya\" hari ini sangat…","options":["Senang","Sibuk","Lelah","Lapar"],"correct":2},{"type":"A","text":"她头疼。","ask":"Dia…","options":["Sakit kepala","Sakit perut","Sakit gigi","Sakit kaki"],"correct":0},{"type":"A","text":"你要多休息。","ask":"Kamu harus banyak…","options":["Bekerja","Istirahat","Makan","Belajar"],"correct":1},{"type":"A","text":"他感冒了。","ask":"Dia…","options":["Demam","Flu","Patah tulang","Alergi"],"correct":1},{"type":"A","text":"请坐，医生马上来。","ask":"Silakan duduk, dokter segera…","options":["Pergi","Datang","Tidur","Makan"],"correct":1},{"type":"A","text":"我想睡觉。","ask":"\"Saya\" ingin…","options":["Makan","Bermain","Tidur","Belajar"],"correct":2},{"type":"A","text":"多吃水果对身体好。","ask":"Banyak makan buah baik untuk…","options":["Pikiran","Tubuh/kesehatan","Mata","Rambut"],"correct":1},{"type":"A","text":"你好一点了吗？","ask":"Apakah kamu sudah…?","options":["Lebih baikan","Lebih buruk","Lebih sibuk","Lebih senang"],"correct":0},{"type":"A","text":"我吃了药。","ask":"\"Saya\" sudah minum…","options":["Air","Teh","Obat","Susu"],"correct":2},{"type":"A","text":"他的眼睛很大。","ask":"Matanya sangat…","options":["Kecil","Besar","Merah","Hitam"],"correct":1},{"type":"A","text":"请你打开嘴巴。","ask":"Tolong buka…","options":["Mata","Telinga","Mulut","Tangan"],"correct":2},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们去了哪里？","options":["商店","公园","学校","饭店"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们在公园待了多长时间？","options":["1小时","2小时","3小时","4小时"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"回家以后小明做了什么？","options":["看电视","睡觉","做作业","吃饭"],"correct":2},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"昨天是星期几？","options":["星期六","星期天","星期一","星期五"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"他们点了几个菜？","options":["2个","3个","4个","5个"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"吃完饭他们去了哪里？","options":["公园","家","商店","学校"],"correct":2},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"小红几点起床？","options":["6点","7点","8点","9点"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她的学校离家远吗？","options":["很远","不远","一般","不知道"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她怎么去学校？","options":["坐车","骑车","走路","坐地铁"],"correct":2},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"今天天气怎么样？","options":["很好","下雨","很热","很冷"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"小明等了多长时间？","options":["半小时","一小时","两小时","三小时"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"谁来接小明？","options":["爸爸","妈妈","姐姐","朋友"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"李老师教什么？","options":["数学","英语","中文","音乐"],"correct":2},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"他说话快不快？","options":["很快","很慢","一般","不说话"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"下课以后他做什么？","options":["回家","睡觉","帮学生回答问题","吃饭"],"correct":2},{"type":"C","words":["在","哪里","你","住"],"answer":"你住在哪里？"},{"type":"C","words":["去","我","想","中国"],"answer":"我想去中国。"},{"type":"C","words":["很","好","天气","今天"],"answer":"今天天气很好。"},{"type":"C","words":["多少","这个","钱"],"answer":"这个多少钱？"},{"type":"C","words":["喜欢","做","你","什么"],"answer":"你喜欢做什么？"},{"type":"C","words":["看","电影","我","喜欢"],"answer":"我喜欢看电影。"},{"type":"C","words":["坐","飞机","去","他","北京"],"answer":"他坐飞机去北京。"},{"type":"C","words":["在","家","他","里"],"answer":"他在家里。"},{"type":"C","words":["下雨","了","今天"],"answer":"今天下雨了。"},{"type":"C","words":["工作","做","什么","你"],"answer":"你做什么工作？"}]},{"bab":12,"title":"Bab 12 — Perasaan & Emosi","questions":[{"type":"A","text":"我今天很高兴。","ask":"\"Saya\" hari ini sangat…","options":["Sedih","Marah","Senang","Takut"],"correct":2},{"type":"A","text":"他很生气。","ask":"Dia sangat…","options":["Senang","Sedih","Marah","Takut"],"correct":2},{"type":"A","text":"她哭了。","ask":"Dia…","options":["Tertawa","Menangis","Tersenyum","Berlari"],"correct":1},{"type":"A","text":"不要怕。","ask":"Jangan…","options":["Menangis","Marah","Takut","Sedih"],"correct":2},{"type":"A","text":"我很想你。","ask":"\"Saya\" sangat…kamu.","options":["Suka","Rindu","Marah pada","Takut pada"],"correct":1},{"type":"A","text":"大家都很开心。","ask":"Semua orang sangat…","options":["Sedih","Marah","Senang","Takut"],"correct":2},{"type":"A","text":"他笑了。","ask":"Dia…","options":["Menangis","Tertawa","Marah","Tidur"],"correct":1},{"type":"A","text":"你为什么不高兴？","ask":"Kenapa kamu…?","options":["Tidak senang","Tidak datang","Tidak belajar","Tidak makan"],"correct":0},{"type":"A","text":"我觉得很幸福。","ask":"\"Saya\" merasa sangat…","options":["Sedih","Bahagia","Lelah","Takut"],"correct":1},{"type":"A","text":"她很难过。","ask":"Dia sangat…","options":["Senang","Sedih","Marah","Takut"],"correct":1},{"type":"A","text":"别生气了。","ask":"Jangan…lagi.","options":["Menangis","Takut","Sedih","Marah"],"correct":3},{"type":"A","text":"我不怕。","ask":"\"Saya\" tidak…","options":["Senang","Sedih","Takut","Marah"],"correct":2},{"type":"A","text":"他很紧张。","ask":"Dia sangat…","options":["Rileks","Gugup","Senang","Bosan"],"correct":1},{"type":"A","text":"你开心吗？","ask":"Apakah kamu…?","options":["Senang","Sedih","Lapar","Lelah"],"correct":0},{"type":"A","text":"谢谢你，我很感动。","ask":"Terima kasih, saya sangat…","options":["Marah","Terharu","Takut","Bosan"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们去了哪里？","options":["商店","公园","学校","饭店"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们在公园待了多长时间？","options":["1小时","2小时","3小时","4小时"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"回家以后小明做了什么？","options":["看电视","睡觉","做作业","吃饭"],"correct":2},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"昨天是星期几？","options":["星期六","星期天","星期一","星期五"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"他们点了几个菜？","options":["2个","3个","4个","5个"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"吃完饭他们去了哪里？","options":["公园","家","商店","学校"],"correct":2},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"小红几点起床？","options":["6点","7点","8点","9点"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她的学校离家远吗？","options":["很远","不远","一般","不知道"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她怎么去学校？","options":["坐车","骑车","走路","坐地铁"],"correct":2},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"今天天气怎么样？","options":["很好","下雨","很热","很冷"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"小明等了多长时间？","options":["半小时","一小时","两小时","三小时"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"谁来接小明？","options":["爸爸","妈妈","姐姐","朋友"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"李老师教什么？","options":["数学","英语","中文","音乐"],"correct":2},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"他说话快不快？","options":["很快","很慢","一般","不说话"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"下课以后他做什么？","options":["回家","睡觉","帮学生回答问题","吃饭"],"correct":2},{"type":"C","words":["在","哪里","你","住"],"answer":"你住在哪里？"},{"type":"C","words":["去","我","想","中国"],"answer":"我想去中国。"},{"type":"C","words":["很","好","天气","今天"],"answer":"今天天气很好。"},{"type":"C","words":["多少","这个","钱"],"answer":"这个多少钱？"},{"type":"C","words":["喜欢","做","你","什么"],"answer":"你喜欢做什么？"},{"type":"C","words":["看","电影","我","喜欢"],"answer":"我喜欢看电影。"},{"type":"C","words":["坐","飞机","去","他","北京"],"answer":"他坐飞机去北京。"},{"type":"C","words":["在","家","他","里"],"answer":"他在家里。"},{"type":"C","words":["下雨","了","今天"],"answer":"今天下雨了。"},{"type":"C","words":["工作","做","什么","你"],"answer":"你做什么工作？"}]},{"bab":13,"title":"Bab 13 — Rumah & Benda Sehari-hari","questions":[{"type":"A","text":"我的房间很大。","ask":"Kamar \"saya\" sangat…","options":["Kecil","Besar","Kotor","Gelap"],"correct":1},{"type":"A","text":"桌子上有一本书。","ask":"Di atas meja ada…","options":["Sebuah buku","Sebuah gelas","Sebuah apel","Sebuah tas"],"correct":0},{"type":"A","text":"椅子在桌子旁边。","ask":"Kursi ada di…meja.","options":["Atas","Bawah","Samping","Dalam"],"correct":2},{"type":"A","text":"请关门。","ask":"Tolong…pintu.","options":["Buka","Tutup","Dorong","Tarik"],"correct":1},{"type":"A","text":"灯在哪里？","ask":"Di mana…?","options":["Lampu","Meja","Kursi","Buku"],"correct":0},{"type":"A","text":"这是我的房子。","ask":"Ini adalah…saya.","options":["Sekolah","Kantor","Rumah","Toko"],"correct":2},{"type":"A","text":"他在看电视。","ask":"Dia sedang menonton…","options":["Film","Televisi","Buku","Komputer"],"correct":1},{"type":"A","text":"我的手机在哪里？","ask":"Di mana…saya?","options":["Buku","Dompet","Handphone","Kunci"],"correct":2},{"type":"A","text":"床很舒服。","ask":"Tempat tidurnya sangat…","options":["Keras","Kecil","Nyaman","Besar"],"correct":2},{"type":"A","text":"窗户开着。","ask":"Jendela sedang…","options":["Tertutup","Terbuka","Rusak","Kotor"],"correct":1},{"type":"A","text":"厨房在那边。","ask":"Dapur ada di…","options":["Sini","Sana","Atas","Bawah"],"correct":1},{"type":"A","text":"我的衣服在椅子上。","ask":"Baju saya di atas…","options":["Meja","Kursi","Tempat tidur","Lantai"],"correct":1},{"type":"A","text":"卫生间在哪里？","ask":"Di mana…?","options":["Kamar mandi","Dapur","Kamar tidur","Ruang tamu"],"correct":0},{"type":"A","text":"家里有一只猫。","ask":"Di rumah ada seekor…","options":["Anjing","Kucing","Burung","Ikan"],"correct":1},{"type":"A","text":"请把门打开。","ask":"Tolong…pintu.","options":["Tutup","Kunci","Buka","Perbaiki"],"correct":2},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们去了哪里？","options":["商店","公园","学校","饭店"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们在公园待了多长时间？","options":["1小时","2小时","3小时","4小时"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"回家以后小明做了什么？","options":["看电视","睡觉","做作业","吃饭"],"correct":2},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"昨天是星期几？","options":["星期六","星期天","星期一","星期五"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"他们点了几个菜？","options":["2个","3个","4个","5个"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"吃完饭他们去了哪里？","options":["公园","家","商店","学校"],"correct":2},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"小红几点起床？","options":["6点","7点","8点","9点"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她的学校离家远吗？","options":["很远","不远","一般","不知道"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她怎么去学校？","options":["坐车","骑车","走路","坐地铁"],"correct":2},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"今天天气怎么样？","options":["很好","下雨","很热","很冷"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"小明等了多长时间？","options":["半小时","一小时","两小时","三小时"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"谁来接小明？","options":["爸爸","妈妈","姐姐","朋友"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"李老师教什么？","options":["数学","英语","中文","音乐"],"correct":2},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"他说话快不快？","options":["很快","很慢","一般","不说话"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"下课以后他做什么？","options":["回家","睡觉","帮学生回答问题","吃饭"],"correct":2},{"type":"C","words":["在","哪里","你","住"],"answer":"你住在哪里？"},{"type":"C","words":["去","我","想","中国"],"answer":"我想去中国。"},{"type":"C","words":["很","好","天气","今天"],"answer":"今天天气很好。"},{"type":"C","words":["多少","这个","钱"],"answer":"这个多少钱？"},{"type":"C","words":["喜欢","做","你","什么"],"answer":"你喜欢做什么？"},{"type":"C","words":["看","电影","我","喜欢"],"answer":"我喜欢看电影。"},{"type":"C","words":["坐","飞机","去","他","北京"],"answer":"他坐飞机去北京。"},{"type":"C","words":["在","家","他","里"],"answer":"他在家里。"},{"type":"C","words":["下雨","了","今天"],"answer":"今天下雨了。"},{"type":"C","words":["工作","做","什么","你"],"answer":"你做什么工作？"}]},{"bab":14,"title":"Bab 14 — Pekerjaan & Profesi","questions":[{"type":"A","text":"你做什么工作？","ask":"Pertanyaan ini menanyakan…","options":["Hobi","Pekerjaan","Keluarga","Alamat"],"correct":1},{"type":"A","text":"我是老师。","ask":"\"Saya\" adalah…","options":["Dokter","Guru","Murid","Pedagang"],"correct":1},{"type":"A","text":"他在医院工作。","ask":"Dia bekerja di…","options":["Sekolah","Kantor","Rumah sakit","Toko"],"correct":2},{"type":"A","text":"她想当医生。","ask":"Dia ingin menjadi…","options":["Guru","Perawat","Dokter","Koki"],"correct":2},{"type":"A","text":"我每天早上九点上班。","ask":"\"Saya\" mulai kerja jam…","options":["8","9","10","11"],"correct":1},{"type":"A","text":"他下午六点下班。","ask":"Dia selesai kerja jam…","options":["5","6","7","8"],"correct":1},{"type":"A","text":"老师的工作很忙。","ask":"Pekerjaan guru sangat…","options":["Santai","Sibuk","Mudah","Membosankan"],"correct":1},{"type":"A","text":"我的同事很好。","ask":"Rekan kerja saya sangat…","options":["Jahat","Baik","Malas","Sibuk"],"correct":1},{"type":"A","text":"他在公司工作。","ask":"Dia bekerja di…","options":["Sekolah","Rumah sakit","Perusahaan","Toko"],"correct":2},{"type":"A","text":"你喜欢你的工作吗？","ask":"Apakah kamu suka…?","options":["Sekolahmu","Rumahmu","Pekerjaanmu","Temanmu"],"correct":2},{"type":"A","text":"医生帮助很多人。","ask":"Dokter membantu banyak…","options":["Hewan","Orang","Buku","Uang"],"correct":1},{"type":"A","text":"我想找一个好工作。","ask":"\"Saya\" ingin mencari…yang baik.","options":["Teman","Rumah","Pekerjaan","Sekolah"],"correct":2},{"type":"A","text":"他很会做菜。","ask":"Dia sangat pandai…","options":["Memasak","Mengajar","Menulis","Menyanyi"],"correct":0},{"type":"A","text":"服务员，买单。","ask":"Pelayan, minta…","options":["Menu","Tagihan","Air","Kursi"],"correct":1},{"type":"A","text":"工作以后我去吃饭。","ask":"Setelah kerja saya pergi…","options":["Belajar","Tidur","Makan","Bermain"],"correct":2},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们去了哪里？","options":["商店","公园","学校","饭店"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们在公园待了多长时间？","options":["1小时","2小时","3小时","4小时"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"回家以后小明做了什么？","options":["看电视","睡觉","做作业","吃饭"],"correct":2},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"昨天是星期几？","options":["星期六","星期天","星期一","星期五"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"他们点了几个菜？","options":["2个","3个","4个","5个"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"吃完饭他们去了哪里？","options":["公园","家","商店","学校"],"correct":2},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"小红几点起床？","options":["6点","7点","8点","9点"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她的学校离家远吗？","options":["很远","不远","一般","不知道"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她怎么去学校？","options":["坐车","骑车","走路","坐地铁"],"correct":2},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"今天天气怎么样？","options":["很好","下雨","很热","很冷"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"小明等了多长时间？","options":["半小时","一小时","两小时","三小时"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"谁来接小明？","options":["爸爸","妈妈","姐姐","朋友"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"李老师教什么？","options":["数学","英语","中文","音乐"],"correct":2},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"他说话快不快？","options":["很快","很慢","一般","不说话"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"下课以后他做什么？","options":["回家","睡觉","帮学生回答问题","吃饭"],"correct":2},{"type":"C","words":["在","哪里","你","住"],"answer":"你住在哪里？"},{"type":"C","words":["去","我","想","中国"],"answer":"我想去中国。"},{"type":"C","words":["很","好","天气","今天"],"answer":"今天天气很好。"},{"type":"C","words":["多少","这个","钱"],"answer":"这个多少钱？"},{"type":"C","words":["喜欢","做","你","什么"],"answer":"你喜欢做什么？"},{"type":"C","words":["看","电影","我","喜欢"],"answer":"我喜欢看电影。"},{"type":"C","words":["坐","飞机","去","他","北京"],"answer":"他坐飞机去北京。"},{"type":"C","words":["在","家","他","里"],"answer":"他在家里。"},{"type":"C","words":["下雨","了","今天"],"answer":"今天下雨了。"},{"type":"C","words":["工作","做","什么","你"],"answer":"你做什么工作？"}]},{"bab":15,"title":"Bab 15 — Percakapan Telepon","questions":[{"type":"A","text":"喂，你好！","ask":"Sapaan ini biasa diucapkan saat…","options":["Bertemu langsung","Menelepon","Berkirim surat","Berpisah"],"correct":1},{"type":"A","text":"请问你找谁？","ask":"Pertanyaan ini berarti…","options":["Kamu mau beli apa?","Kamu mencari siapa?","Kamu dari mana?","Kamu mau ke mana?"],"correct":1},{"type":"A","text":"我给你打电话。","ask":"\"Saya\" akan…kamu.","options":["Menulis surat ke","Menelepon","Mengunjungi","Mengirim pesan ke"],"correct":1},{"type":"A","text":"他的电话号码是多少？","ask":"Berapa…dia?","options":["Umur","Alamat","Nomor telepon","Uang"],"correct":2},{"type":"A","text":"我现在不方便。","ask":"\"Saya\" sekarang tidak…","options":["Ada waktu / nyaman","Senang","Lapar","Lelah"],"correct":0},{"type":"A","text":"等一下，我接电话。","ask":"Tunggu sebentar, saya…","options":["Menulis pesan","Menjawab telepon","Pergi dulu","Makan dulu"],"correct":1},{"type":"A","text":"你能再说一次吗？","ask":"Bisakah kamu…sekali lagi?","options":["Datang","Menulis","Mengatakan","Membaca"],"correct":2},{"type":"A","text":"他不在，你晚点再打吧。","ask":"Dia tidak ada, kamu…nanti.","options":["Datang lagi","Telepon lagi","Tulis surat","Kirim pesan"],"correct":1},{"type":"A","text":"我一会儿打给你。","ask":"\"Saya\" sebentar lagi akan…kamu.","options":["Mengunjungi","Menelepon","Menulis ke","Bertemu"],"correct":1},{"type":"A","text":"电话占线。","ask":"Teleponnya sedang…","options":["Mati","Sibuk/terpakai","Rusak","Hilang"],"correct":1},{"type":"A","text":"你的手机号码多少？","ask":"Berapa nomor…kamu?","options":["Rumah","Kantor","HP","Kamar"],"correct":2},{"type":"A","text":"谢谢你打电话给我。","ask":"Terima kasih sudah…saya.","options":["Mengunjungi","Menelepon","Menulis ke","Membantu"],"correct":1},{"type":"A","text":"我打错了，对不起。","ask":"\"Saya\" salah…, maaf.","options":["Alamat","Nomor telepon","Nama","Waktu"],"correct":1},{"type":"A","text":"你什么时候有空？","ask":"Kamu kapan…?","options":["Pulang","Ada waktu luang","Bekerja","Tidur"],"correct":1},{"type":"A","text":"好的，我知道了。","ask":"Baik, saya sudah…","options":["Lupa","Mengerti","Pergi","Selesai"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们去了哪里？","options":["商店","公园","学校","饭店"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们在公园待了多长时间？","options":["1小时","2小时","3小时","4小时"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"回家以后小明做了什么？","options":["看电视","睡觉","做作业","吃饭"],"correct":2},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"昨天是星期几？","options":["星期六","星期天","星期一","星期五"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"他们点了几个菜？","options":["2个","3个","4个","5个"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"吃完饭他们去了哪里？","options":["公园","家","商店","学校"],"correct":2},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"小红几点起床？","options":["6点","7点","8点","9点"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她的学校离家远吗？","options":["很远","不远","一般","不知道"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她怎么去学校？","options":["坐车","骑车","走路","坐地铁"],"correct":2},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"今天天气怎么样？","options":["很好","下雨","很热","很冷"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"小明等了多长时间？","options":["半小时","一小时","两小时","三小时"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"谁来接小明？","options":["爸爸","妈妈","姐姐","朋友"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"李老师教什么？","options":["数学","英语","中文","音乐"],"correct":2},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"他说话快不快？","options":["很快","很慢","一般","不说话"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"下课以后他做什么？","options":["回家","睡觉","帮学生回答问题","吃饭"],"correct":2},{"type":"C","words":["在","哪里","你","住"],"answer":"你住在哪里？"},{"type":"C","words":["去","我","想","中国"],"answer":"我想去中国。"},{"type":"C","words":["很","好","天气","今天"],"answer":"今天天气很好。"},{"type":"C","words":["多少","这个","钱"],"answer":"这个多少钱？"},{"type":"C","words":["喜欢","做","你","什么"],"answer":"你喜欢做什么？"},{"type":"C","words":["看","电影","我","喜欢"],"answer":"我喜欢看电影。"},{"type":"C","words":["坐","飞机","去","他","北京"],"answer":"他坐飞机去北京。"},{"type":"C","words":["在","家","他","里"],"answer":"他在家里。"},{"type":"C","words":["下雨","了","今天"],"answer":"今天下雨了。"},{"type":"C","words":["工作","做","什么","你"],"answer":"你做什么工作？"}]},{"bab":16,"title":"Bab 16 — Review Kata Ganti & Partikel","questions":[{"type":"A","text":"这是什么？","ask":"Pertanyaan ini berarti…","options":["Itu apa?","Ini apa?","Siapa itu?","Di mana ini?"],"correct":1},{"type":"A","text":"那是谁的？","ask":"Itu…?","options":["Punya siapa","Dari mana","Berapa","Untuk apa"],"correct":0},{"type":"A","text":"你的还是我的？","ask":"Milik…?","options":["Kamu atau saya","Dia atau mereka","Guru atau murid","Besar atau kecil"],"correct":0},{"type":"A","text":"我们的学校很大。","ask":"Sekolah…sangat besar.","options":["Saya","Kamu","Kami","Mereka"],"correct":2},{"type":"A","text":"她也来了。","ask":"Dia…datang.","options":["Tidak","Juga","Sudah","Belum"],"correct":1},{"type":"A","text":"他们都去了。","ask":"Mereka…pergi.","options":["Tidak","Juga","Semua","Belum"],"correct":2},{"type":"A","text":"你吃了吗？","ask":"Apakah kamu sudah…?","options":["Minum","Makan","Belajar","Tidur"],"correct":1},{"type":"A","text":"我没有去。","ask":"\"Saya\" tidak…","options":["Pergi","Makan","Belajar","Tidur"],"correct":0},{"type":"A","text":"这个好不好？","ask":"Pertanyaan ini menanyakan…","options":["Ini apa?","Ini bagus tidak?","Ini milik siapa?","Ini di mana?"],"correct":1},{"type":"A","text":"哪个是你的？","ask":"…adalah milikmu?","options":["Yang mana","Yang ini","Yang itu","Semuanya"],"correct":0},{"type":"A","text":"你呢？","ask":"Ungkapan ini berarti…","options":["Kamu siapa?","Kalau kamu?","Kamu di mana?","Kamu mau apa?"],"correct":1},{"type":"A","text":"他说的对。","ask":"Yang dia katakan…","options":["Salah","Benar","Lucu","Aneh"],"correct":1},{"type":"A","text":"我的在这里。","ask":"Punya saya ada di…","options":["Sana","Sini","Atas","Bawah"],"correct":1},{"type":"A","text":"谁的书？","ask":"Buku…?","options":["Siapa","Apa","Di mana","Berapa"],"correct":0},{"type":"A","text":"你想要哪个？","ask":"Kamu mau…?","options":["Yang mana","Yang ini","Semuanya","Tidak ada"],"correct":0},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们去了哪里？","options":["商店","公园","学校","饭店"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们在公园待了多长时间？","options":["1小时","2小时","3小时","4小时"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"回家以后小明做了什么？","options":["看电视","睡觉","做作业","吃饭"],"correct":2},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"昨天是星期几？","options":["星期六","星期天","星期一","星期五"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"他们点了几个菜？","options":["2个","3个","4个","5个"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"吃完饭他们去了哪里？","options":["公园","家","商店","学校"],"correct":2},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"小红几点起床？","options":["6点","7点","8点","9点"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她的学校离家远吗？","options":["很远","不远","一般","不知道"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她怎么去学校？","options":["坐车","骑车","走路","坐地铁"],"correct":2},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"今天天气怎么样？","options":["很好","下雨","很热","很冷"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"小明等了多长时间？","options":["半小时","一小时","两小时","三小时"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"谁来接小明？","options":["爸爸","妈妈","姐姐","朋友"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"李老师教什么？","options":["数学","英语","中文","音乐"],"correct":2},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"他说话快不快？","options":["很快","很慢","一般","不说话"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"下课以后他做什么？","options":["回家","睡觉","帮学生回答问题","吃饭"],"correct":2},{"type":"C","words":["在","哪里","你","住"],"answer":"你住在哪里？"},{"type":"C","words":["去","我","想","中国"],"answer":"我想去中国。"},{"type":"C","words":["很","好","天气","今天"],"answer":"今天天气很好。"},{"type":"C","words":["多少","这个","钱"],"answer":"这个多少钱？"},{"type":"C","words":["喜欢","做","你","什么"],"answer":"你喜欢做什么？"},{"type":"C","words":["看","电影","我","喜欢"],"answer":"我喜欢看电影。"},{"type":"C","words":["坐","飞机","去","他","北京"],"answer":"他坐飞机去北京。"},{"type":"C","words":["在","家","他","里"],"answer":"他在家里。"},{"type":"C","words":["下雨","了","今天"],"answer":"今天下雨了。"},{"type":"C","words":["工作","做","什么","你"],"answer":"你做什么工作？"}]},{"bab":17,"title":"Bab 17 — Review Kata Kerja","questions":[{"type":"A","text":"他在看书。","ask":"Dia sedang…","options":["Menulis","Membaca buku","Tidur","Bermain"],"correct":1},{"type":"A","text":"我想去北京。","ask":"\"Saya\" ingin pergi ke…","options":["Shanghai","Beijing","Guangzhou","Nanjing"],"correct":1},{"type":"A","text":"她会说三种语言。","ask":"Dia bisa berbicara…bahasa.","options":["Dua","Tiga","Empat","Lima"],"correct":1},{"type":"A","text":"请坐下。","ask":"Silakan…","options":["Berdiri","Duduk","Pergi","Masuk"],"correct":1},{"type":"A","text":"我能帮你吗？","ask":"Apakah saya bisa…kamu?","options":["Melihat","Membantu","Mengajari","Mengajak"],"correct":1},{"type":"A","text":"他不想工作。","ask":"Dia tidak ingin…","options":["Belajar","Bekerja","Bermain","Tidur"],"correct":1},{"type":"A","text":"请你说慢一点。","ask":"Tolong bicara lebih…","options":["Cepat","Pelan","Keras","Jelas"],"correct":1},{"type":"A","text":"我听不懂。","ask":"\"Saya\" tidak…","options":["Mendengar","Mengerti/memahami","Melihat","Tahu"],"correct":1},{"type":"A","text":"她去买东西了。","ask":"Dia pergi…barang.","options":["Menjual","Membeli","Melihat","Mencari"],"correct":1},{"type":"A","text":"你能来吗？","ask":"Apakah kamu bisa…?","options":["Pergi","Datang","Pulang","Tinggal"],"correct":1},{"type":"A","text":"我回家了。","ask":"\"Saya\" sudah…","options":["Pergi ke sekolah","Pulang ke rumah","Pergi bekerja","Pergi ke toko"],"correct":1},{"type":"A","text":"他们在吃饭。","ask":"Mereka sedang…","options":["Belajar","Bekerja","Makan","Tidur"],"correct":2},{"type":"A","text":"我认识他。","ask":"\"Saya\"…dia.","options":["Mengenal","Menyukai","Membenci","Merindukan"],"correct":0},{"type":"A","text":"你写得很好。","ask":"Kamu menulis dengan sangat…","options":["Cepat","Lambat","Bagus","Buruk"],"correct":2},{"type":"A","text":"我们开始吧。","ask":"Ayo kita…","options":["Berhenti","Mulai","Pulang","Istirahat"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们去了哪里？","options":["商店","公园","学校","饭店"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们在公园待了多长时间？","options":["1小时","2小时","3小时","4小时"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"回家以后小明做了什么？","options":["看电视","睡觉","做作业","吃饭"],"correct":2},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"昨天是星期几？","options":["星期六","星期天","星期一","星期五"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"他们点了几个菜？","options":["2个","3个","4个","5个"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"吃完饭他们去了哪里？","options":["公园","家","商店","学校"],"correct":2},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"小红几点起床？","options":["6点","7点","8点","9点"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她的学校离家远吗？","options":["很远","不远","一般","不知道"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她怎么去学校？","options":["坐车","骑车","走路","坐地铁"],"correct":2},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"今天天气怎么样？","options":["很好","下雨","很热","很冷"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"小明等了多长时间？","options":["半小时","一小时","两小时","三小时"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"谁来接小明？","options":["爸爸","妈妈","姐姐","朋友"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"李老师教什么？","options":["数学","英语","中文","音乐"],"correct":2},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"他说话快不快？","options":["很快","很慢","一般","不说话"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"下课以后他做什么？","options":["回家","睡觉","帮学生回答问题","吃饭"],"correct":2},{"type":"C","words":["在","哪里","你","住"],"answer":"你住在哪里？"},{"type":"C","words":["去","我","想","中国"],"answer":"我想去中国。"},{"type":"C","words":["很","好","天气","今天"],"answer":"今天天气很好。"},{"type":"C","words":["多少","这个","钱"],"answer":"这个多少钱？"},{"type":"C","words":["喜欢","做","你","什么"],"answer":"你喜欢做什么？"},{"type":"C","words":["看","电影","我","喜欢"],"answer":"我喜欢看电影。"},{"type":"C","words":["坐","飞机","去","他","北京"],"answer":"他坐飞机去北京。"},{"type":"C","words":["在","家","他","里"],"answer":"他在家里。"},{"type":"C","words":["下雨","了","今天"],"answer":"今天下雨了。"},{"type":"C","words":["工作","做","什么","你"],"answer":"你做什么工作？"}]},{"bab":18,"title":"Bab 18 — Review Kata Sifat & Keterangan","questions":[{"type":"A","text":"这个房间太小了。","ask":"Ruangan ini terlalu…","options":["Besar","Kecil","Tinggi","Rendah"],"correct":1},{"type":"A","text":"今天天气非常好。","ask":"Cuaca hari ini sangat…","options":["Buruk","Panas","Bagus","Dingin"],"correct":2},{"type":"A","text":"他跑得很快。","ask":"Dia berlari sangat…","options":["Lambat","Cepat","Pelan","Jauh"],"correct":1},{"type":"A","text":"这本书很有意思。","ask":"Buku ini sangat…","options":["Membosankan","Menarik","Sulit","Mudah"],"correct":1},{"type":"A","text":"她的头发很长。","ask":"Rambutnya sangat…","options":["Pendek","Panjang","Hitam","Tebal"],"correct":1},{"type":"A","text":"你太客气了。","ask":"Kamu terlalu…","options":["Kasar","Sopan","Pelit","Marah"],"correct":1},{"type":"A","text":"我有点累。","ask":"\"Saya\" sedikit…","options":["Lapar","Haus","Lelah","Senang"],"correct":2},{"type":"A","text":"这件衣服很漂亮。","ask":"Baju ini sangat…","options":["Jelek","Cantik/bagus","Mahal","Murah"],"correct":1},{"type":"A","text":"他很聪明。","ask":"Dia sangat…","options":["Bodoh","Pintar","Malas","Rajin"],"correct":1},{"type":"A","text":"路很远。","ask":"Jalannya sangat…","options":["Dekat","Jauh","Pendek","Sempit"],"correct":1},{"type":"A","text":"水很凉。","ask":"Airnya sangat…","options":["Panas","Hangat","Dingin/sejuk","Kotor"],"correct":2},{"type":"A","text":"你说得对。","ask":"Kamu bicara dengan…","options":["Salah","Benar","Cepat","Lambat"],"correct":1},{"type":"A","text":"他不太高兴。","ask":"Dia tidak terlalu…","options":["Sedih","Senang","Marah","Takut"],"correct":1},{"type":"A","text":"这里很安静。","ask":"Di sini sangat…","options":["Berisik","Tenang","Panas","Dingin"],"correct":1},{"type":"A","text":"她跳得很好。","ask":"Dia menari sangat…","options":["Buruk","Bagus","Cepat","Lambat"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们去了哪里？","options":["商店","公园","学校","饭店"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们在公园待了多长时间？","options":["1小时","2小时","3小时","4小时"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"回家以后小明做了什么？","options":["看电视","睡觉","做作业","吃饭"],"correct":2},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"昨天是星期几？","options":["星期六","星期天","星期一","星期五"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"他们点了几个菜？","options":["2个","3个","4个","5个"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"吃完饭他们去了哪里？","options":["公园","家","商店","学校"],"correct":2},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"小红几点起床？","options":["6点","7点","8点","9点"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她的学校离家远吗？","options":["很远","不远","一般","不知道"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她怎么去学校？","options":["坐车","骑车","走路","坐地铁"],"correct":2},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"今天天气怎么样？","options":["很好","下雨","很热","很冷"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"小明等了多长时间？","options":["半小时","一小时","两小时","三小时"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"谁来接小明？","options":["爸爸","妈妈","姐姐","朋友"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"李老师教什么？","options":["数学","英语","中文","音乐"],"correct":2},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"他说话快不快？","options":["很快","很慢","一般","不说话"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"下课以后他做什么？","options":["回家","睡觉","帮学生回答问题","吃饭"],"correct":2},{"type":"C","words":["在","哪里","你","住"],"answer":"你住在哪里？"},{"type":"C","words":["去","我","想","中国"],"answer":"我想去中国。"},{"type":"C","words":["很","好","天气","今天"],"answer":"今天天气很好。"},{"type":"C","words":["多少","这个","钱"],"answer":"这个多少钱？"},{"type":"C","words":["喜欢","做","你","什么"],"answer":"你喜欢做什么？"},{"type":"C","words":["看","电影","我","喜欢"],"answer":"我喜欢看电影。"},{"type":"C","words":["坐","飞机","去","他","北京"],"answer":"他坐飞机去北京。"},{"type":"C","words":["在","家","他","里"],"answer":"他在家里。"},{"type":"C","words":["下雨","了","今天"],"answer":"今天下雨了。"},{"type":"C","words":["工作","做","什么","你"],"answer":"你做什么工作？"}]},{"bab":19,"title":"Bab 19 — Review Grammar","questions":[{"type":"A","text":"我是学生，不是老师。","ask":"\"Saya\" adalah murid, bukan…","options":["Dokter","Guru","Perawat","Pedagang"],"correct":1},{"type":"A","text":"你有没有电脑？","ask":"Pertanyaan ini menanyakan…","options":["Apakah kamu punya komputer?","Komputermu di mana?","Komputermu berapa?","Kamu suka komputer?"],"correct":0},{"type":"A","text":"他比我高。","ask":"Dia lebih…dari saya.","options":["Pendek","Tinggi","Gemuk","Kurus"],"correct":1},{"type":"A","text":"我去过中国。","ask":"\"Saya\" pernah pergi ke…","options":["Jepang","Korea","Tiongkok","Amerika"],"correct":2},{"type":"A","text":"她正在做作业。","ask":"Dia sedang…","options":["Makan","Bermain","Mengerjakan PR","Tidur"],"correct":2},{"type":"A","text":"因为下雨，所以我没去。","ask":"Karena hujan, jadi saya…","options":["Pergi","Tidak pergi","Terlambat","Menunggu"],"correct":1},{"type":"A","text":"虽然很累，但是很高兴。","ask":"Walaupun lelah, tapi sangat…","options":["Sedih","Marah","Senang","Takut"],"correct":2},{"type":"A","text":"从家到学校很近。","ask":"Dari rumah ke sekolah sangat…","options":["Jauh","Dekat","Sulit","Lama"],"correct":1},{"type":"A","text":"你想吃什么就吃什么。","ask":"Kamu mau makan apa saja…","options":["Tidak boleh","Boleh/silakan","Harus tanya","Nanti saja"],"correct":1},{"type":"A","text":"我一边吃饭一边看电视。","ask":"\"Saya\" sambil makan sambil…","options":["Belajar","Bekerja","Menonton TV","Tidur"],"correct":2},{"type":"A","text":"如果你来，我很高兴。","ask":"Kalau kamu datang, saya sangat…","options":["Sedih","Marah","Senang","Takut"],"correct":2},{"type":"A","text":"越学越有意思。","ask":"Semakin belajar semakin…","options":["Bosan","Sulit","Menarik","Mudah"],"correct":2},{"type":"A","text":"他不但聪明而且很努力。","ask":"Dia tidak hanya pintar tapi juga…","options":["Malas","Rajin","Bodoh","Nakal"],"correct":1},{"type":"A","text":"你先坐，我去倒水。","ask":"Kamu duduk dulu, saya pergi…","options":["Makan","Tidur","Menuang air","Bekerja"],"correct":2},{"type":"A","text":"他已经走了。","ask":"Dia sudah…","options":["Datang","Pergi","Tidur","Makan"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们去了哪里？","options":["商店","公园","学校","饭店"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们在公园待了多长时间？","options":["1小时","2小时","3小时","4小时"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"回家以后小明做了什么？","options":["看电视","睡觉","做作业","吃饭"],"correct":2},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"昨天是星期几？","options":["星期六","星期天","星期一","星期五"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"他们点了几个菜？","options":["2个","3个","4个","5个"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"吃完饭他们去了哪里？","options":["公园","家","商店","学校"],"correct":2},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"小红几点起床？","options":["6点","7点","8点","9点"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她的学校离家远吗？","options":["很远","不远","一般","不知道"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她怎么去学校？","options":["坐车","骑车","走路","坐地铁"],"correct":2},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"今天天气怎么样？","options":["很好","下雨","很热","很冷"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"小明等了多长时间？","options":["半小时","一小时","两小时","三小时"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"谁来接小明？","options":["爸爸","妈妈","姐姐","朋友"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"李老师教什么？","options":["数学","英语","中文","音乐"],"correct":2},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"他说话快不快？","options":["很快","很慢","一般","不说话"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"下课以后他做什么？","options":["回家","睡觉","帮学生回答问题","吃饭"],"correct":2},{"type":"C","words":["在","哪里","你","住"],"answer":"你住在哪里？"},{"type":"C","words":["去","我","想","中国"],"answer":"我想去中国。"},{"type":"C","words":["很","好","天气","今天"],"answer":"今天天气很好。"},{"type":"C","words":["多少","这个","钱"],"answer":"这个多少钱？"},{"type":"C","words":["喜欢","做","你","什么"],"answer":"你喜欢做什么？"},{"type":"C","words":["看","电影","我","喜欢"],"answer":"我喜欢看电影。"},{"type":"C","words":["坐","飞机","去","他","北京"],"answer":"他坐飞机去北京。"},{"type":"C","words":["在","家","他","里"],"answer":"他在家里。"},{"type":"C","words":["下雨","了","今天"],"answer":"今天下雨了。"},{"type":"C","words":["工作","做","什么","你"],"answer":"你做什么工作？"}]},{"bab":20,"title":"Bab 20 — Ujian Komprehensif","questions":[{"type":"A","text":"欢迎你来中国！","ask":"Selamat datang di…!","options":["Jepang","Korea","Tiongkok","India"],"correct":2},{"type":"A","text":"我每天学两个小时中文。","ask":"\"Saya\" belajar Mandarin…setiap hari.","options":["1 jam","2 jam","3 jam","4 jam"],"correct":1},{"type":"A","text":"请问，去火车站怎么走？","ask":"Permisi, bagaimana ke…?","options":["Bandara","Stasiun kereta","Toko","Sekolah"],"correct":1},{"type":"A","text":"我的中文还不太好。","ask":"Bahasa Mandarin saya masih…","options":["Sangat bagus","Kurang bagus","Sempurna","Biasa saja"],"correct":1},{"type":"A","text":"这个周末你有空吗？","ask":"Akhir pekan ini kamu…?","options":["Sibuk?","Ada waktu?","Pergi?","Bekerja?"],"correct":1},{"type":"A","text":"我帮你拿行李。","ask":"\"Saya\" bantu kamu bawa…","options":["Buku","Makanan","Barang bawaan","Pakaian"],"correct":2},{"type":"A","text":"时间过得真快。","ask":"Waktu berlalu sangat…","options":["Lambat","Cepat","Lama","Banyak"],"correct":1},{"type":"A","text":"他们是很好的朋友。","ask":"Mereka adalah teman yang sangat…","options":["Baru","Baik","Lama","Jauh"],"correct":1},{"type":"A","text":"我希望明天天气好。","ask":"\"Saya\" berharap besok cuacanya…","options":["Buruk","Bagus","Dingin","Panas"],"correct":1},{"type":"A","text":"你的汉语说得很好。","ask":"Bahasa Mandarinmu diucapkan dengan…","options":["Sangat buruk","Sangat bagus","Biasa saja","Kurang jelas"],"correct":1},{"type":"A","text":"我们一起加油吧！","ask":"Ayo kita…bersama!","options":["Istirahat","Bermain","Bersemangat/berusaha","Pulang"],"correct":2},{"type":"A","text":"谢谢老师教我们。","ask":"Terima kasih guru telah…kami.","options":["Mengajari","Memarahi","Menghukum","Mengabaikan"],"correct":0},{"type":"A","text":"这次考试不太难。","ask":"Ujian kali ini…","options":["Sangat sulit","Tidak terlalu sulit","Sangat mudah","Sangat panjang"],"correct":1},{"type":"A","text":"学中文让我很开心。","ask":"Belajar Mandarin membuat saya…","options":["Sedih","Senang","Takut","Bosan"],"correct":1},{"type":"A","text":"明天见！","ask":"Sampai jumpa…!","options":["Nanti","Besok","Lusa","Minggu depan"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们去了哪里？","options":["商店","公园","学校","饭店"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"他们在公园待了多长时间？","options":["1小时","2小时","3小时","4小时"],"correct":1},{"type":"B","paragraph":"小明和他的朋友们去公园玩。公园里有很多人。他们在那里待了两个小时。小明很高兴。他们下午三点回家了。回家以后，小明做了作业。","text":"回家以后小明做了什么？","options":["看电视","睡觉","做作业","吃饭"],"correct":2},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"昨天是星期几？","options":["星期六","星期天","星期一","星期五"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"他们点了几个菜？","options":["2个","3个","4个","5个"],"correct":1},{"type":"B","paragraph":"昨天是星期天。王先生一家去饭店吃饭。他们点了三个菜和米饭。大家都说菜很好吃。吃完饭以后，他们去了商店买水果。","text":"吃完饭他们去了哪里？","options":["公园","家","商店","学校"],"correct":2},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"小红几点起床？","options":["6点","7点","8点","9点"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她的学校离家远吗？","options":["很远","不远","一般","不知道"],"correct":1},{"type":"B","paragraph":"小红是一个好学生。她每天早上七点起床。她先吃早饭，然后去学校。她的学校离家不远。她走路去学校。下午她回家写作业。","text":"她怎么去学校？","options":["坐车","骑车","走路","坐地铁"],"correct":2},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"今天天气怎么样？","options":["很好","下雨","很热","很冷"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"小明等了多长时间？","options":["半小时","一小时","两小时","三小时"],"correct":1},{"type":"B","paragraph":"今天天气不好，下雨了。小明没有带伞。他在学校等了一个小时。后来妈妈来接他了。妈妈给他带了一把伞。他们一起回家了。","text":"谁来接小明？","options":["爸爸","妈妈","姐姐","朋友"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"李老师教什么？","options":["数学","英语","中文","音乐"],"correct":2},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"他说话快不快？","options":["很快","很慢","一般","不说话"],"correct":1},{"type":"B","paragraph":"李老师是一个很好的老师。他每天教学生们中文。他说话说得很慢，学生们都能听懂。下课以后，他还帮学生们回答问题。大家都很喜欢他。","text":"下课以后他做什么？","options":["回家","睡觉","帮学生回答问题","吃饭"],"correct":2},{"type":"C","words":["在","哪里","你","住"],"answer":"你住在哪里？"},{"type":"C","words":["去","我","想","中国"],"answer":"我想去中国。"},{"type":"C","words":["很","好","天气","今天"],"answer":"今天天气很好。"},{"type":"C","words":["多少","这个","钱"],"answer":"这个多少钱？"},{"type":"C","words":["喜欢","做","你","什么"],"answer":"你喜欢做什么？"},{"type":"C","words":["看","电影","我","喜欢"],"answer":"我喜欢看电影。"},{"type":"C","words":["坐","飞机","去","他","北京"],"answer":"他坐飞机去北京。"},{"type":"C","words":["在","家","他","里"],"answer":"他在家里。"},{"type":"C","words":["下雨","了","今天"],"answer":"今天下雨了。"},{"type":"C","words":["工作","做","什么","你"],"answer":"你做什么工作？"}]}];
+
+    // ─── STATE ───────────────────────────────────────
+    let currentBab     = null;
+    let currentQuestions = [];
+    let currentIndex   = 0;
+    let score          = 0;
+    let answered       = false;
+    let selectedWords  = [];   // array of {word, id}
+    let availableWords = [];   // array of {word, id, used}
+    let completedBabs  = new Set(
+      JSON.parse(sessionStorage.getItem('hsk1_completed') || '[]')
+    );
+
+    // ─── BAB SELECTOR ────────────────────────────────
+    function initBabSelector() {
+      const sel = document.getElementById('babSelector');
+      sel.innerHTML = '';
+      SOAL_DATA.forEach((bab, i) => {
+        const isCompleted = completedBabs.has(i);
+        const isActive    = currentBab === i;
+        const btn = document.createElement('button');
+        btn.className = 'bab-btn'
+          + (isCompleted ? ' completed' : '')
+          + (isActive    ? ' active'    : '');
+        btn.onclick = () => selectBab(i);
+        const shortTitle = bab.title.replace(/^Bab \d+ — /, '');
+        btn.innerHTML =
+          '<div class="bab-btn-num">Bab ' + bab.bab + '</div>' +
+          '<div class="bab-btn-title">' + shortTitle + '</div>' +
+          '<div class="bab-btn-check">✓</div>';
+        sel.appendChild(btn);
+      });
+    }
+
+    // ─── SELECT BAB ──────────────────────────────────
+    function selectBab(idx) {
+      currentBab       = idx;
+      currentQuestions = SOAL_DATA[idx].questions;
+      currentIndex     = 0;
+      score            = 0;
+      answered         = false;
+      selectedWords    = [];
+      availableWords   = [];
+      initBabSelector();
+      renderQuiz();
+      buildKunci(idx);
+      document.getElementById('kunciSection').style.display = 'block';
+      // Close kunci
+      const toggle  = document.getElementById('kunciToggle');
+      const content = document.getElementById('kunciContent');
+      toggle.classList.remove('open');
+      content.classList.remove('open');
+      // Scroll to quiz
+      document.getElementById('soalContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // ─── RENDER QUESTION ─────────────────────────────
+    function renderQuiz() {
+      const container = document.getElementById('soalContainer');
+      const q         = currentQuestions[currentIndex];
+      const total     = currentQuestions.length;
+      const pct       = (currentIndex / total) * 100;
+      const labels    = ['A', 'B', 'C', 'D'];
+
+      let inner = '';
+
+      if (q.type === 'A') {
+        inner =
+          '<div class="soal-type-badge">Bagian A — Baca Kalimat</div>' +
+          '<div class="soal-text">' + esc(q.text) + '</div>' +
+          '<div class="soal-ask">' + esc(q.ask) + '</div>' +
+          '<div class="soal-options" id="optionsArea">' +
+          q.options.map((opt, i) =>
+            '<button class="soal-option" onclick="checkAnswer(' + i + ')" data-idx="' + i + '">' +
+            '<span class="option-label">' + labels[i] + '</span>' +
+            '<span>' + esc(opt) + '</span></button>'
+          ).join('') +
+          '</div>';
+
+      } else if (q.type === 'B') {
+        inner =
+          '<div class="soal-type-badge type-b">Bagian B — Membaca</div>' +
+          '<div class="soal-paragraph">' + esc(q.paragraph) + '</div>' +
+          '<div class="soal-ask">' + esc(q.text || q.ask) + '</div>' +
+          '<div class="soal-options" id="optionsArea">' +
+          q.options.map((opt, i) =>
+            '<button class="soal-option" onclick="checkAnswer(' + i + ')" data-idx="' + i + '">' +
+            '<span class="option-label">' + labels[i] + '</span>' +
+            '<span>' + esc(opt) + '</span></button>'
+          ).join('') +
+          '</div>';
+
+      } else if (q.type === 'C') {
+        // Shuffle words
+        const shuffled = [...q.words]
+          .map((w, i) => ({ word: w, id: i, used: false }))
+          .sort(() => Math.random() - 0.5);
+        availableWords = shuffled;
+        selectedWords  = [];
+
+        inner =
+          '<div class="soal-type-badge type-c">Bagian C — Susun Kalimat</div>' +
+          '<div class="soal-ask">Susun kata-kata berikut menjadi kalimat yang benar:</div>' +
+          '<div class="word-chips-label">Kata tersedia (klik untuk memilih):</div>' +
+          '<div class="word-chips" id="wordChips">' +
+          availableWords.map(w =>
+            '<button class="word-chip" id="chip_' + w.id + '" onclick="handleWordClick(' + w.id + ')">' +
+            esc(w.word) + '</button>'
+          ).join('') +
+          '</div>' +
+          '<div class="answer-area-label">Kalimatmu:</div>' +
+          '<div class="answer-area" id="answerArea">' +
+          '<span class="answer-placeholder" id="answerPlaceholder">Klik kata-kata di atas untuk menyusun kalimat...</span>' +
+          '</div>' +
+          '<div class="type-c-actions">' +
+          '<button class="btn btn-primary" id="checkSentenceBtn" onclick="checkSentence()">Periksa</button>' +
+          '<button class="btn btn-outline" onclick="resetWords()">Reset</button>' +
+          '</div>';
+      }
+
+      container.innerHTML =
+        '<div class="soal-progress">' +
+          '<span class="soal-progress-label">Soal ' + (currentIndex + 1) + ' / ' + total + '</span>' +
+          '<div class="progress-bar-outer"><div class="progress-bar-inner" style="width:' + pct + '%"></div></div>' +
+          '<span class="soal-progress-score">Benar: ' + score + '</span>' +
+        '</div>' +
+        '<div class="soal-inner">' +
+          inner +
+          '<div class="soal-feedback" id="soalFeedback"></div>' +
+          '<button class="btn btn-next" id="nextBtn" style="display:none;" onclick="nextQuestion()">Lanjut →</button>' +
+        '</div>';
+
+      answered = false;
+    }
+
+    // ─── ESCAPE HTML ─────────────────────────────────
+    function esc(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    // ─── CHECK ANSWER (Type A & B) ───────────────────
+    function checkAnswer(selectedIdx) {
+      if (answered) return;
+      answered = true;
+      const q    = currentQuestions[currentIndex];
+      const opts = document.querySelectorAll('.soal-option');
+      opts.forEach(o => o.classList.add('disabled'));
+
+      const feedback = document.getElementById('soalFeedback');
+      if (selectedIdx === q.correct) {
+        score++;
+        opts[selectedIdx].classList.add('correct');
+        feedback.className  = 'soal-feedback correct';
+        feedback.textContent = '✓ Benar! Jawaban yang tepat.';
+      } else {
+        opts[selectedIdx].classList.add('wrong');
+        opts[q.correct].classList.add('correct');
+        feedback.className  = 'soal-feedback wrong';
+        feedback.textContent = '✗ Salah. Jawaban yang benar: ' + q.options[q.correct];
+      }
+      document.getElementById('nextBtn').style.display = 'inline-flex';
+    }
+
+    // ─── WORD CLICK (Type C) ─────────────────────────
+    function handleWordClick(wordId) {
+      const w = availableWords.find(x => x.id === wordId);
+      if (!w || w.used) return;
+      w.used = true;
+      selectedWords.push({ word: w.word, id: w.id });
+      const chip = document.getElementById('chip_' + wordId);
+      if (chip) chip.classList.add('used');
+      renderAnswerArea();
+    }
+
+    function renderAnswerArea() {
+      const area = document.getElementById('answerArea');
+      if (!area) return;
+      if (selectedWords.length === 0) {
+        area.innerHTML = '<span class="answer-placeholder">Klik kata-kata di atas untuk menyusun kalimat...</span>';
+        area.classList.remove('has-words');
+      } else {
+        area.classList.add('has-words');
+        area.innerHTML = selectedWords.map(w =>
+          '<button class="word-chip" onclick="removeWord(' + w.id + ')">' + esc(w.word) + '</button>'
+        ).join('');
+      }
+    }
+
+    function removeWord(wordId) {
+      const idx = selectedWords.findIndex(x => x.id === wordId);
+      if (idx === -1) return;
+      selectedWords.splice(idx, 1);
+      const w = availableWords.find(x => x.id === wordId);
+      if (w) w.used = false;
+      const chip = document.getElementById('chip_' + wordId);
+      if (chip) chip.classList.remove('used');
+      renderAnswerArea();
+    }
+
+    function resetWords() {
+      selectedWords = [];
+      availableWords.forEach(w => {
+        w.used = false;
+        const chip = document.getElementById('chip_' + w.id);
+        if (chip) chip.classList.remove('used');
+      });
+      renderAnswerArea();
+      const fb = document.getElementById('soalFeedback');
+      if (fb) { fb.className = 'soal-feedback'; fb.textContent = ''; }
+      const btn = document.getElementById('checkSentenceBtn');
+      if (btn) { btn.textContent = 'Periksa'; btn.disabled = false; }
+      const nextBtn = document.getElementById('nextBtn');
+      if (nextBtn) nextBtn.style.display = 'none';
+      answered = false;
+      // Reset answer area chip styles
+      const area = document.getElementById('answerArea');
+      if (area) area.querySelectorAll('.word-chip').forEach(c => c.removeAttribute('style'));
+    }
+
+    // ─── CHECK SENTENCE (Type C) ─────────────────────
+    function checkSentence() {
+      if (answered) return;
+      if (selectedWords.length === 0) {
+        alert('Pilih kata-kata terlebih dahulu!');
+        return;
+      }
+      answered = true;
+      const q          = currentQuestions[currentIndex];
+      const userAnswer = selectedWords.map(w => w.word).join('');
+      const normalize  = s => s.replace(/[。？！，、；：""''()（）\s]/g, '');
+      const isCorrect  = normalize(userAnswer) === normalize(q.answer);
+
+      const feedback = document.getElementById('soalFeedback');
+      const btn      = document.getElementById('checkSentenceBtn');
+      if (btn) btn.disabled = true;
+
+      const area = document.getElementById('answerArea');
+      if (isCorrect) {
+        score++;
+        feedback.className  = 'soal-feedback correct';
+        feedback.textContent = '✓ Benar! Kalimat yang tepat: ' + q.answer;
+        if (area) area.querySelectorAll('.word-chip').forEach(c => {
+          c.style.borderColor = 'var(--green)';
+          c.style.background  = 'var(--green-light)';
+          c.style.color       = 'var(--green)';
+        });
+      } else {
+        feedback.className  = 'soal-feedback wrong';
+        feedback.textContent = '✗ Kurang tepat. Jawaban yang benar: ' + q.answer;
+        if (area) area.querySelectorAll('.word-chip').forEach(c => {
+          c.style.borderColor = 'var(--red)';
+          c.style.background  = 'var(--red-light)';
+          c.style.color       = 'var(--red)';
+        });
+      }
+      document.getElementById('nextBtn').style.display = 'inline-flex';
+    }
+
+    // ─── NEXT QUESTION ───────────────────────────────
+    function nextQuestion() {
+      currentIndex++;
+      if (currentIndex >= currentQuestions.length) {
+        showResults();
+      } else {
+        renderQuiz();
+        document.getElementById('soalContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    // ─── RESULTS ─────────────────────────────────────
+    function showResults() {
+      const total = currentQuestions.length;
+      const pct   = Math.round((score / total) * 100);
+      let msg = '', emoji = '';
+      if (pct >= 90)      { msg = 'Luar biasa! Kemampuanmu sangat bagus!'; emoji = '🏆'; }
+      else if (pct >= 70) { msg = 'Bagus! Terus berlatih ya!';             emoji = '👍'; }
+      else                { msg = 'Jangan menyerah! Coba lagi pasti bisa!'; emoji = '💪'; }
+
+      completedBabs.add(currentBab);
+      sessionStorage.setItem('hsk1_completed', JSON.stringify([...completedBabs]));
+      initBabSelector();
+
+      const radius = 54;
+      const circ   = 2 * Math.PI * radius;
+      const dash   = (pct / 100) * circ;
+      const color  = pct >= 90 ? '#16a34a' : pct >= 70 ? '#c9a85c' : '#E63946';
+
+      document.getElementById('soalContainer').innerHTML =
+        '<div class="results-screen">' +
+          '<div class="score-circle-wrap">' +
+            '<svg width="148" height="148" viewBox="0 0 148 148">' +
+              '<circle cx="74" cy="74" r="' + radius + '" fill="none" stroke="#e5e7eb" stroke-width="10"/>' +
+              '<circle cx="74" cy="74" r="' + radius + '" fill="none" stroke="' + color + '" stroke-width="10"' +
+                ' stroke-dasharray="' + dash + ' ' + (circ - dash) + '"' +
+                ' stroke-linecap="round"' +
+                ' transform="rotate(-90 74 74)"' +
+              '/>' +
+              '<text x="74" y="66" text-anchor="middle" font-family="Playfair Display, serif" font-size="28" font-weight="700" fill="#1a1a2e">' + score + '</text>' +
+              '<text x="74" y="88" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="13" fill="#6b7280">/ ' + total + ' Benar</text>' +
+            '</svg>' +
+          '</div>' +
+          '<div class="results-title">' + emoji + ' Selesai!</div>' +
+          '<div class="results-percent">' + pct + '%</div>' +
+          '<div class="results-msg">' + msg + '</div>' +
+          '<div class="results-actions">' +
+            '<button class="btn btn-outline" onclick="selectBab(' + currentBab + ')">↺ Coba Lagi</button>' +
+            '<button class="btn btn-primary" onclick="backToSelector()">← Pilih Bab Lain</button>' +
+          '</div>' +
+        '</div>';
+
+      document.getElementById('soalContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // ─── BACK TO SELECTOR ────────────────────────────
+    function backToSelector() {
+      currentBab = null;
+      document.getElementById('soalContainer').innerHTML =
+        '<div class="soal-empty"><div class="icon">📖</div><p>Pilih bab di atas untuk memulai latihan.</p></div>';
+      document.getElementById('kunciSection').style.display = 'none';
+      initBabSelector();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ─── BUILD KUNCI JAWABAN ─────────────────────────
+    function buildKunci(babIdx) {
+      const questions = SOAL_DATA[babIdx].questions;
+      const labels    = ['A', 'B', 'C', 'D'];
+      const list      = document.getElementById('kunciList');
+      list.innerHTML  = questions.map((q, i) => {
+        let ansText = '', aClass = 'kunci-a';
+        if (q.type === 'A' || q.type === 'B') {
+          ansText = labels[q.correct] + '. ' + q.options[q.correct];
+        } else {
+          ansText = q.answer;
+          aClass  = 'kunci-a type-c';
+        }
+        const qRaw = (q.type === 'C')
+          ? ('Susun: ' + q.words.join(' | '))
+          : (q.ask || q.text || '');
+        const qShort = qRaw.length > 70 ? qRaw.substring(0, 70) + '…' : qRaw;
+        return '<li class="kunci-item">' +
+          '<span class="kunci-num">' + (i + 1) + '.</span>' +
+          '<span class="kunci-q">' + esc(qShort) + '</span>' +
+          '<span class="' + aClass + '">' + esc(ansText) + '</span>' +
+        '</li>';
+      }).join('');
+    }
+
+    // ─── TOGGLE KUNCI ────────────────────────────────
+    function toggleKunci() {
+      document.getElementById('kunciToggle').classList.toggle('open');
+      document.getElementById('kunciContent').classList.toggle('open');
+    }
+
+    // ─── INIT ────────────────────────────────────────
+    initBabSelector();
+  </script>
+</body>
+</html>

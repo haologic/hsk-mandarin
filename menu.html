@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu HSK — Modul HSK Mandarin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── Auth Screen ─────────────────────────────────────── */
+    #auth-screen {
+      min-height: calc(100vh - 70px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      background: var(--bg, #f8f7f4);
+    }
+
+    .auth-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      max-width: 440px;
+      width: 100%;
+      box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+
+    .auth-lock-icon {
+      font-size: 3rem;
+      margin-bottom: 1.25rem;
+      display: block;
+      line-height: 1;
+    }
+
+    .auth-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin: 0 0 0.75rem;
+    }
+
+    .auth-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: #666;
+      line-height: 1.6;
+      margin: 0 0 2rem;
+    }
+
+    .auth-input {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      border: 2px solid #e0e0e0;
+      border-radius: 12px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      color: #1a1a1a;
+      background: #fafafa;
+      outline: none;
+      transition: border-color 0.2s;
+      box-sizing: border-box;
+    }
+
+    .auth-input:focus {
+      border-color: #c0392b;
+      background: #fff;
+    }
+
+    .auth-error {
+      display: none;
+      margin-top: 0.75rem;
+      padding: 0.625rem 1rem;
+      background: #fff0ef;
+      border: 1px solid #f8c8c5;
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      color: #c0392b;
+      text-align: left;
+    }
+
+    .auth-btn {
+      margin-top: 1.25rem;
+      width: 100%;
+      padding: 0.9rem 1rem;
+      background: #c0392b;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .auth-btn:hover {
+      background: #a93226;
+    }
+
+    .auth-btn:active {
+      transform: scale(0.98);
+    }
+
+    .auth-link {
+      display: block;
+      margin-top: 1.25rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      color: #888;
+    }
+
+    .auth-link a {
+      color: #c0392b;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .auth-link a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Menu Screen ─────────────────────────────────────── */
+    #menu-screen {
+      display: none;
+      padding: 3rem 1.5rem 4rem;
+      background: var(--bg, #f8f7f4);
+      min-height: calc(100vh - 70px);
+    }
+
+    .menu-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .menu-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .menu-badge {
+      display: inline-block;
+      background: #fff0ef;
+      color: #c0392b;
+      border: 1px solid #f8c8c5;
+      border-radius: 999px;
+      padding: 0.35rem 1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .menu-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 700;
+      color: #1a1a1a;
+      margin: 0 0 0.875rem;
+    }
+
+    .menu-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      color: #666;
+      line-height: 1.65;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ── HSK Grid ────────────────────────────────────────── */
+    .hsk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .hsk-card {
+      background: #fff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .hsk-card:not(.disabled) {
+      cursor: pointer;
+    }
+
+    .hsk-card:not(.disabled):hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    }
+
+    .hsk-card.disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+
+    /* Card banners */
+    .card-banner {
+      position: relative;
+      height: 130px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+    }
+
+    .banner-hanzi {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.35);
+      line-height: 1;
+    }
+
+    .banner-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* Level colour schemes */
+    .level-1 .card-banner {
+      background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    }
+
+    .level-2 .card-banner {
+      background: linear-gradient(135deg, #e67e22 0%, #ca6f1e 100%);
+    }
+
+    .level-3 .card-banner {
+      background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
+    }
+
+    .level-4 .card-banner {
+      background: linear-gradient(135deg, #2980b9 0%, #1a6fa0 100%);
+    }
+
+    /* Card body */
+    .card-body {
+      padding: 1.25rem 1.25rem 1rem;
+    }
+
+    .card-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #1a1a1a;
+      margin: 0 0 0.5rem;
+    }
+
+    .card-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.83rem;
+      color: #777;
+      line-height: 1.55;
+      margin: 0 0 1rem;
+    }
+
+    .card-stats {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      border-top: 1px solid #f0f0f0;
+      padding-top: 0.875rem;
+    }
+
+    .card-stat {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      color: #555;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* ── Footer ──────────────────────────────────────────── */
+    footer {
+      background: #1a1a1a;
+      color: #aaa;
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      line-height: 1.7;
+    }
+
+    footer .footer-brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    footer .hanzi-logo {
+      font-family: 'Noto Sans SC', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #e74c3c;
+    }
+
+    footer .footer-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #eee;
+    }
+
+    footer p {
+      margin: 0.25rem 0;
+    }
+
+    footer a {
+      color: #e74c3c;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navbar ───────────────────────────────────────────── -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      <div class="hanzi-logo">汉</div>
+      <span>Modul HSK</span>
+    </a>
+  </nav>
+
+  <!-- ── Auth Screen ──────────────────────────────────────── -->
+  <div id="auth-screen">
+    <div class="auth-card">
+      <span class="auth-lock-icon">🔐</span>
+      <h1 class="auth-title">Masukkan Password</h1>
+      <p class="auth-desc">Masukkan password yang kamu terima setelah pembelian untuk mengakses modul.</p>
+
+      <input
+        type="password"
+        id="password-input"
+        class="auth-input"
+        placeholder="Password kamu..."
+        onkeydown="if(event.key==='Enter') checkPassword()"
+        autocomplete="current-password"
+      />
+
+      <div id="auth-error" class="auth-error">
+        Password salah. Silakan coba lagi.
+      </div>
+
+      <button class="auth-btn" onclick="checkPassword()">Masuk</button>
+
+      <p class="auth-link">
+        Belum punya password?
+        <a href="index.html#beli">Beli modul di sini</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- ── Menu Screen ──────────────────────────────────────── -->
+  <div id="menu-screen">
+    <div class="menu-container">
+
+      <div class="menu-header">
+        <span class="menu-badge">Pilih Level</span>
+        <h1 class="menu-title">Modul HSK Mandarin</h1>
+        <p class="menu-desc">Pilih level HSK yang ingin kamu pelajari. Setiap level berisi kosakata, grammar, dan latihan soal lengkap.</p>
+      </div>
+
+      <div class="hsk-grid">
+
+        <!-- HSK 1 — Active -->
+        <div class="hsk-card level-1" onclick="window.location.href='hsk1-materi.html'">
+          <div class="card-banner">
+            <span class="banner-hanzi">一</span>
+            <span class="banner-label">HSK 1</span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">HSK Level 1 — Pemula</h2>
+            <p class="card-desc">Dasar-dasar Bahasa Mandarin. Kosakata sehari-hari, salam, memperkenalkan diri, angka, dan percakapan sederhana.</p>
+            <div class="card-stats">
+              <span class="card-stat">📖 150 Kosakata</span>
+              <span class="card-stat">📝 15 Grammar</span>
+              <span class="card-stat">✏️ 800 Soal</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- HSK 2 — Disabled -->
+        <div class="hsk-card level-2 disabled">
+          <div class="card-banner">
+            <span class="banner-hanzi">二</span>
+            <span class="banner-label">HSK 2</span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">HSK Level 2 — Dasar</h2>
+            <p class="card-desc">Memperluas kosakata dan kemampuan membuat kalimat lebih kompleks untuk kehidupan sehari-hari.</p>
+            <div class="card-stats">
+              <span class="card-stat">📖 150 Kosakata</span>
+              <span class="card-stat">📝 15 Grammar</span>
+              <span class="card-stat">✏️ 800 Soal</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- HSK 3 — Disabled -->
+        <div class="hsk-card level-3 disabled">
+          <div class="card-banner">
+            <span class="banner-hanzi">三</span>
+            <span class="banner-label">HSK 3</span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">HSK Level 3 — Menengah Awal</h2>
+            <p class="card-desc">Mampu berkomunikasi dalam situasi sehari-hari di China, termasuk bekerja dan belajar.</p>
+            <div class="card-stats">
+              <span class="card-stat">📖 300 Kosakata</span>
+              <span class="card-stat">📝 15 Grammar</span>
+              <span class="card-stat">✏️ 800 Soal</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- HSK 4 — Disabled -->
+        <div class="hsk-card level-4 disabled">
+          <div class="card-banner">
+            <span class="banner-hanzi">四</span>
+            <span class="banner-label">HSK 4</span>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">HSK Level 4 — Menengah</h2>
+            <p class="card-desc">Dapat berdiskusi tentang berbagai topik dengan lancar dan memahami teks Mandarin yang lebih kompleks.</p>
+            <div class="card-stats">
+              <span class="card-stat">📖 600 Kosakata</span>
+              <span class="card-stat">📝 15 Grammar</span>
+              <span class="card-stat">✏️ 800 Soal</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Footer ───────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-brand">
+      <span class="hanzi-logo">汉</span>
+      <span class="footer-name">Modul HSK Mandarin</span>
+    </div>
+    <p>Belajar Mandarin dengan metode terstruktur dan latihan soal komprehensif.</p>
+    <p style="margin-top:0.5rem;">
+      <a href="index.html">Beranda</a> &nbsp;·&nbsp;
+      <a href="index.html#beli">Beli Modul</a>
+    </p>
+    <p style="margin-top:1rem; font-size:0.8rem; color:#555;">
+      &copy; 2026 Modul HSK Mandarin. All rights reserved.
+    </p>
+  </footer>
+
+  <!-- ── Scripts ──────────────────────────────────────────── -->
+  <script>
+    const PASSWORD = 'hsk2026mandarin';
+
+    // Check if already authenticated
+    if (sessionStorage.getItem('hsk_auth') === 'true') {
+      showMenu();
+    }
+
+    function checkPassword() {
+      const input = document.getElementById('password-input').value;
+      if (input === PASSWORD) {
+        sessionStorage.setItem('hsk_auth', 'true');
+        showMenu();
+      } else {
+        document.getElementById('auth-error').style.display = 'block';
+        document.getElementById('password-input').value = '';
+        document.getElementById('password-input').focus();
+      }
+    }
+
+    function showMenu() {
+      document.getElementById('auth-screen').style.display = 'none';
+      document.getElementById('menu-screen').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>

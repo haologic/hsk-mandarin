@@ -1,16 +1,473 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HSK Mandarin — Belajar Mandarin untuk Orang Indonesia</title>
-    <meta name="description" content="Platform belajar Bahasa Mandarin HSK 1-4 paling lengkap untuk pelajar Indonesia.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modul HSK Mandarin — Belajar Mandarin HSK 1–4 Lengkap dalam Bahasa Indonesia</title>
+  <meta name="description" content="Modul belajar Mandarin HSK 1–4 lengkap dalam Bahasa Indonesia. Kosakata, grammar, 800+ soal latihan per level. Hanya Rp 79.000." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-brand">
+      <div class="hanzi-logo">汉</div>
+      <span>Modul HSK</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#fitur">Fitur</a></li>
+      <li><a href="#preview">Preview</a></li>
+      <li><a href="#stats">Konten</a></li>
+      <li><a href="#beli" class="nav-cta">Beli Modul</a></li>
+    </ul>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="home">
+    <!-- Decorative background characters -->
+    <span class="hero-bg-char" style="top: 8%; left: 3%;">学</span>
+    <span class="hero-bg-char" style="top: 55%; left: 1%;">中</span>
+    <span class="hero-bg-char" style="top: 20%; right: 2%;">文</span>
+    <span class="hero-bg-char" style="bottom: 10%; right: 5%;">语</span>
+    <span class="hero-bg-char" style="bottom: 30%; left: 45%;">汉</span>
+
+    <div class="hero-container">
+      <!-- LEFT: Copy -->
+      <div class="hero-left fade-in">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Modul Mandarin Terlengkap untuk Pemula Indonesia
+        </div>
+
+        <h1 class="hero-title">
+          Kuasai Bahasa Mandarin dari
+          <span class="highlight">HSK 1 sampai 4</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Modul belajar mandiri yang lengkap — kosakata resmi HSK, pola grammar terstruktur, dan <strong>800+ soal latihan per level</strong>, semua dijelaskan dalam Bahasa Indonesia yang mudah dipahami.
+        </p>
+
+        <div class="hero-price-block">
+          <div class="price-main">
+            <span class="price-current">Rp 79.000</span>
+            <span class="price-old">Rp 199.000</span>
+            <span class="price-discount">Hemat 60%</span>
+          </div>
+          <p class="price-note">Akses seumur hidup · Semua 4 level HSK</p>
+        </div>
+
+        <div class="hero-cta-group">
+          <a href="https://trakteer.id/" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            Beli Sekarang
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="#preview" class="btn-secondary">Lihat Preview</a>
+        </div>
+      </div>
+
+      <!-- RIGHT: Preview card -->
+      <div class="hero-right fade-in">
+        <div class="hero-card">
+          <div class="card-header">
+            <span class="card-tag">HSK 1 · Kosakata</span>
+            <span class="card-level">Pelajaran 1</span>
+          </div>
+
+          <div class="vocab-feature">
+            <div class="hanzi-big">你好</div>
+            <div class="pinyin-big">nǐ hǎo</div>
+            <div class="meaning-big">Halo / Apa kabar</div>
+          </div>
+
+          <div class="card-example">
+            <span class="example-label">Contoh kalimat:</span>
+            <p class="example-cn">你好，我叫小明。</p>
+            <p class="example-py">Nǐ hǎo, wǒ jiào Xiǎomíng.</p>
+            <p class="example-id">Halo, namaku Xiao Ming.</p>
+          </div>
+
+          <div class="card-footer-bar">
+            <span>HSK 1</span>
+            <span>·</span>
+            <span>150 Kosakata</span>
+            <span>·</span>
+            <span>800 Soal</span>
+          </div>
+        </div>
+
+        <!-- Floating badges -->
+        <div class="float-badge badge-left">
+          <span class="badge-icon">📚</span>
+          <span>150+ Kosakata/Level</span>
+        </div>
+        <div class="float-badge badge-right">
+          <span class="badge-icon">✏️</span>
+          <span>800 Soal/Level</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STATS BAR ==================== -->
+  <section class="stats-bar" id="stats">
+    <div class="stats-container">
+      <div class="stat-item fade-in">
+        <span class="stat-hanzi">四</span>
+        <div class="stat-info">
+          <strong>4 Level HSK</strong>
+          <span>HSK 1, 2, 3 &amp; 4</span>
+        </div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item fade-in">
+        <span class="stat-hanzi">词</span>
+        <div class="stat-info">
+          <strong>600+ Kosakata</strong>
+          <span>Semua kosakata resmi HSK</span>
+        </div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item fade-in">
+        <span class="stat-hanzi">题</span>
+        <div class="stat-info">
+          <strong>3.200+ Latihan Soal</strong>
+          <span>20 bab × 40 soal/level</span>
+        </div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item fade-in">
+        <span class="stat-hanzi">法</span>
+        <div class="stat-info">
+          <strong>60 Poin Grammar</strong>
+          <span>15 poin grammar per level</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURES ==================== -->
+  <section class="features-section" id="fitur">
+    <div class="section-container">
+      <div class="section-header fade-in">
+        <span class="section-eyebrow">Yang Kamu Dapatkan</span>
+        <h2 class="section-title">Apa yang Kamu Dapatkan</h2>
+        <p class="section-subtitle">Satu Modul, Semua yang Kamu Butuhkan</p>
+      </div>
+
+      <div class="features-grid">
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon">📖</div>
+          <h3>Kosakata Resmi HSK</h3>
+          <p>Daftar kosakata resmi HSK lengkap dengan hanzi, pinyin, arti, dan contoh kalimat dalam Bahasa Indonesia.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon">📝</div>
+          <h3>Grammar Jelas &amp; Terstruktur</h3>
+          <p>15 poin grammar per level disusun dari yang mudah ke kompleks, dengan pola kalimat dan contoh yang gamblang.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon">✏️</div>
+          <h3>800 Soal Latihan per Level</h3>
+          <p>20 bab dengan 40 soal tiap bab: pilihan ganda bacaan, pemahaman teks, dan menyusun kalimat acak.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon">🔑</div>
+          <h3>Kunci Jawaban Lengkap</h3>
+          <p>Setiap soal dilengkapi kunci jawaban, sehingga kamu bisa langsung mengecek dan memahami kesalahanmu.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon">🌐</div>
+          <h3>Akses Seumur Hidup</h3>
+          <p>Bayar sekali, akses selamanya. Buka modulmu kapan saja dan di perangkat apa saja — tanpa batas waktu.</p>
+        </div>
+
+        <div class="feature-card fade-in">
+          <div class="feature-icon">🇮🇩</div>
+          <h3>100% Bahasa Indonesia</h3>
+          <p>Semua penjelasan, instruksi, dan arti kata sepenuhnya dalam Bahasa Indonesia. Tidak perlu takut bingung.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PREVIEW ==================== -->
+  <section class="preview-section" id="preview">
+    <div class="section-container">
+      <div class="section-header fade-in">
+        <span class="section-eyebrow">Preview Gratis</span>
+        <h2 class="section-title">Intip Isi Modulnya</h2>
+        <p class="section-subtitle">Lihat sekilas bagaimana materi disajikan di dalam modul.</p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="preview-tabs fade-in">
+        <button class="preview-tab active" onclick="showPreview('kosakata', event)">Kosakata</button>
+        <button class="preview-tab" onclick="showPreview('grammar', event)">Grammar</button>
+        <button class="preview-tab" onclick="showPreview('soal', event)">Latihan Soal</button>
+      </div>
+
+      <!-- Tab: Kosakata -->
+      <div class="preview-content" id="preview-kosakata">
+        <div class="preview-table-wrap">
+          <table class="preview-table">
+            <thead>
+              <tr>
+                <th>Hanzi</th>
+                <th>Pinyin</th>
+                <th>Arti</th>
+                <th>Jenis Kata</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="hanzi-cell">我</td>
+                <td class="pinyin-cell">wǒ</td>
+                <td>Saya / Aku</td>
+                <td><span class="word-type">Kata Ganti</span></td>
+              </tr>
+              <tr>
+                <td class="hanzi-cell">你</td>
+                <td class="pinyin-cell">nǐ</td>
+                <td>Kamu / Anda</td>
+                <td><span class="word-type">Kata Ganti</span></td>
+              </tr>
+              <tr>
+                <td class="hanzi-cell">他</td>
+                <td class="pinyin-cell">tā</td>
+                <td>Dia (laki-laki)</td>
+                <td><span class="word-type">Kata Ganti</span></td>
+              </tr>
+              <tr>
+                <td class="hanzi-cell">她</td>
+                <td class="pinyin-cell">tā</td>
+                <td>Dia (perempuan)</td>
+                <td><span class="word-type">Kata Ganti</span></td>
+              </tr>
+              <tr>
+                <td class="hanzi-cell">好</td>
+                <td class="pinyin-cell">hǎo</td>
+                <td>Baik / Bagus</td>
+                <td><span class="word-type">Kata Sifat</span></td>
+              </tr>
+              <tr>
+                <td class="hanzi-cell">是</td>
+                <td class="pinyin-cell">shì</td>
+                <td>Adalah</td>
+                <td><span class="word-type">Kata Kerja</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="blur-overlay"></div>
+      </div>
+
+      <!-- Tab: Grammar -->
+      <div class="preview-content" id="preview-grammar" style="display:none;">
+        <div class="grammar-cards">
+          <div class="grammar-card">
+            <div class="grammar-number">Poin Grammar 1</div>
+            <h4 class="grammar-title">Kalimat dengan kata kerja <span class="hl-red">是</span> (shì)</h4>
+            <p class="grammar-desc">Kata kerja 是 digunakan untuk menyatakan identitas atau kesetaraan, seperti kata "adalah" dalam Bahasa Indonesia.</p>
+            <div class="grammar-pattern">
+              <span class="pattern-label">Pola:</span>
+              <code>Subjek + 是 + Objek</code>
+            </div>
+            <div class="grammar-examples">
+              <div class="gram-ex">
+                <span class="ex-cn">我是学生。</span>
+                <span class="ex-py">Wǒ shì xuésheng.</span>
+                <span class="ex-id">Saya adalah pelajar.</span>
+              </div>
+              <div class="gram-ex">
+                <span class="ex-cn">他是老师。</span>
+                <span class="ex-py">Tā shì lǎoshī.</span>
+                <span class="ex-id">Dia adalah guru.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grammar-card">
+            <div class="grammar-number">Poin Grammar 2</div>
+            <h4 class="grammar-title">Kalimat tanya dengan partikel <span class="hl-red">吗</span> (ma)</h4>
+            <p class="grammar-desc">Partikel 吗 diletakkan di akhir kalimat pernyataan untuk membentuk kalimat tanya yang sederhana.</p>
+            <div class="grammar-pattern">
+              <span class="pattern-label">Pola:</span>
+              <code>Kalimat Pernyataan + 吗？</code>
+            </div>
+            <div class="grammar-examples">
+              <div class="gram-ex">
+                <span class="ex-cn">你好吗？</span>
+                <span class="ex-py">Nǐ hǎo ma?</span>
+                <span class="ex-id">Apakah kamu baik-baik saja?</span>
+              </div>
+              <div class="gram-ex">
+                <span class="ex-cn">他是学生吗？</span>
+                <span class="ex-py">Tā shì xuésheng ma?</span>
+                <span class="ex-id">Apakah dia seorang pelajar?</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blur-overlay"></div>
+      </div>
+
+      <!-- Tab: Soal -->
+      <div class="preview-content" id="preview-soal" style="display:none;">
+        <div class="soal-cards">
+          <div class="soal-card">
+            <div class="soal-header">
+              <span class="soal-type">Pilihan Ganda</span>
+              <span class="soal-num">Soal 1</span>
+            </div>
+            <p class="soal-question">Apa arti dari kata <strong class="hl-red">学生</strong> (xuésheng)?</p>
+            <div class="soal-options">
+              <label class="soal-option">
+                <input type="radio" name="q1" value="a" />
+                <span class="option-letter">A</span>
+                <span>Guru</span>
+              </label>
+              <label class="soal-option correct">
+                <input type="radio" name="q1" value="b" />
+                <span class="option-letter">B</span>
+                <span>Pelajar / Murid</span>
+              </label>
+              <label class="soal-option">
+                <input type="radio" name="q1" value="c" />
+                <span class="option-letter">C</span>
+                <span>Teman</span>
+              </label>
+              <label class="soal-option">
+                <input type="radio" name="q1" value="d" />
+                <span class="option-letter">D</span>
+                <span>Orang tua</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="soal-card">
+            <div class="soal-header">
+              <span class="soal-type">Susun Kalimat</span>
+              <span class="soal-num">Soal 2</span>
+            </div>
+            <p class="soal-question">Susunlah kata-kata berikut menjadi kalimat yang benar:</p>
+            <div class="word-tiles">
+              <span class="tile">学生</span>
+              <span class="tile">是</span>
+              <span class="tile">我</span>
+              <span class="tile">不</span>
+            </div>
+            <div class="soal-answer-hint">
+              <span class="hint-label">Jawaban:</span>
+              <span class="hint-text">我不是学生。<em>(Wǒ bù shì xuésheng — Saya bukan pelajar.)</em></span>
+            </div>
+          </div>
+        </div>
+        <div class="blur-overlay"></div>
+      </div>
+
+      <p class="preview-note fade-in">
+        Ini hanya segelintir contoh. Modul lengkap berisi ratusan kosakata, puluhan poin grammar, dan ribuan soal latihan.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== CTA / BELI ==================== -->
+  <section class="cta-section" id="beli">
+    <!-- Decorative chars -->
+    <span class="cta-bg-char left">买</span>
+    <span class="cta-bg-char right">学</span>
+
+    <div class="cta-container fade-in">
+      <div class="cta-eyebrow">
+        <span class="cta-dot"></span>
+        Penawaran Terbatas
+        <span class="cta-dot"></span>
+      </div>
+      <h2 class="cta-title">Mulai Perjalanan Mandarinmu<br />Sekarang</h2>
+      <p class="cta-desc">Akses penuh ke semua level HSK 1–4. Bayar sekali, belajar seumur hidup.</p>
+
+      <div class="cta-price-block">
+        <div class="cta-price-display">
+          <span class="cta-price-current">Rp 79.000</span>
+          <div class="cta-price-right">
+            <span class="cta-price-old">Rp 199.000</span>
+            <span class="cta-price-save">Hemat Rp 120.000</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="https://trakteer.id/" target="_blank" rel="noopener noreferrer" class="btn-cta-big">
+        Beli Modul Sekarang
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+
+      <p class="cta-small-note">
+        Setelah pembayaran, kamu akan menerima password untuk mengakses modul.<br />
+        Pembayaran aman melalui Trakteer &mdash; platform support kreator terpercaya.
+      </p>
+
+      <div class="cta-trust-row">
+        <span class="trust-item">✓ Akses Seumur Hidup</span>
+        <span class="trust-item">✓ Semua 4 Level HSK</span>
+        <span class="trust-item">✓ 100% Bahasa Indonesia</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="hanzi-logo">汉</div>
+        <span>Modul HSK Mandarin</span>
+      </div>
+      <p class="footer-copy">
+        &copy; 2026 Modul HSK Mandarin. Dibuat dengan ❤️ untuk pelajar Indonesia.
+      </p>
+      <p class="footer-contact">
+        Pertanyaan? Hubungi kami di
+        <a href="https://trakteer.id/haologic" target="_blank" rel="noopener noreferrer">haologic</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Preview tabs
+    function showPreview(tab, event) {
+      document.querySelectorAll('.preview-content').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.preview-tab').forEach(el => el.classList.remove('active'));
+      document.getElementById('preview-' + tab).style.display = 'block';
+      if (event && event.target) event.target.classList.add('active');
+    }
+
+    // Scroll animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
 </html>
